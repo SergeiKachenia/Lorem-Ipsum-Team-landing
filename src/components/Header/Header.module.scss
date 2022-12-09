@@ -3,6 +3,7 @@
 .header {
   width: 100%;
   padding: 20px 0;
+  background-color: $color-background-header-and-footer;
 }
 
 .list {
@@ -13,7 +14,7 @@
 }
 
 .link {
-  @include regular-text(16px, 32px, $color-main-text);
+  @include regular-text(16px, 32px, $color-secondary-text);
   padding-bottom: 6px;
 
   text-decoration: none;
@@ -22,5 +23,5 @@
 }
 
 .link_active {
-  border-bottom: 1px solid $color-main-active;
+  border-bottom: 1px solid $color-secondary-text;
 }

@@ -1,9 +1,5 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
 
+// Common styles
 .container {
   width: 100%;
   max-width: 1440px;
@@ -19,19 +15,21 @@
 // Colors
 $color-black: #000;
 $color-white: #fff;
-$color-main-text: #111315;
-$color-secondary-text: #cfdefb;
+$color-main-text: #121518;
+$color-secondary-text: #e7ecf7;
 $color-main: #0a558b;
 $color-main-light: #25638f;
 $color-main-hover: #083c62;
 $color-main-active: #06273e;
+$color-secondary-hover: #9ea8b9;
+$color-secondary-active: #7e899d;
 $color-grey: #fafafa;
 $color-error: #940202;
 $color-disabled: #a4aab5;
 $color-background: #64849a;
 $color-background-hover: #516a7c;
 $color-background-active: #384a56;
-$color-background-header-and-footer: #062942;
+$color-background-header-and-footer: #09293f;
 
 
 // Sizes
