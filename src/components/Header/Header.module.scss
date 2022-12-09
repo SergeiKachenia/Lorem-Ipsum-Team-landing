@@ -1,0 +1,27 @@
+@import '../../styles/global.scss';
+
+.header {
+    padding: 20px 88px;
+}
+
+.list {
+    list-style: none;
+    @include flex(row, flex-start, center);
+    gap: 40px;
+}
+
+.link {
+    @include flex(column, center, center);
+    gap: 4px;
+}
+
+.header__link {
+    padding-bottom: 4px;
+    @include medium-text(16px, 1.4, $color-main-text);
+    text-decoration: none;
+    border-bottom: 2px solid white;
+}
+
+.header__link_active {
+    border-bottom: 2px solid $color-main-active;
+}
