@@ -1,0 +1,87 @@
+// Colors
+$color-black: #000000;
+$color-white: #ffffff;
+$color-main-text: #111214;
+$color-secondary-text: #cfdefb;
+$color-main: #0a558b;
+$color-main-light: #25638f;
+$color-main-hover: #083c62;
+$color-main-active: #06273e;
+$color-grey: #fafafa;
+$color-error: #940202;
+$color-disabled: #a4aab5;
+$color-background: #6a869a;
+$color-background-hover: #516472;
+$color-background-active: #333f47;
+$color-background-header-and-footer: #042944;
+
+
+// Sizes
+$width-desk-wide: 1281px;
+$width-desk-narrow: 1025px;
+$width-tablet-wide: 861px;
+$width-tablet-narrow: 769px;
+$width-mobile-wide: 451px;
+$width-mobile-narrow: 331px;
+
+// Mixins
+@mixin regular-text($size, $line-height, $color) {
+  font-family: 'Roboto', sans-serif;
+  font-size: $size;
+  font-weight: 400;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin medium-text($size, $line-height, $color) {
+  font-family: 'Roboto', sans-serif;
+  font-size: $size;
+  font-weight: 500;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin semi-medium-text($size, $line-height, $color) {
+  font-family: 'Roboto', sans-serif;
+  font-size: $size;
+  font-weight: 600;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin bold-text($size, $line-height, $color) {
+  font-family: 'Roboto', sans-serif;
+  font-size: $size;
+  font-weight: 700;
+  line-height: $line-height;
+  color: $color;
+}
+
+@mixin no-selection() {
+  /* iOS Safari */
+  user-select: none;
+
+  -webkit-touch-callout: none;
+}
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin icon-size($width, $height) {
+  min-width: $width;
+  max-width: $width;
+  min-height: $height;
+  max-height: $height;
+}
+
+@mixin buttonDefault() {
+    background: transparent;
+    border: none;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+  }
