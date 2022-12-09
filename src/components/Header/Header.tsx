@@ -5,31 +5,28 @@ import { NavLink } from 'react-router-dom';
 
 import styles from './Header.module.scss';
 
-interface PropsType {
-  activePage: number;
-}
-
-const Header: React.FC<PropsType> = ({ activePage }) => {
+const Header: React.FC = () => {
   return (
     <header className={styles.header}>
-      <ul className={styles.list}>
-        <li className={styles.link}>
-          <NavLink
-            className={({ isActive }) => cn(styles.header__link, { [styles.header__link_active]: isActive })}
-            to='/'
-          >
-            Страница 1
-          </NavLink>
-        </li>
-        <li className={styles.link}>
-          <NavLink
-            className={({ isActive }) => cn(styles.header__link, { [styles.header__link_active]: isActive })}
-            to={'/projects'}
-          >
-            Страница 2
-          </NavLink>
-        </li>
-      </ul>
+      <div className={styles.container}>
+        <nav>
+          <ul className={styles.list}>
+            <li>
+              <NavLink className={({ isActive }) => cn(styles.link, { [styles.link_active]: isActive })} to='/'>
+                Первая страница
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={({ isActive }) => cn(styles.link, { [styles.link_active]: isActive })}
+                to={'/projects'}
+              >
+                Вторая страница
+              </NavLink>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
   );
 };

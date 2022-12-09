@@ -1,12 +1,24 @@
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    width: 96%;
+  }
 }
 
 // Colors
-$color-black: #000000;
-$color-white: #ffffff;
+$color-black: #000;
+$color-white: #fff;
 $color-main-text: #111315;
 $color-secondary-text: #cfdefb;
 $color-main: #0a558b;
@@ -32,7 +44,7 @@ $width-mobile-narrow: 331px;
 
 // Mixins
 @mixin regular-text($size, $line-height, $color) {
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: $size;
   font-weight: 400;
   line-height: $line-height;
@@ -40,7 +52,7 @@ $width-mobile-narrow: 331px;
 }
 
 @mixin medium-text($size, $line-height, $color) {
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: $size;
   font-weight: 500;
   line-height: $line-height;
@@ -48,7 +60,7 @@ $width-mobile-narrow: 331px;
 }
 
 @mixin semi-medium-text($size, $line-height, $color) {
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: $size;
   font-weight: 600;
   line-height: $line-height;
@@ -56,7 +68,7 @@ $width-mobile-narrow: 331px;
 }
 
 @mixin bold-text($size, $line-height, $color) {
-  font-family: 'Roboto', sans-serif;
+  font-family: Roboto, sans-serif;
   font-size: $size;
   font-weight: 700;
   line-height: $line-height;
@@ -84,10 +96,12 @@ $width-mobile-narrow: 331px;
   max-height: $height;
 }
 
-@mixin buttonDefault() {
+@mixin button-default() {
+    cursor: pointer;
+
+    padding: 0;
+
     background: transparent;
     border: none;
     outline: 0;
-    padding: 0;
-    cursor: pointer;
-  }
+}

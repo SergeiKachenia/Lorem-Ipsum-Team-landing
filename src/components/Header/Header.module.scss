@@ -1,27 +1,26 @@
-@import '../../styles/global.scss';
+@import '../../styles/global';
 
 .header {
-    padding: 20px 88px;
+  width: 100%;
+  padding: 20px 0;
 }
 
 .list {
-    list-style: none;
-    @include flex(row, flex-start, center);
-    gap: 40px;
+  @include flex(row, flex-start, center);
+  gap: 40px;
+
+  list-style: none;
 }
 
 .link {
-    @include flex(column, center, center);
-    gap: 4px;
+  @include regular-text(16px, 32px, $color-main-text);
+  padding-bottom: 6px;
+
+  text-decoration: none;
+
+  border-bottom: none;
 }
 
-.header__link {
-    padding-bottom: 4px;
-    @include medium-text(16px, 1.4, $color-main-text);
-    text-decoration: none;
-    border-bottom: 2px solid white;
-}
-
-.header__link_active {
-    border-bottom: 2px solid $color-main-active;
+.link_active {
+  border-bottom: 1px solid $color-main-active;
 }
