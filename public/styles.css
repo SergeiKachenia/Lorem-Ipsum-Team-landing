@@ -4,30 +4,6 @@ html {
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
-body {
-  margin: 0;
-
-  font-family: -apple-system, 'Roboto', sans-serif;
-
-  background-color: #fff;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-main {
-  display: block;
-}
-code {
-  font-family: 'Roboto', sans-serif;
-}
-
 a {
   cursor: pointer;
   background-color: transparent;
@@ -123,26 +99,4 @@ padding: 0; /* 2 */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
 height: auto;
-}
-
-[type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
-}
-
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
-}
-
-template {
-  display: none;
-}
-
-[hidden] {
-  display: none;
 }
