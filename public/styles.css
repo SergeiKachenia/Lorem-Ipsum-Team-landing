@@ -4,29 +4,7 @@ html {
     -webkit-text-size-adjust: 100%; /* 2 */
   }
 
-  body {
-    margin: 0;
 
-    font-family: -apple-system, 'Roboto', sans-serif;
-
-    background-color: #fff;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  main {
-    display: block;
-  }
-  code {
-    font-family: 'Roboto', sans-serif;
-  }
 
   a {
     cursor: pointer;
