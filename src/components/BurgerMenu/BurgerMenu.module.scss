@@ -1,0 +1,11 @@
+@import 'styles/global';
+
+
+.menu {
+    display: none;
+    @media (max-width: $width-desk-narrow) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
