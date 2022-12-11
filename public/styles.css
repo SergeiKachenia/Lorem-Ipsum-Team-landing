@@ -6,7 +6,7 @@ html {
 body {
   margin: 0;
 
-  font-family: -apple-system, 'Roboto', sans-serif;
+  font-family: -apple-system, 'YS', sans-serif;
 
   background-color: #fff;
 
@@ -24,7 +24,7 @@ main {
   display: block;
 }
 code {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'YS', sans-serif;
 }
 
 a {
