@@ -50,7 +50,7 @@ $width-mobile-narrow: 331px;
 
 // Mixins
 @mixin regular-text($size, $line-height, $color) {
-  font-family: Yandex Sans Text, sans-serif;
+  font-family: "Yandex Sans Text", sans-serif;
   font-size: $size;
   font-weight: 400;
   line-height: $line-height;
@@ -58,7 +58,7 @@ $width-mobile-narrow: 331px;
 }
 
 @mixin medium-text($size, $line-height, $color) {
-  font-family: Yandex Sans Text, sans-serif;
+  font-family: "Yandex Sans Text", sans-serif;
   font-size: $size;
   font-weight: 500;
   line-height: $line-height;
@@ -66,7 +66,7 @@ $width-mobile-narrow: 331px;
 }
 
 @mixin semi-medium-text($size, $line-height, $color) {
-  font-family: Yandex Sans Text, sans-serif;
+  font-family: "Yandex Sans Text", sans-serif;
   font-size: $size;
   font-weight: 600;
   line-height: $line-height;
@@ -74,7 +74,7 @@ $width-mobile-narrow: 331px;
 }
 
 @mixin bold-text($size, $line-height, $color) {
-  font-family: Yandex Sans Text, sans-serif;
+  font-family: "Yandex Sans Text", sans-serif;
   font-size: $size;
   font-weight: 700;
   line-height: $line-height;
