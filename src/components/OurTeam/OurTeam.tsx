@@ -64,10 +64,8 @@ export const OurTeam: React.FC<PropsType> = ({ teamList }) => {
           </div>
         </div>
         <AliceCarousel
-          mouseTracking
           disableDotsControls
           disableButtonsControls
-          keyboardNavigation={true}
           responsive={responsive}
           items={teamListMapped}
           ref={carousel}
