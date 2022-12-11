@@ -42,36 +42,34 @@ export const OurTeam: React.FC<PropsType> = ({ teamList }) => {
     1300: { items: 3, itemsFit: 'contain' },
   };
   return (
-    <>
-      <div className={styles.container}>
-        <div className={styles.headerContainer}>
-          <span className={styles.headerText}>Наша команда</span>
-          <div className={styles.buttons}>
-            <div
-              onClick={(e) => {
-                carousel?.current?.slidePrev(e);
-              }}
-            >
-              <ArrowButton isLeft={true} />
-            </div>
-            <div
-              onClick={(e) => {
-                carousel?.current?.slideNext(e);
-              }}
-            >
-              <ArrowButton isLeft={false} />
-            </div>
+    <div className={styles.container}>
+      <div className={styles.headerContainer}>
+        <span className={styles.headerText}>Наша команда</span>
+        <div className={styles.buttons}>
+          <div
+            onClick={(e) => {
+              carousel?.current?.slidePrev(e);
+            }}
+          >
+            <ArrowButton isLeft={true} />
+          </div>
+          <div
+            onClick={(e) => {
+              carousel?.current?.slideNext(e);
+            }}
+          >
+            <ArrowButton isLeft={false} />
           </div>
         </div>
-        <AliceCarousel
-          disableDotsControls
-          disableButtonsControls
-          responsive={responsive}
-          items={teamListMapped}
-          ref={carousel}
-          infinite={true}
-        />
       </div>
-    </>
+      <AliceCarousel
+        disableDotsControls
+        disableButtonsControls
+        responsive={responsive}
+        items={teamListMapped}
+        ref={carousel}
+        infinite={true}
+      />
+    </div>
   );
 };
