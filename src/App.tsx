@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
-import Header from './components/Header/Header';
-
+import { OurTeam } from './components/OurTeam/OurTeam';
+import { mockTeamMembers } from './constants/mock';
 export const App: React.FC = (): JSX.Element => {
   return (
     <BrowserRouter>
-      <Header />
+      <OurTeam teamList={mockTeamMembers} />
     </BrowserRouter>
   );
 };

@@ -1,0 +1,31 @@
+@import "../../styles/global";
+
+.carouselItem {
+  @include flex(row, center, stretch)
+}
+
+.aliceWrap {
+  @include flex(column-reverse, center, stretch)
+}
+
+.buttons {
+  @include flex(row, center, center);
+  gap: 20px;
+}
+
+.headerContainer {
+  @include flex(row, space-between, center);
+  margin-bottom: 100px;
+}
+
+.headerText {
+  @include regular-text(64px, 80px, $color-main-text);
+}
+@media(max-width: 595px) {
+  .headerContainer {
+    @include flex(column, center, center);
+    gap: 20px;
+
+    margin-bottom: 50px;
+  }
+}
