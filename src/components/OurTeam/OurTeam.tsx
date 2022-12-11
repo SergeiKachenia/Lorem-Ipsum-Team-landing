@@ -28,8 +28,6 @@ export const OurTeam: React.FC<PropsType> = ({ teamList }) => {
           key={member.uuid}
           name={member.name}
           stackList={member.stackList}
-          vkLink={member.vkLink}
-          gitHubLink={member.gitHubLink}
           desc={member.desc}
           uuid={member.uuid}
           data-value={member.uuid}
