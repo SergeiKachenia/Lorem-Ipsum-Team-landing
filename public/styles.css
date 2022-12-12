@@ -3,11 +3,10 @@ html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
-
 body {
   margin: 0;
 
-  font-family: -apple-system, 'Roboto', sans-serif;
+  font-family: -apple-system, 'Yandex Sans Text', sans-serif;
 
   background-color: #fff;
 
@@ -25,7 +24,7 @@ main {
   display: block;
 }
 code {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Yandex Sans Text', sans-serif;
 }
 
 a {
@@ -123,26 +122,4 @@ padding: 0; /* 2 */
 [type="number"]::-webkit-inner-spin-button,
 [type="number"]::-webkit-outer-spin-button {
 height: auto;
-}
-
-[type="search"] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
-}
-
-[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
-}
-
-template {
-  display: none;
-}
-
-[hidden] {
-  display: none;
 }
