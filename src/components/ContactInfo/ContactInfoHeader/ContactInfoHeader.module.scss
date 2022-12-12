@@ -1,0 +1,25 @@
+@import 'styles/global';
+
+.header {
+  @include flex(row, space-between, center);
+  margin-bottom: 52px;
+
+  .title {
+    @include regular-text(40px, 48px, $color-main-text);
+  }
+
+  .feedbackFormBtn {
+    @include button-default;
+    @include medium-text(20px, 24px, #E7ECF7);
+    padding: 28px 58.5px;
+
+    background: #25638F;
+    border-radius: 20px;
+
+    transition: background 0.3s ease-out;
+
+    &:hover {
+      background: #0A558B;
+    }
+  }
+}

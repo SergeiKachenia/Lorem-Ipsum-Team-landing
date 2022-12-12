@@ -1,0 +1,5 @@
+@import 'styles/global';
+
+.content {
+  @include flex(row, space-between, flex-start);
+}
