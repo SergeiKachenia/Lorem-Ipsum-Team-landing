@@ -2,6 +2,8 @@
 
 .header {
   @include flex(row, space-between, center);
+  gap: 15px;
+
   margin-bottom: 52px;
 
   .title {
@@ -11,7 +13,8 @@
   .feedbackFormBtn {
     @include button-default;
     @include medium-text(20px, 24px, $color-white-text);
-    padding: 28px 58.5px;
+    width: 400px;
+    padding: 28px 0;
 
     background: $color-main-blue;
     border-radius: 20px;
@@ -24,7 +27,6 @@
 
     @media (max-width: $width-mobile-wide) {
       width: 100%;
-      padding: 28px 0;
     }
   }
 

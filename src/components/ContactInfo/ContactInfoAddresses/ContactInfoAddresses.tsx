@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import { ContactInfoAddress } from './ContactInfoAddress/ContactInfoAddress';
 import styles from './ContactInfoAddresses.module.scss';
@@ -10,19 +10,23 @@ export const ContactInfoAddresses: React.FC<IContactInfoAddressesProps> = ({
   activeAddressId,
   setActiveAddressId,
 }) => {
+  const mappedAddresses = useMemo(
+    () =>
+      contacts.map((c) => (
+        <ContactInfoAddress
+          key={c.id}
+          name={c.name}
+          addresses={c.addresses}
+          activeAddressId={activeAddressId}
+          setActiveAddressId={setActiveAddressId}
+        />
+      )),
+    [activeAddressId],
+  );
+
   return (
-    <address>
-      <ul className={styles.addresses}>
-        {contacts.map((c) => (
-          <ContactInfoAddress
-            key={c.id}
-            name={c.name}
-            addresses={c.addresses}
-            activeAddressId={activeAddressId}
-            setActiveAddressId={setActiveAddressId}
-          />
-        ))}
-      </ul>
+    <address className={styles.wrapper}>
+      <ul className={styles.addresses}>{mappedAddresses}</ul>
     </address>
   );
 };
