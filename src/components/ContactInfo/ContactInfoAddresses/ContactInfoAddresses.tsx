@@ -3,15 +3,13 @@ import React from 'react';
 import { ContactInfoAddress } from './ContactInfoAddress/ContactInfoAddress';
 import styles from './ContactInfoAddresses.module.scss';
 
-import { Contacts } from '../ContactInfo';
+import { IContactInfoAddressesProps } from '../../../types/ContactInfoProps/ContactInfoAddressesProps/IContactInfoAddressesProps';
 
-interface props {
-  contacts: Contacts;
-  activeAddressId: number;
-  setActiveAddressId: (id: number) => void;
-}
-
-export const ContactInfoAddresses: React.FC<props> = ({ contacts, activeAddressId, setActiveAddressId }) => {
+export const ContactInfoAddresses: React.FC<IContactInfoAddressesProps> = ({
+  contacts,
+  activeAddressId,
+  setActiveAddressId,
+}) => {
   return (
     <address>
       <ul className={styles.addresses}>

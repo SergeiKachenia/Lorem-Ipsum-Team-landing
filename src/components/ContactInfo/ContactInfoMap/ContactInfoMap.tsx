@@ -5,16 +5,9 @@ import styles from './ContactInfoMap.module.scss';
 
 import activeMark from '../../../assets/icons/geomarker-active.svg';
 import defaultMark from '../../../assets/icons/geomarker-default.svg';
-import { Address, Contacts } from '../ContactInfo';
+import { IContactInfoMapProps } from '../../../types/ContactInfoProps/ContactInfoMapProps/IContactInfoMapProps';
 
-interface props {
-  contacts: Contacts;
-  activeAddressId: number;
-  setActiveAddressId: (id: number) => void;
-  addresses: Address[];
-}
-
-export const ContactInfoMap: React.FC<props> = ({ contacts, activeAddressId, setActiveAddressId, addresses }) => {
+export const ContactInfoMap: React.FC<IContactInfoMapProps> = ({ activeAddressId, setActiveAddressId, addresses }) => {
   return (
     <div className={styles.map}>
       <YMaps>
@@ -23,8 +16,7 @@ export const ContactInfoMap: React.FC<props> = ({ contacts, activeAddressId, set
             center: [55.325187, 56.993132],
             zoom: 4,
           }}
-          width={'100%'}
-          height={'100%'}
+          className={styles.ymap}
         >
           {addresses.map((a) => (
             <Placemark
