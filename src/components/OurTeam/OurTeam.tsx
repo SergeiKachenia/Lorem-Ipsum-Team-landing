@@ -30,27 +30,23 @@ export const OurTeam: React.FC<IOurTeamProps> = ({ teamList }) => {
     1024: { items: 3 },
     1300: { items: 3, itemsFit: 'contain' },
   };
+  const nextSlideHandler = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
+    carousel?.current?.slideNext(e);
+  };
+  const prevSlideHandler = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
+    carousel?.current?.slidePrev(e);
+  };
   return (
     <div className={styles.container}>
       <div className={styles.headerContainer}>
         <span className={styles.headerText}>Наша команда</span>
         <div className={styles.buttons}>
-          <div
-            className={styles.button}
-            onClick={(e) => {
-              carousel?.current?.slidePrev(e);
-            }}
-          >
+          <button className={styles.button} onClick={nextSlideHandler}>
             <ArrowButton isLeft={true} />
-          </div>
-          <div
-            className={styles.button}
-            onClick={(e) => {
-              carousel?.current?.slideNext(e);
-            }}
-          >
+          </button>
+          <button className={styles.button} onClick={prevSlideHandler}>
             <ArrowButton isLeft={false} />
-          </div>
+          </button>
         </div>
       </div>
       <AliceCarousel
