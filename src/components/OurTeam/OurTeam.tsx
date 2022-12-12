@@ -26,7 +26,8 @@ export const OurTeam: React.FC<IOurTeamProps> = ({ teamList }) => {
   const carousel = useRef<AliceCarousel>(null);
   const responsive = {
     0: { items: 1 },
-    880: { items: 2 },
+    650: { items: 2 },
+    1024: { items: 3 },
     1300: { items: 3, itemsFit: 'contain' },
   };
   return (
@@ -35,6 +36,7 @@ export const OurTeam: React.FC<IOurTeamProps> = ({ teamList }) => {
         <span className={styles.headerText}>Наша команда</span>
         <div className={styles.buttons}>
           <div
+            className={styles.button}
             onClick={(e) => {
               carousel?.current?.slidePrev(e);
             }}
@@ -42,6 +44,7 @@ export const OurTeam: React.FC<IOurTeamProps> = ({ teamList }) => {
             <ArrowButton isLeft={true} />
           </div>
           <div
+            className={styles.button}
             onClick={(e) => {
               carousel?.current?.slideNext(e);
             }}

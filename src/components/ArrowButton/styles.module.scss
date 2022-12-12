@@ -3,9 +3,8 @@
 .buttonContainer {
   @include flex(row, center, center);
   cursor: pointer;
-
-  width: 56px;
-  height: 56px;
+  width: 100%;
+  height: 100%;
 
   background: $color-white-text;
   border-radius: 20px;

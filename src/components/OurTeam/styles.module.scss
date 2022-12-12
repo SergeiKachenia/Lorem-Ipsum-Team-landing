@@ -18,8 +18,28 @@
   margin-bottom: 100px;
 }
 
+.button {
+  width: 56px;
+  height: 56px;
+}
+
 .headerText {
   @include regular-text(64px, 80px, $color-main-text);
+}
+@media(max-width: 1024px) {
+  .button {
+    width: 40px;
+    height: 40px;
+  }
+
+  .button svg{
+    width: 22px;
+    height: 18px;
+  }
+
+  .button div {
+    border-radius: 14px;
+  }
 }
 @media(max-width: 595px) {
   .headerContainer {
