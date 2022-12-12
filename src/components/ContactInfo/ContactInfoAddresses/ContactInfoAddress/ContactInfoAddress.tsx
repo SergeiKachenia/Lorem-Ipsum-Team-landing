@@ -8,7 +8,7 @@ import { Address } from '../../ContactInfo';
 interface props {
   name: string;
   addresses: Address[];
-  activeAddressId: null | number;
+  activeAddressId: number;
   setActiveAddressId: (id: number) => void;
 }
 

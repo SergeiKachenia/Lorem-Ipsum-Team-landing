@@ -7,7 +7,7 @@ import { Contacts } from '../ContactInfo';
 
 interface props {
   contacts: Contacts;
-  activeAddressId: null | number;
+  activeAddressId: number;
   setActiveAddressId: (id: number) => void;
 }
 
