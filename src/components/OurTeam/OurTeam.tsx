@@ -57,6 +57,7 @@ export const OurTeam: React.FC<IOurTeamProps> = ({ teamList }) => {
         items={teamListMapped}
         ref={carousel}
         infinite={true}
+        mouseTracking
       />
     </div>
   );
