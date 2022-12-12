@@ -3,6 +3,7 @@
 .buttonContainer {
   @include flex(row, center, center);
   cursor: pointer;
+
   width: 100%;
   height: 100%;
 

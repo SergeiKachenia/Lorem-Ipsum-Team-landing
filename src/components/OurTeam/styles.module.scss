@@ -1,7 +1,8 @@
 @import "styles/global";
 
 .carouselItem {
-  @include flex(row, center, stretch)
+  @include flex(row, center, stretch);
+  padding: 0 4px;
 }
 
 .aliceWrap {
