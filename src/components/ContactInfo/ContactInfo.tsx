@@ -22,23 +22,12 @@ interface Contact {
 export type Contacts = Contact[];
 
 export const ContactInfo: React.FC = () => {
-  const [activeAddressId, setActiveAddressId] = useState(null as null | number);
-
   const contacts: Contacts = [
-    // {
-    //   id: 1,
-    //   name: 'Афанасьев Артем',
-    //   addresses: [
-    //     {
-    //       id: 1,
-    //       address: 'г. Москва, Ленинский пр-т, 10',
-    //     },
-    //     {
-    //       id: 2,
-    //       address: 'г. Москва, Ленинский пр-т, 10',
-    //     },
-    //   ],
-    // },
+    {
+      id: 1,
+      name: 'Афанасьев Артем',
+      addresses: [],
+    },
     {
       id: 2,
       name: 'Дрягин Даниил',
@@ -61,35 +50,24 @@ export const ContactInfo: React.FC = () => {
         },
       ],
     },
-    // {
-    //   id: 3,
-    //   name: 'Устинов Александр',
-    //   addresses: [
-    //     {
-    //       id: 5,
-    //       address: 'г. Москва, Ленинский пр-т, 10',
-    //     },
-    //     {
-    //       id: 6,
-    //       address: 'г. Москва, Ленинский пр-т, 10',
-    //     },
-    //   ],
-    // },
-    // {
-    //   id: 4,
-    //   name: 'Хамуева Дарья',
-    //   addresses: [
-    //     {
-    //       id: 7,
-    //       address: 'г. Москва, Ленинский пр-т, 10',
-    //     },
-    //     {
-    //       id: 8,
-    //       address: 'г. Москва, Ленинский пр-т, 10',
-    //     },
-    //   ],
-    // },
+    {
+      id: 3,
+      name: 'Устинов Александр',
+      addresses: [],
+    },
+    {
+      id: 4,
+      name: 'Хамуева Дарья',
+      addresses: [],
+    },
   ];
+
+  const addresses = contacts.reduce((acc: Address[], contact) => {
+    acc = [...acc, ...contact.addresses];
+    return acc;
+  }, []);
+
+  const [activeAddressId, setActiveAddressId] = useState(addresses[0].id);
 
   return (
     <section>
@@ -105,6 +83,7 @@ export const ContactInfo: React.FC = () => {
             contacts={contacts}
             activeAddressId={activeAddressId}
             setActiveAddressId={setActiveAddressId}
+            addresses={addresses}
           />
         </div>
       </div>

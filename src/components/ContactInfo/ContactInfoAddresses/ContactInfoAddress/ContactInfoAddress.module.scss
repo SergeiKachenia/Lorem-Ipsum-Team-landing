@@ -12,7 +12,7 @@
   padding-left: 24px;
 
   .address {
-    @include regular-text(15px, 18px, $color-secondary-active);
+    @include regular-text(15px, 18px, $color-grey-text);
     cursor: pointer;
 
     position: relative;
@@ -32,7 +32,7 @@
     }
 
     &:hover {
-      color: $color-disabled;
+      color: $color-grey-text-hover;
     }
 
     &.active {

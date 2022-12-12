@@ -11,14 +11,10 @@ interface props {
   contacts: Contacts;
   activeAddressId: null | number;
   setActiveAddressId: (id: number) => void;
+  addresses: Address[];
 }
 
-export const ContactInfoMap: React.FC<props> = ({ contacts, activeAddressId, setActiveAddressId }) => {
-  const addresses = contacts.reduce((acc: Address[], contact) => {
-    acc = [...acc, ...contact.addresses];
-    return acc;
-  }, []);
-
+export const ContactInfoMap: React.FC<props> = ({ contacts, activeAddressId, setActiveAddressId, addresses }) => {
   return (
     <div className={styles.map}>
       <YMaps>

@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React from 'react';
 
 import { ContactInfoAddress } from './ContactInfoAddress/ContactInfoAddress';
 import styles from './ContactInfoAddresses.module.scss';
