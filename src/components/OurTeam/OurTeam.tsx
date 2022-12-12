@@ -4,23 +4,11 @@ import AliceCarousel from 'react-alice-carousel';
 import 'react-alice-carousel/lib/scss/alice-carousel.scss';
 import styles from './styles.module.scss';
 
+import { IOurTeamProps } from '../../types/IOurTeamProps';
 import { ArrowButton } from '../ArrowButton/ArrowButton';
 import { TeamMemberCard } from '../TeamMemberCard/TeamMemberCard';
 
-interface teamMember {
-  name: string;
-  stackList: string[];
-  vkLink: string;
-  gitHubLink: string;
-  desc: string;
-  uuid: string;
-}
-
-interface PropsType {
-  teamList: teamMember[];
-}
-
-export const OurTeam: React.FC<PropsType> = ({ teamList }) => {
+export const OurTeam: React.FC<IOurTeamProps> = ({ teamList }) => {
   const teamListMapped = useMemo(() => {
     return teamList.map((member) => (
       <div key={member.uuid} className={styles.carouselItem}>
