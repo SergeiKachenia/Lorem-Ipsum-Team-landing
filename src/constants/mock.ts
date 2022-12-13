@@ -1,3 +1,5 @@
+import { IContact } from '../types/IContact';
+
 export const mockTeamMembers = [
   {
     uuid: '4e5ae8d6-9449-459a-b807-07a8c82ee8f8',
@@ -38,5 +40,50 @@ export const mockTeamMembers = [
     vkLink: '',
     gitHubLink: '',
     desc: 'Рассказ о себе. Lorem ipsum dolor amet consectetur. Duis sed velit libero urna vivamus sem sit. Penatibus enim iaculis malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus enim ac ullamcorper.',
+  },
+];
+
+export const contacts: IContact[] = [
+  {
+    id: 1,
+    name: 'Афанасьев Артем',
+    addresses: [],
+  },
+  {
+    id: 2,
+    name: 'Дрягин Даниил',
+    addresses: [
+      {
+        id: 3,
+        address: 'г. Омск, ул. 70 лет Октября, 20/3',
+        location: {
+          lat: 54.98493,
+          lon: 73.321203,
+        },
+      },
+      {
+        id: 4,
+        address: 'г. Омск, проспект Мира, 11',
+        location: {
+          lat: 55.026267,
+          lon: 73.290889,
+        },
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: 'Устинов Александр',
+    addresses: [],
+  },
+  {
+    id: 4,
+    name: 'Хамуева Дарья',
+    addresses: [],
+  },
+  {
+    id: 5,
+    name: 'Сергей Каченя',
+    addresses: [],
   },
 ];

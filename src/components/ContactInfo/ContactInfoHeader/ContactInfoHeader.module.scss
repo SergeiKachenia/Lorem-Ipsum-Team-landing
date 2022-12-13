@@ -1,0 +1,36 @@
+@import 'styles/global';
+
+.header {
+  @include flex(row, space-between, center);
+  gap: 15px;
+
+  margin-bottom: 52px;
+
+  .title {
+    @include regular-text(40px, 48px, $color-main-text);
+  }
+
+  .feedbackFormBtn {
+    @include button-default;
+    @include medium-text(20px, 24px, $color-white-text);
+    width: 400px;
+    padding: 28px 0;
+
+    background: $color-main-blue;
+    border-radius: 20px;
+
+    transition: background 0.3s ease-out;
+
+    &:hover {
+      background: $color-main-blue-hover;
+    }
+
+    @media (max-width: $width-mobile-wide) {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $width-tablet-narrow) {
+    @include flex(column, flex-start, flex-start);
+  }
+}

@@ -1,0 +1,11 @@
+@import 'styles/global';
+
+.content {
+  @include flex(row, space-between, flex-start);
+  gap: 15px;
+
+  @media (max-width: $width-tablet-narrow) {
+    @include flex(column, flex-start, flex-start);
+  }
+}
+
