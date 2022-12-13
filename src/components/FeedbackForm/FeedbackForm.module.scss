@@ -1,110 +1,149 @@
 @import 'styles/global';
 
-
 .wrapper {
-    width: 100vw;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    @include flex(row, center, center);
+  @include flex(row, center, center);
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100%;
 }
 
 .background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: $color-black;
-    opacity: 0.6;
-    z-index: 1;
+  position: absolute;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  opacity: 0.95;
+  background-color: $color-another-main-text;
 }
 
 .form {
-    position: relative;
-    background-color: $color-white;
-    z-index: 2;
-    @include flex(column, baseline, flex-start);
-    gap: 24px;
-    padding: 48px 32px 32px;
-    width: calc(1/2 * $width-desk-wide);
-    border-radius: 2px;
+  @include flex(column, flex-start, flex-start);
+  position: relative;
+  z-index: 2;
+
+  gap: 32px;
+
+  width: 640px;
+  padding: 48px;
+
+  background-color: $color-white;
+  border-radius: 2px;
 }
 
 .closeBtn {
-    width: 32px;
-    height: 32px;
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    cursor: pointer;
+  cursor: pointer;
+
+  position: absolute;
+  top: 14px;
+  right: 14px;
+
+  width: 34.29px;
+  height: 34.29px;
 }
 
 .title {
-    @include regular-text(32px, 1, $color-black)
+  @include regular-text(40px, 56px, $color-another-main-text)
 }
 
 .field {
-    width: 100%;
-    @include flex(row, space-between, flex-start);
-    gap: 16px
+  @include flex(row, space-between, flex-start);
+  gap: 16px;
+
+  width: 100%;
 }
 
 .data_check {
-    width: 100%;
-    @include flex(row, flex-start, center);
-    gap: 16px;
+  @include flex(row, flex-start, center);
+  gap: 16px;
+
+  width: 100%;
 }
 
 .input {
-    width: 60%;
-    resize: none;
-    padding: 8px 12px;
-    border: 1px solid $color-disabled;
-    border-radius: 2px;
+  @include regular-text(20px, 24px, $color-another-main-text);
+  resize: none;
+
+  width: 352px;
+  padding: 12px 20px;
+
+  background: $color-white;
+  border: 1px solid $color-grey-text;
+  border-radius: 2px;
 }
 
 .input:focus {
-    border: 1px solid $color-main-text;
-    outline: none;
+  outline: $color-dark-grey-text solid 1px;
 }
 
 .label {
-    padding: 14px 0;
-    @include bold-text(16px, 1, $color-black);
+  @include medium-text(20px, 24px, $color-another-main-text);
+  max-width: 176px;
+  padding: 12px 0 0;
 }
 
 .validError {
-    padding: 11px 0 17px;
-    max-width: 196px;
-    @include regular-text(16px, 1, rgb(255, 75, 75));
-}
-
-.width_128 {
-    max-width: 128px;
+  @include medium-text(20px, 24px, $color-error);
 }
 
 .checkbox {
-    width: 36px;
-    height: 36px;
+  position: relative;
+
+  width: 0;
+  height: 48px;
+  margin-right: 48px;
+
+  &::before {
+    cursor: pointer;
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    box-sizing: border-box;
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid #4B4C52;
+  }
+
+  &:checked {
+    &::before {
+      background-image: url("../../assets/icons/checkbox-active.svg");
+      background-position: center;
+      background-size: cover;
+    }
+  }
 }
 
 .data_check__label {
-    @include bold-text(16px, 1, $color-black)
+  @include medium-text(19px, 24px, $color-another-main-text);
 }
 
 .send_btn {
-    width: 100%;
-    background-color: $color-main-blue-active;
-    padding: 20px;
-    @include medium-text(24px, 1, $color-white);    
-    border: none;
-    border-radius: 4px;
-    transition: ease-in-out 0.25s;
-    &:hover {
-        background-color: $color-main-blue-hover;
-    }
-    &:disabled {
-        background-color: $color-disabled;
-    }
+  @include button-default;
+  @include medium-text(28px, 36px, $color-white-text);
+  width: 100%;
+  padding: 21px 0 23px;
+
+  background-color: $color-main-blue;
+  border-radius: 2px;
+
+  transition: ease-in-out 0.25s;
+
+  &:hover {
+    background-color: $color-main-blue-hover;
+  }
+
+  &:disabled {
+    cursor: default;
+
+    filter: brightness(40%);
+  }
 }
 
