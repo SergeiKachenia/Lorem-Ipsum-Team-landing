@@ -23,7 +23,7 @@
     "lint:es": "eslint --ext .ts,.tsx src",
     "lint:es:fix": "npm run lint:es -- --fix",
     "lint:scss": "stylelint src",
-    "lint:scss:fix": "npm run lint:css -- --fix"
+    "lint:scss:fix": "npm run lint:scss -- --fix"
   },
   "lint-staged": {
     "*.(ts|tsx)": [
