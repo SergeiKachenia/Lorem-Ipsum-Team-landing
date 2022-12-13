@@ -47,6 +47,10 @@
     @include regular-text(40px, 80px, $color-main-text);
   }
 
+  .headerContainer {
+    margin-bottom: 50px;
+  }
+
   .button svg{
     width: 22px;
     height: 18px;
@@ -60,8 +64,6 @@
   .headerContainer {
     @include flex(column, center, center);
     gap: 20px;
-
-    margin-bottom: 50px;
   }
 
   .buttons * {
