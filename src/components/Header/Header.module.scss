@@ -36,7 +36,7 @@
 }
 
 .link {
-  @include regular-text(16px, 32px, $color-secondary-text);
+  @include regular-text(16px, 32px, $color-grey);
   padding-bottom: 6px;
 
   text-decoration: none;
@@ -48,20 +48,20 @@
 
 @media (any-hover:hover) {
   .link:hover {
-    color: $color-secondary-hover;
+    color: $color-grey-text-hover;
   }
 }
 
 .link:active {
-  color: $color-secondary-active;
+  color: $color-grey-text-active;
 }
 
 .link_active {
-  color: $color-secondary-active;
-  border-bottom: 1px solid $color-secondary-text;
+  color: $color-white-text;
+  border-bottom: 1px solid $color-white-text;
 }
 
 .link_active:hover {
-  color: $color-secondary-active;
+  color: $color-white-text;
 }
 

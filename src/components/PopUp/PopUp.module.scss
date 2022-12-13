@@ -1,0 +1,17 @@
+@import 'styles/global';
+
+
+.popup_btn {
+    @include regular-text(16px, 10px, $color-white-text);
+    background-color: $color-main-blue-active;
+    padding: 24px 32px;
+    border: none;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+@media (any-hover:hover) {
+    .popup_btn:hover {
+      background-color: $color-main-blue-hover;
+    }
+  }
