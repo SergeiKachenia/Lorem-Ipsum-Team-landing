@@ -41,10 +41,10 @@ export const OurTeam: React.FC<IOurTeamProps> = ({ teamList }) => {
       <div className={styles.headerContainer}>
         <span className={styles.headerText}>Наша команда</span>
         <div className={styles.buttons}>
-          <button className={styles.button} onClick={nextSlideHandler}>
+          <button className={styles.button} onClick={prevSlideHandler}>
             <ArrowButton isLeft={true} />
           </button>
-          <button className={styles.button} onClick={prevSlideHandler}>
+          <button className={styles.button} onClick={nextSlideHandler}>
             <ArrowButton isLeft={false} />
           </button>
         </div>
