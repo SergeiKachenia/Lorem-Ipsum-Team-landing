@@ -1,0 +1,15 @@
+@import "../styles/global.scss";
+.footer{
+    padding: 50px 80px;
+    width: calc(100% - 160px);
+    background-color: $color-background-header-and-footer;
+}
+.footer_text{
+    @include regular-text(16px, 32px, $color-secondary-text);
+}
+@media (max-width: $width-mobile-wide) {
+    .footer{
+        padding: 25px 40px;
+        width: calc(100% - 80px);
+    }
+}
