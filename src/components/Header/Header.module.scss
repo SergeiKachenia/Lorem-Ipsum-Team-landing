@@ -1,8 +1,8 @@
-@import "styles/global";
 
 .header {
   width: 100%;
   padding: 20px 0;
+
   background-color: $color-background-header-and-footer;
 
   @media (max-width: $width-desk-narrow) {
@@ -19,14 +19,17 @@
   transition: left 0.2s;
   @media (max-width: $width-desk-narrow) {
     position: absolute;
+    top: 68px;
+    left: -120%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
     box-sizing: content-box;
     width: 100%;
     padding: 0 0 20px;
-    gap: 20px;
-    top: 68px;
-    left: -120%;
-    display: flex;
-    flex-direction: column;
+
     background-color: $color-background-header-and-footer;
   }
 }
@@ -36,7 +39,7 @@
 }
 
 .link {
-  @include regular-text(16px, 32px, $color-grey);
+  @include regular-text(16px, 32px, $color-secondary-text);
   padding-bottom: 6px;
 
   text-decoration: none;
@@ -48,20 +51,20 @@
 
 @media (any-hover:hover) {
   .link:hover {
-    color: $color-grey-text-hover;
+    color: $color-secondary-hover;
   }
 }
 
 .link:active {
-  color: $color-grey-text-active;
+  color: $color-secondary-active;
 }
 
 .link_active {
-  color: $color-white-text;
-  border-bottom: 1px solid $color-white-text;
+  color: $color-secondary-active;
+
+  border-bottom: 1px solid $color-secondary-text;
 }
 
 .link_active:hover {
-  color: $color-white-text;
+  color: $color-secondary-active;
 }
-

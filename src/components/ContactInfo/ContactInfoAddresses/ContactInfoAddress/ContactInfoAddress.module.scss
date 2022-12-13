@@ -1,0 +1,54 @@
+@import 'styles/global';
+
+.name {
+  @include medium-text(20px, 24px, $color-main-text);
+  margin-bottom: 13px;
+}
+
+.addresses {
+  @include flex(column, flex-start, flex-start);
+  gap: 14px;
+
+  padding-left: 24px;
+
+  .address {
+    @include regular-text(15px, 18px, $color-grey-text);
+    cursor: pointer;
+
+    position: relative;
+
+    transition: color 0.3s ease-out;
+
+    &::before {
+      @include icon-size(20px, 20px);
+      content: '';
+
+      position: absolute;
+      top: 50%;
+      left: -24px;
+      transform: translateY(-50%);
+
+      background-image: url("../../../../assets/icons/geomarker-default.svg");
+    }
+
+    &:hover {
+      color: $color-grey-text-hover;
+    }
+
+    &.active {
+      color: $color-main-text;
+
+      &::after {
+        @include icon-size(20px, 20px);
+        content: '';
+
+        position: absolute;
+        top: 50%;
+        left: -24px;
+        transform: translateY(-50%);
+
+        background-image: url("../../../../assets/icons/geomarker-active.svg");
+      }
+    }
+  }
+}
