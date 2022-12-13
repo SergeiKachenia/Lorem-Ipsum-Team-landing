@@ -43,6 +43,10 @@
     height: 40px;
   }
 
+  .headerText {
+    @include regular-text(40px, 80px, $color-main-text);
+  }
+
   .button svg{
     width: 22px;
     height: 18px;
