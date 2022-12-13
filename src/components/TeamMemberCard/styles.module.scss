@@ -20,7 +20,7 @@
 }
 
 .card {
-  @include flex(column, top, stretch);
+  @include flex(column, stretch, flex-start);
   gap: 20px;
 
   width: 408px;
