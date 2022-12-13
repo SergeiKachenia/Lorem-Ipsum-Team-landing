@@ -1,5 +1,9 @@
 @import "styles/global";
 
+.ourTeam {
+  margin-bottom: 120px;
+}
+
 .button {
   cursor: pointer;
 
@@ -68,5 +72,17 @@
 
   .buttons * {
     display: none;
+  }
+}
+
+.currentPageItem {
+  width: 100%;
+  height: 2px;
+
+  background: $color-grey;
+  border-radius: 8px;
+
+  &.active {
+    background: $color-another-main-text;
   }
 }
