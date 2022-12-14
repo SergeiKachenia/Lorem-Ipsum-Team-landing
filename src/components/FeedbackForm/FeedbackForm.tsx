@@ -30,24 +30,18 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
       console.log(values);
     },
   });
-  const condName = (key: keyof typeof formik.touched | keyof typeof formik.errors): boolean => {
-    if (formik.touched[key] !== undefined && formik.errors[key] !== undefined) {
-      return false;
-    }
-    return true;
-  };
-  const isFormFull =
-    Object.values(formik.values).filter((val) => val === '').length === 0 && Object.entries(formik.errors).length === 0;
+  const hasError = (fieldName: keyof typeof formik.touched | keyof typeof formik.errors): boolean =>
+    !(formik.touched[fieldName] !== undefined && formik.errors[fieldName] !== undefined);
 
   return (
     <div className={styles.wrapper}>
-      <div className={styles.background}></div>
+      <div className={styles.background} onClick={closeForm}></div>
       <form className={styles.form} onSubmit={formik.handleSubmit}>
         <MdClose className={styles.closeBtn} onClick={closeForm}></MdClose>
         <h2 className={styles.title}>Форма для связи с нами</h2>
         <div className={styles.field}>
-          <label className={cn(styles.label, { [styles.validError]: !condName('name') })}>
-            {condName('name') ? 'Как вас зовут' : formik.errors.name}
+          <label className={cn(styles.label, { [styles.validError]: !hasError('name') })}>
+            {hasError('name') ? 'Как вас зовут' : formik.errors.name}
           </label>
           <input
             name='name'
@@ -59,8 +53,8 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
           />
         </div>
         <div className={styles.field}>
-          <label className={cn(styles.label, { [styles.validError]: !condName('email') })}>
-            {condName('email') ? 'Ваш email' : formik.errors.email}
+          <label className={cn(styles.label, { [styles.validError]: !hasError('email') })}>
+            {hasError('email') ? 'Ваш email' : formik.errors.email}
           </label>
           <input
             name='email'
@@ -74,10 +68,10 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
         <div className={styles.field}>
           <label
             className={cn(styles.label, {
-              [styles.validError]: !condName('message'),
+              [styles.validError]: !hasError('message'),
             })}
           >
-            {condName('message') ? 'Ваше сообщение' : formik.errors.message}
+            {hasError('message') ? 'Ваше сообщение' : formik.errors.message}
           </label>
           <textarea
             name='message'
@@ -89,12 +83,18 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
           />
         </div>
         <div className={styles.data_check}>
-          <input name='dataTreat' type='checkbox' className={styles.checkbox} onChange={formik.handleChange} />
-          <label className={styles.data_check__label}>
-            {condName('dataTreat') ? 'Даю согласие на обработку персональных данных' : formik.errors.dataTreat}
+          <input
+            id='dataTreat'
+            name='dataTreat'
+            type='checkbox'
+            className={styles.checkbox}
+            onChange={formik.handleChange}
+          />
+          <label htmlFor='dataTreat' className={styles.data_check__label}>
+            {hasError('dataTreat') ? 'Даю согласие на обработку персональных данных' : formik.errors.dataTreat}
           </label>
         </div>
-        <button className={styles.send_btn} type='submit' disabled={!isFormFull}>
+        <button className={styles.send_btn} type='submit' disabled={!(formik.isValid && formik.dirty)}>
           Отправить
         </button>
       </form>
