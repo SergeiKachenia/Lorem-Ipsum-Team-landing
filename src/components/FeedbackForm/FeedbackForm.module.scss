@@ -1,184 +1,197 @@
 @import "styles/global";
 
 .wrapper {
-    @include flex(row, center, center);
-    position: fixed;
-    z-index: 2;
-    top: 0;
-    left: 0;
+  @include flex(row, center, center);
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .background {
-    position: absolute;
-    z-index: 1;
+  position: absolute;
+  z-index: 1;
 
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    opacity: 0.95;
-    background-color: $color-another-main-text;
+  opacity: 0.95;
+  background-color: $color-another-main-text;
 }
 
 .form {
-    @include flex(column, flex-start, flex-start);
-    position: relative;
-    z-index: 2;
+  @include flex(column, flex-start, flex-start);
+  position: relative;
+  z-index: 2;
 
-    gap: 16px;
+  gap: 16px;
 
-    width: 640px;
-    padding: 48px;
+  width: 640px;
+  padding: 48px;
 
-    background-color: $color-white;
-    border-radius: 20px;
+  background-color: $color-white;
+  border-radius: 20px;
 }
 
 .closeBtn {
-    cursor: pointer;
+  cursor: pointer;
 
-    position: absolute;
-    top: 14px;
-    right: 14px;
+  position: absolute;
+  top: 14px;
+  right: 14px;
 
-    width: 34.29px;
-    height: 34.29px;
+  width: 34.29px;
+  height: 34.29px;
 }
 
 .title {
-    @include regular-text(40px, 56px, $color-another-main-text);
+  @include regular-text(40px, 56px, $color-another-main-text);
+  margin-bottom: 16px;
 }
 
 .field {
-    @include flex(row, space-between, flex-start);
-    gap: 16px;
+  @include flex(row, space-between, flex-start);
+  gap: 16px;
 
-    width: 100%;
+  width: 100%;
 }
 
 .data_check {
-    @include flex(row, flex-start, center);
-    gap: 16px;
+  @include flex(row, flex-start, center);
+  gap: 16px;
 
-    width: 100%;
+  width: 100%;
 }
 
 .input {
-    @include regular-text(20px, 24px, $color-another-main-text);
-    resize: vertical;
-    max-height: 20vh;
-    min-height: 5vh;
+  @include regular-text(20px, 24px, $color-another-main-text);
+  resize: vertical;
 
-    width: 352px;
-    padding: 12px 20px;
+  width: 352px;
+  height: 48px;
+  padding: 12px 20px;
 
-    background: $color-white;
-    border: 1px solid $color-grey-text;
-    border-radius: 2px;
+  background: $color-white;
+  border: 1px solid $color-grey-text;
+  border-radius: 2px;
+}
+
+.textarea {
+  height: 140px;
+  min-height: 5vh;
+  max-height: 20vh;
 }
 
 .input:focus {
-    outline: $color-dark-grey-text solid 1px;
+  outline: $color-dark-grey-text solid 1px;
 }
 
 .label {
-    @include medium-text(20px, 24px, $color-another-main-text);
-    max-width: 176px;
-    padding: 12px 0 0;
+  @include medium-text(20px, 24px, $color-another-main-text);
+  max-width: 176px;
+  padding: 12px 0 0;
 }
 
 .errorSpan {
-    height: 24px;
-    visibility: hidden;
-    width: 100%;
-    text-align: right;
+  width: 100%;
+  height: 24px;
+
+  text-align: right;
+
+  visibility: hidden;
 }
 
 .validError {
-    @include medium-text(14px, 24px, $color-error);
-    visibility: visible;
+  @include medium-text(14px, 24px, $color-error);
+  visibility: visible;
 }
 
 .checkbox {
-    position: relative;
+  position: relative;
 
-    width: 0;
+  width: 0;
+  height: 48px;
+  margin-right: 48px;
+
+  &::before {
+    cursor: pointer;
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    box-sizing: border-box;
+    width: 48px;
     height: 48px;
-    margin-right: 48px;
 
+    border: 1px solid #4b4c52;
+    border-radius: 10px;
+  }
+
+  &:checked {
     &::before {
-        cursor: pointer;
-        content: "";
-
-        position: absolute;
-        top: 0;
-        left: 0;
-
-        box-sizing: border-box;
-        width: 48px;
-        height: 48px;
-
-        border: 1px solid #4b4c52;
-        border-radius: 10px;
+      background-image: url("../../assets/icons/checkbox-active.svg");
+      background-position: center;
+      background-size: cover;
     }
-
-    &:checked {
-        &::before {
-            background-image: url("../../assets/icons/checkbox-active.svg");
-            background-position: center;
-            background-size: cover;
-        }
-    }
+  }
 }
 
 .data_check__label {
-    @include medium-text(19px, 24px, $color-another-main-text);
+  @include medium-text(19px, 24px, $color-another-main-text);
 }
 
 .send_btn {
-    @include button-default;
-    @include medium-text(28px, 36px, $color-white-text);
-    width: 100%;
-    padding: 21px 0 23px;
+  @include button-default;
+  @include medium-text(28px, 36px, $color-white-text);
+  width: 100%;
+  margin-top: 16px;
+  padding: 21px 0 23px;
 
-    background-color: $color-main-blue;
-    border-radius: 20px;
+  background-color: $color-main-blue;
+  border-radius: 20px;
 
-    transition: ease-in-out 0.25s;
+  transition: ease-in-out 0.25s;
+
+  &:hover {
+    background-color: $color-main-blue-hover;
+  }
+
+  &:disabled {
+    cursor: default;
+
+    filter: brightness(40%);
 
     &:hover {
-        background-color: $color-main-blue-hover;
+      background-color: $color-main-blue;
     }
-
-    &:disabled {
-        cursor: default;
-
-        filter: brightness(40%);
-
-        &:hover {
-            background-color: $color-main-blue;
-        }
-    }
+  }
 }
 
 .hiddenMessage {
-    z-index: 5;
-    padding: 24px 32px;
-    @include regular-text(24px, 24px, $color-black);
-    text-align: center;
-    position: absolute;
-    right: -30%;
-    bottom: 5%;
-    background-color: $color-white;
-    opacity: 1;
-    border-radius: 5px;
-    transition: 0.3s;
+  @include regular-text(24px, 24px, $color-black);
+  position: absolute;
+  z-index: 5;
+  right: -30%;
+  bottom: 5%;
+
+  padding: 24px 32px;
+
+  text-align: center;
+
+  opacity: 1;
+  background-color: $color-white;
+  border-radius: 5px;
+
+  transition: 0.3s;
 }
 
 
 .resultMesage {
-    right: 5%;
-    bottom: 5%;
+  right: 5%;
+  bottom: 5%;
 }

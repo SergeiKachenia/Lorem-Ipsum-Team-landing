@@ -103,7 +103,7 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
           <textarea
             name='message'
             rows={5}
-            className={styles.input}
+            className={cn(styles.input, styles.textarea)}
             onChange={formik.handleChange}
             onBlur={formik.handleBlur}
             value={formik.values.message}
