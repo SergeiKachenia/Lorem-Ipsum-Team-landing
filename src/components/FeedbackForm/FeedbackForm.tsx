@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { useFormik } from 'formik';
 
-import React from 'react';
+import React, { useState } from 'react';
 
 import { MdClose } from 'react-icons/md';
 import uuid from 'react-uuid';
@@ -11,6 +11,8 @@ import * as Yup from 'yup';
 import styles from './FeedbackForm.module.scss';
 
 const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
+  const [buttonPressed, setPressed] = useState(false);
+  const [resultMesage, setMessage] = useState('');
   const formik = useFormik({
     initialValues: {
       name: '',
@@ -25,19 +27,30 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
       dataTreat: Yup.array().min(1, 'Даю согласие на обработку персональных данных'),
     }),
     onSubmit: async (values) => {
-      await fetch('https://jsonplaceholder.typicode.com/posts', {
-        method: 'POST',
-        body: JSON.stringify({
-          title: 'contact form',
-          body: values,
-          userId: uuid(),
-        }),
-        headers: {
-          'Content-type': 'application/json; charset=UTF-8',
-        },
-      })
-        .then(async (response) => await response.json())
-        .then((json) => console.log(json));
+      try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+          method: 'POST',
+          body: JSON.stringify({
+            title: 'contact form',
+            body: values,
+            userId: uuid(),
+          }),
+          headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+          },
+        });
+        const respJson = await response.json();
+        setMessage('Your data is send to server!');
+        console.log(respJson);
+      } catch (err) {
+        setMessage('Failed send your data(');
+        console.log(err);
+      }
+      setPressed(true);
+      setTimeout(() => {
+        setPressed(false);
+        setMessage('');
+      }, 3000);
     },
   });
   const hasError = (fieldName: keyof typeof formik.touched | keyof typeof formik.errors): boolean =>
@@ -119,6 +132,7 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
           Отправить
         </button>
       </form>
+      <span className={cn(styles.hiddenMessage, { [styles.resultMesage]: buttonPressed })}>{resultMesage}</span>
     </div>
   );
 };
