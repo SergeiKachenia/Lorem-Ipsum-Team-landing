@@ -4,13 +4,11 @@ import { useFormik } from 'formik';
 import React from 'react';
 
 import { MdClose } from 'react-icons/md';
+import uuid from 'react-uuid';
+import { ICloseForm } from 'types/ICloseFormProps';
 import * as Yup from 'yup';
 
 import styles from './FeedbackForm.module.scss';
-
-interface ICloseForm {
-  closeForm: () => void;
-}
 
 const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
   const formik = useFormik({
@@ -26,8 +24,20 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
       message: Yup.string().required('Сообщение не может быть пустым'),
       dataTreat: Yup.array().min(1, 'Даю согласие на обработку персональных данных'),
     }),
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit: async (values) => {
+      await fetch('https://jsonplaceholder.typicode.com/posts', {
+        method: 'POST',
+        body: JSON.stringify({
+          title: 'contact form',
+          body: values,
+          userId: uuid(),
+        }),
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+        },
+      })
+        .then(async (response) => await response.json())
+        .then((json) => console.log(json));
     },
   });
   const hasError = (fieldName: keyof typeof formik.touched | keyof typeof formik.errors): boolean =>
@@ -40,9 +50,7 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
         <MdClose className={styles.closeBtn} onClick={closeForm}></MdClose>
         <h2 className={styles.title}>Форма для связи с нами</h2>
         <div className={styles.field}>
-          <label className={cn(styles.label, { [styles.validError]: !hasError('name') })}>
-            {hasError('name') ? 'Как вас зовут' : formik.errors.name}
-          </label>
+          <label className={cn(styles.label)}>Как вас зовут</label>
           <input
             name='name'
             type='text'
@@ -52,10 +60,15 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
             value={formik.values.name}
           />
         </div>
+        <span
+          className={cn(styles.errorSpan, {
+            [styles.validError]: !hasError('name'),
+          })}
+        >
+          {hasError('name') ? '' : formik.errors.name}
+        </span>
         <div className={styles.field}>
-          <label className={cn(styles.label, { [styles.validError]: !hasError('email') })}>
-            {hasError('email') ? 'Ваш email' : formik.errors.email}
-          </label>
+          <label className={cn(styles.label)}>Ваш email</label>
           <input
             name='email'
             type='email'
@@ -65,14 +78,15 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
             value={formik.values.email}
           />
         </div>
+        <span
+          className={cn(styles.errorSpan, {
+            [styles.validError]: !hasError('email'),
+          })}
+        >
+          {hasError('email') ? '' : formik.errors.email}
+        </span>
         <div className={styles.field}>
-          <label
-            className={cn(styles.label, {
-              [styles.validError]: !hasError('message'),
-            })}
-          >
-            {hasError('message') ? 'Ваше сообщение' : formik.errors.message}
-          </label>
+          <label className={cn(styles.label)}>Ваше сообщение</label>
           <textarea
             name='message'
             rows={5}
@@ -82,6 +96,13 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
             value={formik.values.message}
           />
         </div>
+        <span
+          className={cn(styles.errorSpan, {
+            [styles.validError]: !hasError('message'),
+          })}
+        >
+          {hasError('message') ? '' : formik.errors.message}
+        </span>
         <div className={styles.data_check}>
           <input
             id='dataTreat'
