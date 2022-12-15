@@ -26,7 +26,8 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
       message: Yup.string().required('Сообщение не может быть пустым'),
       dataTreat: Yup.array().min(1, 'Даю согласие на обработку персональных данных'),
     }),
-    onSubmit: async (values) => {
+    onSubmit: async (values, { setSubmitting, resetForm }) => {
+      setSubmitting(true);
       try {
         const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
           method: 'POST',
@@ -42,10 +43,12 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
         const respJson = await response.json();
         setMessage('Your data is send to server!');
         console.log(respJson);
+        resetForm();
       } catch (err) {
         setMessage('Failed send your data(');
         console.log(err);
       }
+      setSubmitting(false);
       setPressed(true);
       setTimeout(() => {
         setPressed(false);
@@ -128,7 +131,11 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
             {hasError('dataTreat') ? 'Даю согласие на обработку персональных данных' : formik.errors.dataTreat}
           </label>
         </div>
-        <button className={styles.send_btn} type='submit' disabled={!(formik.isValid && formik.dirty)}>
+        <button
+          className={styles.send_btn}
+          type='submit'
+          disabled={!(formik.isValid && formik.dirty) || formik.isSubmitting}
+        >
           Отправить
         </button>
       </form>
