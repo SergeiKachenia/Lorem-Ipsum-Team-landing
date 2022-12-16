@@ -15,7 +15,7 @@ const Header: React.FC = () => {
           <ul className={cn(styles.menu, { [styles.menu_active]: isOpen })}>
             <li>
               <NavLink className={({ isActive }) => cn(styles.link, { [styles.link_active]: isActive })} to='/'>
-                Первая страница
+                О нас
               </NavLink>
             </li>
             <li>
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
                 className={({ isActive }) => cn(styles.link, { [styles.link_active]: isActive })}
                 to={'/projects'}
               >
-                Вторая страница
+                Наши проекты
               </NavLink>
             </li>
           </ul>
