@@ -1,20 +1,44 @@
+
+// Common styles
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    width: 96%;
+  }
+}
+
 // Colors
-$color-black: #000000;
-$color-white: #ffffff;
-$color-main-text: #111315;
-$color-secondary-text: #cfdefb;
-$color-main: #0a558b;
-$color-main-light: #25638f;
-$color-main-hover: #083c62;
-$color-main-active: #06273e;
-$color-grey: #fafafa;
+$color-black: #000;
+$color-white: #fff;
+
+// Text
+$color-main-text: #121518;
+$color-another-main-text: #16161A;
+
+// Grey
+$color-grey: #D9D9D9;
+$color-grey-text: #85868C;
+$color-grey-text-hover: #A4AAB5;
+$color-grey-text-active: #888d96;
+
+// Text
+$color-white-text: #E7ECF7;
+$color-dark-grey-text: #4B4C52;
+
+// Main
+$color-main-blue: #25638f;
+$color-main-blue-hover: #0a558b;
+$color-main-blue-active: #0b4670;
+
+// Other
 $color-error: #940202;
 $color-disabled: #a4aab5;
-$color-background: #64849a;
-$color-background-hover: #516a7c;
-$color-background-active: #384a56;
-$color-background-header-and-footer: #062942;
-
+$color-background-header-and-footer: #09293f;
 
 // Sizes
 $width-desk-wide: 1281px;
@@ -26,7 +50,7 @@ $width-mobile-narrow: 331px;
 
 // Mixins
 @mixin regular-text($size, $line-height, $color) {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Yandex Sans Text", sans-serif;
   font-size: $size;
   font-weight: 400;
   line-height: $line-height;
@@ -34,7 +58,7 @@ $width-mobile-narrow: 331px;
 }
 
 @mixin medium-text($size, $line-height, $color) {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Yandex Sans Text", sans-serif;
   font-size: $size;
   font-weight: 500;
   line-height: $line-height;
@@ -42,7 +66,7 @@ $width-mobile-narrow: 331px;
 }
 
 @mixin semi-medium-text($size, $line-height, $color) {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Yandex Sans Text", sans-serif;
   font-size: $size;
   font-weight: 600;
   line-height: $line-height;
@@ -50,7 +74,7 @@ $width-mobile-narrow: 331px;
 }
 
 @mixin bold-text($size, $line-height, $color) {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Yandex Sans Text", sans-serif;
   font-size: $size;
   font-weight: 700;
   line-height: $line-height;
@@ -78,10 +102,12 @@ $width-mobile-narrow: 331px;
   max-height: $height;
 }
 
-@mixin buttonDefault() {
+@mixin button-default() {
+    cursor: pointer;
+
+    padding: 0;
+
     background: transparent;
     border: none;
     outline: 0;
-    padding: 0;
-    cursor: pointer;
-  }
+}

@@ -1,0 +1,50 @@
+
+@font-face {
+    font-family: 'Yandex Sans Text';
+    font-weight: normal;
+    font-style: normal;
+    src: url('YandexSansText-Regular.eot');
+    src: local('Yandex Sans Text Regular'), local('YandexSansText-Regular'),
+        url('YandexSansText-Regular.eot?#iefix') format('embedded-opentype'),
+        url('YandexSansText-Regular.woff2') format('woff2'),
+        url('YandexSansText-Regular.woff') format('woff'),
+        url('YandexSansText-Regular.ttf') format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Yandex Sans Text';
+    font-weight: bold;
+    font-style: normal;
+    src: url('YandexSansText-Bold.eot');
+    src: local('Yandex Sans Text Bold'), local('YandexSansText-Bold'),
+        url('YandexSansText-Bold.eot?#iefix') format('embedded-opentype'),
+        url('YandexSansText-Bold.woff2') format('woff2'),
+        url('YandexSansText-Bold.woff') format('woff'),
+        url('YandexSansText-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Yandex Sans Text';
+    font-weight: 500;
+    font-style: normal;
+    src: url('YandexSansText-Medium.eot');
+    src: local('Yandex Sans Text Medium'), local('YandexSansText-Medium'),
+        url('YandexSansText-Medium.eot?#iefix') format('embedded-opentype'),
+        url('YandexSansText-Medium.woff2') format('woff2'),
+        url('YandexSansText-Medium.woff') format('woff'),
+        url('YandexSansText-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Yandex Sans Text';
+    font-weight: 600;
+    font-style: normal;
+    src: url('YandexSansText-Medium.eot');
+    src: local('Yandex Sans Text Medium'), local('YandexSansText-Medium'),
+        url('YandexSansText-Medium.eot?#iefix') format('embedded-opentype'),
+        url('YandexSansText-Medium.woff2') format('woff2'),
+        url('YandexSansText-Medium.woff') format('woff'),
+        url('YandexSansText-Medium.ttf') format('truetype');
+}
+
