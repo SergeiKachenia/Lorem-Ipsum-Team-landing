@@ -55,6 +55,10 @@
     border-radius: 50px;
   }
 
+  @media (max-height: 760px) {
+    border-radius: 5px;
+  }
+
   @media (max-width: 640px) {
     gap: 8px;
   }
@@ -137,7 +141,8 @@
 
 .errorSpan {
   width: 100%;
-  height: 24px;
+  
+  margin: 12px 0px;
 
   text-align: right;
 
@@ -150,6 +155,9 @@
 
 .validError {
   @include medium-text(14px, 24px, $color-error);
+
+  margin: 0px;
+
   visibility: visible;
 }
 
