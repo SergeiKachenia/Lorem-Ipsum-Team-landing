@@ -44,7 +44,7 @@ export const OurTeam: React.FC<IOurTeamProps> = ({ teamList }) => {
   };
 
   return (
-    <section className={styles.ourTeam}>
+    <section className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.headerContainer}>
           <span className={styles.headerText}>Наша команда</span>
