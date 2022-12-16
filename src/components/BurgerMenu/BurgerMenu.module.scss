@@ -1,11 +1,10 @@
 @import 'styles/global';
 
-
 .menu {
-    display: none;
-    @media (max-width: $width-desk-narrow) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  display: none;
+
+  @media (max-width: $width-desk-narrow) {
+    @include flex(row, flex-end, center);
+    margin-right: 20px;
+  }
 }

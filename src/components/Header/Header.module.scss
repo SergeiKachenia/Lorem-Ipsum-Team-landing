@@ -1,70 +1,70 @@
+@import "styles/global";
 
 .header {
+  position: relative;
+
   width: 100%;
   padding: 20px 0;
 
   background-color: $color-background-header-and-footer;
+
+  .menu {
+    @include flex(row, flex-start, center);
+    gap: 40px;
+
+    list-style: none;
+
+    transition: left 0.6s ease-out;
+
+    &.menu_active {
+      left: 0;
+    }
+
+    @media (max-width: $width-desk-narrow) {
+      @include flex(column, flex-start, center);
+
+      position: absolute;
+      top: 100%;
+      left: -100%;
+
+      gap: 20px;
+
+      box-sizing: content-box;
+      width: 100%;
+      padding: 0 0 20px;
+
+      background-color: $color-background-header-and-footer;
+    }
+  }
 
   @media (max-width: $width-desk-narrow) {
     box-sizing: border-box;
   }
 }
 
-.menu {
-  @include flex(row, flex-start, center);
-  gap: 40px;
-
-  list-style: none;
-
-  transition: left 0.2s;
-  @media (max-width: $width-desk-narrow) {
-    position: absolute;
-    top: 68px;
-    left: -120%;
-
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-
-    box-sizing: content-box;
-    width: 100%;
-    padding: 0 0 20px;
-
-    background-color: $color-background-header-and-footer;
-  }
-}
-
-.menu_active {
-  left: 0;
-}
-
 .link {
-  @include regular-text(16px, 32px, $color-secondary-text);
+  @include regular-text(16px, 32px, $color-grey-text);
   padding-bottom: 6px;
 
   text-decoration: none;
 
   border-bottom: none;
 
-  transition: 0.3s;
-}
+  transition: color 0.3s ease-out;
 
-@media (any-hover:hover) {
-  .link:hover {
-    color: $color-secondary-hover;
+  &:active {
+    color: $color-white-text;
   }
-}
 
-.link:active {
-  color: $color-secondary-active;
-}
+  &.link_active {
+    color: $color-white-text;
 
-.link_active {
-  color: $color-secondary-active;
+    border-bottom: 1px solid $color-white-text;
+  }
 
-  border-bottom: 1px solid $color-secondary-text;
-}
-
-.link_active:hover {
-  color: $color-secondary-active;
+  @media (any-hover: hover) {
+    &:hover {
+      color: $color-white-text;
+    }
+  }
 }
