@@ -13,7 +13,7 @@ const FeedbackPopUp: React.FC = () => {
   return (
     <div>
       <button onClick={setPopUpVisible} className={cn(styles.popup_btn)}>
-        Форма обратной связи с нами
+        Написать нам
       </button>
       {isOpen && <FeedbackForm closeForm={setPopUpVisible}></FeedbackForm>}
     </div>
