@@ -11,4 +11,6 @@ export const store = configureStore({
   middleware: (getDefaultMiddleware) => getDefaultMiddleware(),
 });
 
+export type AppStateType = ReturnType<typeof reducer>;
+
 export type AppDispatch = typeof store.dispatch;
