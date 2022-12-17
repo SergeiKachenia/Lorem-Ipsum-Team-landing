@@ -2,48 +2,40 @@ import React, { useMemo } from 'react';
 
 import styles from './ProjectCard.module.scss';
 
-import avatar from '../../../assets/images/avatar.png';
-import defaultImage from '../../../assets/images/defaultProjectImage.png';
+import defaultAvatar from '../../../assets/images/avatar.png';
+import defaultPreview from '../../../assets/images/defaultProjectImage.png';
+
+import { IProjectCardProps } from '../../../types/IProject';
 import { StackLabel } from '../../StackLabel/StackLabel';
-
-interface IStackItem {
-  id: number;
-  technology: string;
-}
-
-interface IProjectCardProps {
-  imageUrl: string | null;
-  title: string;
-  authorName: string;
-  date: string;
-  company: string;
-  stack: IStackItem[];
-  description: string;
-}
 
 export const ProjectCard: React.FC<IProjectCardProps> = ({
   imageUrl,
   title,
-  authorName,
+  author,
   date,
-  company,
+  target,
   stack,
   description,
 }) => {
   const stackLabels = useMemo(() => {
-    return stack.map((s) => <StackLabel key={s.id} stackName={s.technology} />);
+    return stack.map((s) => <StackLabel key={s.id} technology={s.technology} />);
   }, [stack]);
 
   return (
     <article className={styles.wrapper}>
-      <img className={styles.preview} src={imageUrl !== null ? imageUrl : defaultImage} alt='Превью проекта' />
+      <img className={styles.preview} src={imageUrl !== null ? imageUrl : defaultPreview} alt='Превью проекта' />
       <div className={styles.info}>
         <h1 className={styles.title}>{title}</h1>
         <address className={styles.author}>
-          <img className={styles.authorAvatar} src={avatar} alt='Аватар' /> {authorName}
+          <img
+            className={styles.authorAvatar}
+            src={author.avatarUrl !== null ? author.avatarUrl : defaultAvatar}
+            alt='Аватар автора'
+          />{' '}
+          {author.name}
         </address>
         <div className={styles.subinfo}>
-          <time className={styles.date}>{date}</time>|<address className={styles.company}>{company}</address>|
+          <time className={styles.date}>{date}</time>|<address className={styles.target}>{target}</address>|
           <div className={styles.technologies}>{stackLabels}</div>
         </div>
         <p className={styles.description}>{description}</p>

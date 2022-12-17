@@ -1,6 +1,8 @@
 @import "styles/global";
 
 .wrapper {
+  align-self: stretch;
+
   box-sizing: content-box;
   width: 100%;
   max-width: 622px;
@@ -45,6 +47,8 @@
         display: block;
 
         margin-right: 8px;
+
+        border-radius: 50px;
       }
     }
 
@@ -52,24 +56,40 @@
       @include flex(row, flex-start, center);
 
       @include regular-text(14px, 20px, $color-grey-text);
-      gap: 5px;
+      flex-wrap: wrap;
+      gap: 8px;
 
       margin-bottom: 16px;
 
-      .company {
+      .target {
         font-style: normal;
       }
 
       .technologies {
         @include flex(row, flex-start, center);
+        flex-wrap: wrap;
         gap: 8px;
-
-        margin-left: 8px;
       }
     }
 
     .description {
       @include regular-text(16px, 24px, $color-dark-grey-text);
     }
+  }
+
+  @media (max-width: 1317px) {
+    max-width: 572px;
+  }
+
+  @media (max-width: 1213px) {
+    max-width: 522px;
+  }
+
+  @media (max-width: 1109px) {
+    max-width: 472px;
+  }
+
+  @media (max-width: $width-desk-narrow) {
+    max-width: 622px;
   }
 }

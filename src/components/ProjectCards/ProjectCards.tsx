@@ -1,25 +1,31 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 
 import { ProjectCard } from './ProjectCard/ProjectCard';
 import styles from './ProjectCards.module.scss';
 
+import { shortProjectsInfo } from '../../constants/projects';
+
 export const ProjectCards: React.FC = () => {
+  const mappedProjectCards = useMemo(
+    () =>
+      shortProjectsInfo.map((p) => (
+        <ProjectCard
+          key={p.id}
+          imageUrl={p.imageUrl}
+          title={p.title}
+          author={p.author}
+          date={p.date}
+          target={p.target}
+          stack={p.stack}
+          description={p.description}
+        />
+      )),
+    [shortProjectsInfo],
+  );
+
   return (
-    <div>
-      <ProjectCard
-        imageUrl={null}
-        title={'Название проекта #1'}
-        authorName={'Роман Николаев'}
-        date={'21:32 21/11/2022'}
-        company={'Академия Яндекс'}
-        stack={[
-          { id: 1, technology: 'HTML' },
-          { id: 2, technology: 'CSS' },
-        ]}
-        description={
-          'Краткое описание проекта. Lorem ipsum dolor sit amet consectetur. Senectus sed velit libero urna sem vivamus senectus penatibus turpis. Ut enim neque malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus ullamcorper vivamus. Amet neque aenean gravida maecenas...'
-        }
-      />
+    <div className={styles.wrapper}>
+      <div className={styles.container}>{mappedProjectCards}</div>
     </div>
   );
 };

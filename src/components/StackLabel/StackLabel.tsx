@@ -1,10 +1,9 @@
 import React from 'react';
 
-import 'react-alice-carousel/lib/scss/alice-carousel.scss';
-import styles from './styles.module.scss';
+import styles from './StackLabel.module.scss';
 
-import { IStackLabelProps } from '../../types/IStackLabelProps';
+import { IStackLabelProps } from '../../types/IStack';
 
-export const StackLabel: React.FC<IStackLabelProps> = ({ stackName }) => {
-  return <div className={styles.stackLabel}>{`${stackName}`}</div>;
+export const StackLabel: React.FC<IStackLabelProps> = ({ technology }) => {
+  return <div className={styles.stackLabel}>{`${technology}`}</div>;
 };

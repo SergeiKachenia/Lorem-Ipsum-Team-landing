@@ -1,1 +1,13 @@
 @import "styles/global";
+
+.wrapper {
+  .container {
+    @include flex(row, space-between, flex-start);
+    flex-wrap: wrap;
+    gap: 64px 16px;
+
+    @media (max-width: $width-desk-narrow) {
+      justify-content: center;
+    }
+  }
+}

@@ -1,14 +1,13 @@
 import React, { useMemo } from 'react';
 
-import 'react-alice-carousel/lib/scss/alice-carousel.scss';
-import styles from './styles.module.scss';
+import styles from './TeamMemberCard.module.scss';
 
 import { ITeamMemberCardProps } from '../../types/ITeamMemberCardProps';
 import { StackLabel } from '../StackLabel/StackLabel';
 
 export const TeamMemberCard: React.FC<ITeamMemberCardProps> = ({ name, stackList, desc, uuid }) => {
   const stackLabels = useMemo(() => {
-    return stackList.map((stack) => <StackLabel key={uuid + stack} stackName={stack} />);
+    return stackList.map((stack) => <StackLabel key={stack.id} technology={stack.technology} />);
   }, [stackList, uuid]);
   return (
     <div className={styles.card}>
