@@ -3,9 +3,9 @@ import FeedbackForm from 'components/FeedbackForm/FeedbackForm';
 
 import React, { useState } from 'react';
 
-import styles from './PopUp.module.scss';
+import styles from './FeedbackPopUp.module.scss';
 
-const PopUp: React.FC = () => {
+const FeedbackPopUp: React.FC = () => {
   const [isOpen, setOpen] = useState(false);
   const setPopUpVisible = (): void => {
     setOpen(!isOpen);
@@ -13,11 +13,11 @@ const PopUp: React.FC = () => {
   return (
     <div>
       <button onClick={setPopUpVisible} className={cn(styles.popup_btn)}>
-        Форма обратной связи с нами
+        Написать нам
       </button>
       {isOpen && <FeedbackForm closeForm={setPopUpVisible}></FeedbackForm>}
     </div>
   );
 };
 
-export default PopUp;
+export default FeedbackPopUp;

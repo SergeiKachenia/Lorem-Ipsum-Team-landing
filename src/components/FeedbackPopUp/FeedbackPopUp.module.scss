@@ -3,7 +3,7 @@
 .popup_btn {
   @include button-default;
   @include medium-text(20px, 24px, $color-white-text);
-  width: 400px;
+  width: 384px;
   padding: 24px;
 
   background: $color-main-blue;
