@@ -127,7 +127,7 @@
 .description {
   @include regular-text(16px, 24px, $color-dark-grey-text);
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .popupContainer {
     flex-direction: column-reverse;
   }
@@ -193,7 +193,7 @@
   height: 34.29px;
 
   path {
-    filter: invert(.7);
+    filter: invert(.85);
     mix-blend-mode: difference;
   }
 }
