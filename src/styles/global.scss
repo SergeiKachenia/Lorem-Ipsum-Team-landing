@@ -1,3 +1,4 @@
+@use "sass:math";
 
 // Common styles
 .container {
@@ -110,4 +111,21 @@ $width-mobile-narrow: 331px;
     background: transparent;
     border: none;
     outline: 0;
+}
+
+@mixin avatar-wrapper($border: 2px, $size: 84px, $color: #454545) {
+  $radius: math.div($size, 2) - $border;
+  width: $size;
+  height: $size;
+
+  clip-path: circle($radius);
+
+  img {
+    $offset: $radius - $border;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    clip-path: circle($offset);
+  }
 }
