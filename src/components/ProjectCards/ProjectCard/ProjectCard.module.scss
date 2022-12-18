@@ -1,0 +1,95 @@
+@import "styles/global";
+
+.wrapper {
+  align-self: stretch;
+
+  box-sizing: content-box;
+  width: 100%;
+  max-width: 622px;
+
+  background: $color-white;
+  border: 1px solid $color-main-blue;
+  border-radius: 16px;
+
+  .preview {
+    @include no-selection;
+    pointer-events: none;
+
+    display: block;
+
+    max-width: 100%;
+    max-height: 280px;
+
+    border-radius: 16px 16px 0 0;
+  }
+
+  .info {
+    padding: 16px 52px 16px 28px;
+
+    .title {
+      @include medium-text(30px, 48px, $color-another-main-text);
+      margin: 0 0 4px;
+    }
+
+    .author {
+      @include flex(row, flex-start, center);
+      @include regular-text(18px, 24px, $color-another-main-text);
+
+      margin-bottom: 16px;
+
+      font-style: normal;
+
+      &Avatar {
+        @include icon-size(32px, 32px);
+        @include no-selection;
+        pointer-events: none;
+
+        display: block;
+
+        margin-right: 8px;
+
+        border-radius: 50px;
+      }
+    }
+
+    .subinfo {
+      @include flex(row, flex-start, center);
+
+      @include regular-text(14px, 20px, $color-grey-text);
+      flex-wrap: wrap;
+      gap: 8px;
+
+      margin-bottom: 16px;
+
+      .target {
+        font-style: normal;
+      }
+
+      .technologies {
+        @include flex(row, flex-start, center);
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+    }
+
+    .description {
+      @include regular-text(16px, 24px, $color-dark-grey-text);
+    }
+  }
+
+  @media (max-width: 1317px) {
+    max-width: 572px;
+  }
+
+  @media (max-width: 1213px) {
+    max-width: 522px;
+  }
+
+  @media (max-width: 1109px) {
+    max-width: 472px;
+  }
+
+  @media (max-width: $width-desk-narrow) {
+    max-width: 622px;
+  }
+}
