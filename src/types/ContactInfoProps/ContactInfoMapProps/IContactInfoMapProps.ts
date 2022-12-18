@@ -1,4 +1,4 @@
-import { IAddress, IContact } from '../../IContact';
+import { IAddress } from '../../IContact';
 
 export interface IContactInfoMapProps {
   activeAddressId: number;
