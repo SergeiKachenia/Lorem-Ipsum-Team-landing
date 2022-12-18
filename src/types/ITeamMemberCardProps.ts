@@ -1,6 +1,8 @@
+import { IStackItem } from './IStack';
+
 export interface ITeamMemberCardProps {
   name: string;
-  stackList: string[];
+  stackList: IStackItem[];
   desc: string;
   uuid: string;
 }

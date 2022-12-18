@@ -1,6 +1,8 @@
+import { IStackItem } from './IStack';
+
 export interface ITeamMember {
   name: string;
-  stackList: string[];
+  stackList: IStackItem[];
   vkLink: string;
   gitHubLink: string;
   desc: string;
