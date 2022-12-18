@@ -2,13 +2,16 @@ import React, { useEffect, useMemo } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
+import { AppDispatch } from 'store';
+
+import { loadProjects } from 'store/projects/loadProjects';
+
+import { selectProjects, selectStatus } from 'store/projects/selectors';
+
+import { Statuses } from 'constants/statuses';
+
 import { ProjectCard } from './ProjectCard/ProjectCard';
 import styles from './ProjectCards.module.scss';
-
-import { Statuses } from '../../constants/statuses';
-import { AppDispatch } from '../../store';
-import { loadProjects } from '../../store/projects/loadProjects';
-import { selectProjects, selectStatus } from '../../store/projects/selectors';
 
 export const ProjectCards: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
@@ -43,9 +46,5 @@ export const ProjectCards: React.FC = () => {
     return <div>Загрузка</div>; /* Тут прелоадер */
   }
 
-  return (
-    <div className={styles.wrapper}>
-      <div className={styles.container}>{mappedProjectCards}</div>
-    </div>
-  );
+  return <div className={styles.container}>{mappedProjectCards}</div>;
 };

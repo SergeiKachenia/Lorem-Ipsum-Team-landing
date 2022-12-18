@@ -1,4 +1,4 @@
-import { IProjectInfo, IShortProjectInfo } from '../types/IProject';
+import { IProjectInfo, IShortProjectInfo } from 'types/IProject';
 
 export const shortProjectsInfo: IShortProjectInfo[] = [
   {
@@ -6,6 +6,7 @@ export const shortProjectsInfo: IShortProjectInfo[] = [
     imageUrl: null,
     title: 'Название проекта #1',
     author: {
+      id: 1,
       avatarUrl: null,
       name: 'Афанасьев Артем',
     },
@@ -23,6 +24,7 @@ export const shortProjectsInfo: IShortProjectInfo[] = [
     imageUrl: null,
     title: 'Название проекта #2',
     author: {
+      id: 2,
       avatarUrl: null,
       name: 'Дрягин Даниил',
     },
@@ -40,6 +42,7 @@ export const shortProjectsInfo: IShortProjectInfo[] = [
     imageUrl: null,
     title: 'Название проекта #3',
     author: {
+      id: 3,
       avatarUrl: null,
       name: 'Устинов Александр',
     },
@@ -57,6 +60,7 @@ export const shortProjectsInfo: IShortProjectInfo[] = [
     imageUrl: null,
     title: 'Название проекта #4',
     author: {
+      id: 1,
       avatarUrl: null,
       name: 'Афанасьев Артем',
     },
@@ -74,6 +78,7 @@ export const shortProjectsInfo: IShortProjectInfo[] = [
     imageUrl: null,
     title: 'Название проекта #5',
     author: {
+      id: 2,
       avatarUrl: null,
       name: 'Дрягин Даниил',
     },
@@ -91,6 +96,7 @@ export const shortProjectsInfo: IShortProjectInfo[] = [
     imageUrl: null,
     title: 'Название проекта #6',
     author: {
+      id: 3,
       avatarUrl: null,
       name: 'Устинов Александр',
     },
@@ -108,6 +114,7 @@ export const shortProjectsInfo: IShortProjectInfo[] = [
     imageUrl: null,
     title: 'Название проекта #7',
     author: {
+      id: 1,
       avatarUrl: null,
       name: 'Афанасьев Артем',
     },
@@ -125,6 +132,7 @@ export const shortProjectsInfo: IShortProjectInfo[] = [
     imageUrl: null,
     title: 'Название проекта #8',
     author: {
+      id: 2,
       avatarUrl: null,
       name: 'Дрягин Даниил',
     },
@@ -142,6 +150,7 @@ export const shortProjectsInfo: IShortProjectInfo[] = [
     imageUrl: null,
     title: 'Название проекта #9',
     author: {
+      id: 3,
       avatarUrl: null,
       name: 'Устинов Александр',
     },
@@ -162,6 +171,7 @@ export const projectsInfo: IProjectInfo[] = [
     imagesUrls: null,
     title: 'Название проекта #1',
     author: {
+      id: 1,
       avatarUrl: null,
       name: 'Афанасьев Артем',
     },
@@ -180,6 +190,7 @@ export const projectsInfo: IProjectInfo[] = [
     imagesUrls: null,
     title: 'Название проекта #2',
     author: {
+      id: 2,
       avatarUrl: null,
       name: 'Дрягин Даниил',
     },
@@ -198,6 +209,7 @@ export const projectsInfo: IProjectInfo[] = [
     imagesUrls: null,
     title: 'Название проекта #3',
     author: {
+      id: 3,
       avatarUrl: null,
       name: 'Устинов Александр',
     },
@@ -216,6 +228,7 @@ export const projectsInfo: IProjectInfo[] = [
     imagesUrls: null,
     title: 'Название проекта #4',
     author: {
+      id: 1,
       avatarUrl: null,
       name: 'Афанасьев Артем',
     },
@@ -234,6 +247,7 @@ export const projectsInfo: IProjectInfo[] = [
     imagesUrls: null,
     title: 'Название проекта #5',
     author: {
+      id: 2,
       avatarUrl: null,
       name: 'Дрягин Даниил',
     },
@@ -252,6 +266,7 @@ export const projectsInfo: IProjectInfo[] = [
     imagesUrls: null,
     title: 'Название проекта #6',
     author: {
+      id: 3,
       avatarUrl: null,
       name: 'Устинов Александр',
     },
@@ -270,6 +285,7 @@ export const projectsInfo: IProjectInfo[] = [
     imagesUrls: null,
     title: 'Название проекта #7',
     author: {
+      id: 1,
       avatarUrl: null,
       name: 'Афанасьев Артем',
     },
@@ -288,6 +304,7 @@ export const projectsInfo: IProjectInfo[] = [
     imagesUrls: null,
     title: 'Название проекта #8',
     author: {
+      id: 2,
       avatarUrl: null,
       name: 'Дрягин Даниил',
     },
@@ -306,6 +323,7 @@ export const projectsInfo: IProjectInfo[] = [
     imagesUrls: null,
     title: 'Название проекта #9',
     author: {
+      id: 3,
       avatarUrl: null,
       name: 'Устинов Александр',
     },

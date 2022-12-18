@@ -1,11 +1,11 @@
+import defaultAvatar from 'assets/images/avatar.png';
+import defaultPreview from 'assets/images/defaultProjectImage.png';
 import React, { useMemo } from 'react';
+
+import { IProjectCardProps } from 'types/IProject';
 
 import styles from './ProjectCard.module.scss';
 
-import defaultAvatar from '../../../assets/images/avatar.png';
-import defaultPreview from '../../../assets/images/defaultProjectImage.png';
-
-import { IProjectCardProps } from '../../../types/IProject';
 import { StackLabel } from '../../StackLabel/StackLabel';
 
 export const ProjectCard: React.FC<IProjectCardProps> = ({
@@ -31,7 +31,7 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
             className={styles.authorAvatar}
             src={author.avatarUrl !== null ? author.avatarUrl : defaultAvatar}
             alt='Аватар автора'
-          />{' '}
+          />
           {author.name}
         </address>
         <div className={styles.subinfo}>

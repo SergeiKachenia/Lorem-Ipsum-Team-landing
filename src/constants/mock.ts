@@ -1,5 +1,5 @@
-import { IContact } from '../types/IContact';
-import { ITeamMember } from '../types/ITeamMember';
+import { IContact } from 'types/IContact';
+import { ITeamMember } from 'types/ITeamMember';
 
 export const mockTeamMembers: ITeamMember[] = [
   {

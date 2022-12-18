@@ -1,8 +1,9 @@
 import React, { useMemo } from 'react';
 
+import { ITeamMemberCardProps } from 'types/ITeamMemberCardProps';
+
 import styles from './TeamMemberCard.module.scss';
 
-import { ITeamMemberCardProps } from '../../types/ITeamMemberCardProps';
 import { StackLabel } from '../StackLabel/StackLabel';
 
 export const TeamMemberCard: React.FC<ITeamMemberCardProps> = ({ name, stackList, desc, uuid }) => {
