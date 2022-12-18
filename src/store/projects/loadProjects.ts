@@ -9,7 +9,8 @@ export const loadProjects = createAsyncThunk('projects/loadProjects', async (_, 
   thunkAPI.dispatch(projectsSlice.actions.startLoading());
 
   try {
-    const response = await setDelay(() => shortProjectsInfo);
+    const projects = Number(Object(thunkAPI.getState()).projects.entities.length);
+    const response = await setDelay(() => shortProjectsInfo.slice(projects, projects + 6));
 
     thunkAPI.dispatch(projectsSlice.actions.updateEntities({ entities: response }));
     thunkAPI.dispatch(projectsSlice.actions.successLoading());

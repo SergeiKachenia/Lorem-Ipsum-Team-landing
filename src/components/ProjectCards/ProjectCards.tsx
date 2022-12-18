@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -16,10 +16,12 @@ import styles from './ProjectCards.module.scss';
 export const ProjectCards: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const projects = useSelector(selectProjects);
+  const [loadMore, setLoad] = useState(false);
 
-  useEffect(() => {
+  if (projects.length === 0 || loadMore) {
     void dispatch(loadProjects());
-  }, []);
+    setLoad(false);
+  }
 
   const mappedProjectCards = useMemo(() => {
     if (projects.length === 0) {
@@ -46,5 +48,10 @@ export const ProjectCards: React.FC = () => {
     return <div>Загрузка</div>; /* Тут прелоадер */
   }
 
-  return <div className={styles.container}>{mappedProjectCards}</div>;
+  return (
+    <div className={styles.container}>
+      <div className={styles.cards}>{mappedProjectCards}</div>
+      <button onClick={() => setLoad(true)}>Загрузить ещё...</button>
+    </div>
+  );
 };
