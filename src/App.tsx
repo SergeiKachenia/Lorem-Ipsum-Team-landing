@@ -1,13 +1,18 @@
-import AboutUsPage from 'pages/AboutUsPage';
-import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Footer from './components/Footer/Footer';
-import Header from './components/Header/Header';
+import React from 'react';
+import { Provider } from 'react-redux';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { store } from './store';
+
+// Components and pages
+import Footer from 'components/Footer/Footer';
+import Header from 'components/Header/Header';
+import AboutUsPage from 'pages/AboutUsPage';
 import ProjectsPage from './pages/ProjectsPage/ProjectsPage';
 
 export const App: React.FC = (): JSX.Element => {
   return (
+      <Provider store={store}>
     <BrowserRouter>
       <Header />
       <main>
@@ -18,5 +23,4 @@ export const App: React.FC = (): JSX.Element => {
       </main>
       <Footer />
     </BrowserRouter>
-  );
-};
+        </Provider>
