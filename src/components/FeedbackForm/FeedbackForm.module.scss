@@ -141,8 +141,7 @@
 
 .errorSpan {
   width: 100%;
-  
-  margin: 12px 0px;
+  margin: 12px 0;
 
   text-align: right;
 
@@ -156,7 +155,7 @@
 .validError {
   @include medium-text(14px, 24px, $color-error);
 
-  margin: 0px;
+  margin: 0;
 
   visibility: visible;
 }
