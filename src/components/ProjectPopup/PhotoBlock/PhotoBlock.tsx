@@ -3,7 +3,7 @@ import React, { memo, useMemo, useRef } from 'react';
 
 import AliceCarousel from 'react-alice-carousel';
 
-import styles from './styles.module.scss';
+import styles from './PhotoBlock.module.scss';
 
 import { IPhotoBlockProps } from '../../../types/IPhotoBlockProps';
 import { RoundArrowButton } from '../../RoundArrowButton/RoundArrowButton';

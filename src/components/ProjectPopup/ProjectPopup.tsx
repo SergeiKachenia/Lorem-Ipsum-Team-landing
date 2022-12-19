@@ -6,7 +6,7 @@ import { IProjectPopupProps } from 'types/IProjectPopupProps';
 
 import InfoBlock from './InfoBlock/InfoBlock';
 import PhotoBlock from './PhotoBlock/PhotoBlock';
-import styles from './styles.module.scss';
+import styles from './ProjectPopup.module.scss';
 
 const ProjectPopup: React.FC<IProjectPopupProps> = ({
   imagesUrls,

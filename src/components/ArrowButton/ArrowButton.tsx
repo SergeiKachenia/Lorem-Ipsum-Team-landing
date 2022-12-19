@@ -2,7 +2,7 @@ import cn from 'classnames';
 import React from 'react';
 
 import 'react-alice-carousel/lib/scss/alice-carousel.scss';
-import styles from './styles.module.scss';
+import styles from './ArrowButton.module.scss';
 
 import { ReactComponent as ArrowLeft } from '../../assets/icons/ArrowLeft.svg';
 import { ReactComponent as ArrowRight } from '../../assets/icons/ArrowRight.svg';
