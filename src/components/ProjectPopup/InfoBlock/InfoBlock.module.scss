@@ -117,13 +117,13 @@
   gap: 2px;
 
   .projectFooterLink {
-    color: $color-main-blue;
+    color: $color-link;
     text-decoration: none;
   }
 
   path {
     @include icon-size(15px, 15px);
 
-    fill: $color-main-blue;
+    fill: $color-link;
   }
 }
