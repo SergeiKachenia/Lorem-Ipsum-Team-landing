@@ -37,6 +37,11 @@ export const ContactInfoMap: React.FC<IContactInfoMapProps> = ({ activeAddressId
     <div className={styles.map}>
       <YMaps>
         <Map
+          options={{
+            copyrightLogoVisible: false,
+            copyrightProvidersVisible: false,
+            copyrightUaVisible: false,
+          }}
           defaultState={{
             center: [55.325187, 56.993132],
             zoom: 4,

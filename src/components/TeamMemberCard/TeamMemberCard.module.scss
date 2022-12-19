@@ -74,7 +74,6 @@
 
 .card:hover .cardStackList * {
   @include regular-text(14px, 20px, $color-dark-grey-text);
-  background: $color-white-text;
 }
 
 .card:hover {
