@@ -39,147 +39,15 @@
   border-radius: 2px;
 }
 
-.infoBlock {
-  @include flex(column, flex-start, flex-start);
-
-  /* Firefox scrollbar */
-  scrollbar-color: $color-grey transparent;
-  scrollbar-width: thin;
-
-  overflow-y: scroll;
-  gap: 16px;
-
-  width: 50%;
-  height: 100%;
-  padding: 32px 16px;
-
-  opacity: 1;
-  background: $color-white;
-  border-radius: 2px 0 0 2px;
-}
-
-
-
-.photoBlock {
-  @include flex(column, center, center);
-
-  position:relative;
-
-  width: 50%;
-  height: 100%;
-
-  opacity: 1;
-  background: $color-another-main-text;
-  border-radius: 0 2px 2px 0;
-}
-
-.projectHeader {
-  @include flex(column, flex-start, flex-start);
-  gap: 16px;
-
-  width: 100%;
-}
-
-.projectHeaderText {
-  @include medium-text(2em, 48px, $color-another-main-text);
-
-  margin: 0;
-  padding: 0;
-}
-
-.author {
-  @include flex(row, flex-start, center);
-  @include regular-text(18px, 24px, $color-another-main-text);
-
-  gap: 8px;
-
-  font-style: normal;
-
-  &Avatar {
-    @include icon-size(32px, 32px);
-    @include avatar-wrapper(0, 32px);
-    @include no-selection;
-    pointer-events: none;
-
-    margin-right: 8px;
-  }
-}
-
-.projectHeaderBottom {
-  @include flex(row, flex-start, center);
-
-  @include regular-text(14px, 20px, $color-grey-text);
-  flex-wrap: wrap;
-  gap: 8px;
-
-
-  .target {
-    font-style: normal;
-  }
-
-  .technologies {
-    @include flex(row, flex-start, center);
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-}
-
-.description {
-  @include regular-text(16px, 24px, $color-dark-grey-text);
-}
 @media (max-width: 1024px) {
   .popupContainer {
     flex-direction: column-reverse;
-  }
-
-  .infoBlock {
-  width:100%;
-  height: 50%;
   }
 
   .photoBlock {
     width:100%;
     height: 50%;
   }
-}
-
-
-/* scrollbar */
-
-/* Chrome, Edge and Safari */
-*::-webkit-scrollbar {
-  width: 18px;
-}
-
-.infoBlock::-webkit-scrollbar-track {
-  background-color: transparent;
-  border: solid 3px transparent;
-}
-
-.infoBlock::-webkit-scrollbar-track:hover {
-  background-color: transparent;
-}
-
-.infoBlock::-webkit-scrollbar-track:active {
-  background-color: transparent;
-}
-
-.infoBlock::-webkit-scrollbar-thumb {
-  background-color: $color-grey;
-  border: 5px solid $color-white;
-  border-radius: 20px;
-}
-
-.infoBlock::-webkit-scrollbar-thumb:hover {
-  background-color: $color-grey;
-}
-
-.infoBlock::-webkit-scrollbar-thumb:active {
-  background-color: $color-grey;
-}
-
-.hidden {
-  display: none;
 }
 
 .closeBtn {
@@ -195,63 +63,5 @@
   path {
     filter: invert(.85);
     mix-blend-mode: difference;
-  }
-}
-
-.carouselItem {
-  width: 100%;
-  max-height: 100%;
-  padding: 8px;
-
-  border-radius: 2px;
-}
-
-.button {
-  cursor: pointer;
-
-  width: 56px;
-  height: 56px;
-  padding: 0;
-
-  font: inherit;
-  color: inherit;
-
-  background: none;
-  border: none;
-  outline: inherit;
-}
-
-.buttons {
-  @include flex(row, space-between, center);
-
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  right: 0;
-  left: 0;
-  transform: translateY(-50%);
-
-  width: 100%;
-  padding: 0 2px;
-}
-
-.alice-carousel {
-  z-index: 1;
-}
-
-.projectFooter {
-  @include flex(row, flex-start, center);
-
-  gap: 2px;
-
-  .projectFooterLink {
-    color: $color-main-blue;
-    text-decoration: none;
-  }
-
-  path {
-    @include icon-size(15px, 15px);
-
-    fill: $color-main-blue;
   }
 }

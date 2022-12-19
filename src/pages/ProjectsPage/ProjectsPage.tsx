@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './ProjectsPage.module.scss';
 
-import { ProjectPopup } from '../../components/ProjectPopup/ProjectPopup';
+import ProjectPopup from '../../components/ProjectPopup/ProjectPopup';
 import { projectsInfo } from '../../constants/projects';
 
 const ProjectsPage: React.FC = () => {
