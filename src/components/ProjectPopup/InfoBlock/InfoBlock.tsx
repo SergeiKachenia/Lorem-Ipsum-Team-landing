@@ -1,6 +1,6 @@
 import React, { memo, useMemo } from 'react';
 
-import styles from './ProjectPopup.module.scss';
+import styles from './InfoBlock.module.scss';
 
 import { ReactComponent as LinkIcon } from '../../../assets/icons/LinkIcon.svg';
 import defaultAvatar from '../../../assets/images/avatar.png';
