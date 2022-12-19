@@ -9,6 +9,12 @@ export interface IAddress {
 }
 export interface IContact {
   id: number;
-  name: string;
-  addresses: IAddress[];
+  ru: {
+    name: string;
+    addresses: IAddress[];
+  };
+  en: {
+    name: string;
+    addresses: IAddress[];
+  };
 }

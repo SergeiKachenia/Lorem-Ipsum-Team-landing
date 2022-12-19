@@ -17,9 +17,9 @@ export const OurTeam: React.FC<IOurTeamProps> = ({ teamList }) => {
       <div key={member.uuid} className={styles.carouselItem}>
         <TeamMemberCard
           key={member.uuid}
-          name={member.name}
-          stackList={member.stackList}
-          desc={member.desc}
+          name={member.ru.name}
+          stackList={member.ru.stackList}
+          desc={member.ru.desc}
           uuid={member.uuid}
           data-value={member.uuid}
         />

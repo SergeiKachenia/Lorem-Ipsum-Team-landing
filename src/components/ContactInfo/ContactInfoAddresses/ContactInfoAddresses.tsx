@@ -15,8 +15,8 @@ export const ContactInfoAddresses: React.FC<IContactInfoAddressesProps> = ({
       contacts.map((c) => (
         <ContactInfoAddress
           key={c.id}
-          name={c.name}
-          addresses={c.addresses}
+          name={c.ru.name}
+          addresses={c.ru.addresses}
           activeAddressId={activeAddressId}
           setActiveAddressId={setActiveAddressId}
         />
