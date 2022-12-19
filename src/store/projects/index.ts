@@ -6,6 +6,7 @@ import { Statuses } from '../../constants/statuses';
 const initialState = {
   entities: [] as IShortProjectInfo[],
   status: Statuses.idle,
+  full: false,
 };
 
 export const projectsSlice = createSlice({
@@ -13,7 +14,12 @@ export const projectsSlice = createSlice({
   initialState,
   reducers: {
     updateEntities: (state, action) => {
-      state.entities = [...action.payload.entities];
+      const indexes = state.entities.map((el) => el.id);
+      const payload = [...action.payload.entities].filter((el) => !indexes.includes(el.id));
+      state.entities = [...state.entities].concat(payload);
+      if (indexes.length === 9) {
+        state.full = true;
+      }
     },
     startLoading: (state) => {
       state.status = Statuses.inProgress;

@@ -12,3 +12,4 @@ export const selectProjects = (state: AppStateType): IShortProjectInfo[] =>
   Object.values(selectProjectsModule(state).entities);
 export const selectStatus = (state: AppStateType): typeof Statuses[keyof typeof Statuses] =>
   selectProjectsModule(state).status;
+export const selectFull = (state: AppStateType): boolean => state.projects.full;

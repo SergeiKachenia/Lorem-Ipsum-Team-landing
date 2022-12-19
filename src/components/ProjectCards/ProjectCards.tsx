@@ -1,12 +1,12 @@
-import React, { useState, useMemo } from 'react';
-
+import React, { useEffect, useState, useMemo } from 'react';
+import { TfiReload } from 'react-icons/tfi';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { AppDispatch } from 'store';
 
 import { loadProjects } from 'store/projects/loadProjects';
 
-import { selectProjects, selectStatus } from 'store/projects/selectors';
+import { selectProjects, selectStatus, selectFull } from 'store/projects/selectors';
 
 import { Statuses } from 'constants/statuses';
 
@@ -16,13 +16,18 @@ import styles from './ProjectCards.module.scss';
 export const ProjectCards: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const projects = useSelector(selectProjects);
+  const isFull = useSelector(selectFull);
   const [loadMore, setLoad] = useState(false);
 
-  if (projects.length === 0 || loadMore) {
+  useEffect(() => {
     void dispatch(loadProjects());
-    setLoad(false);
-  }
+  }, []);
 
+  if (loadMore) {
+    setLoad(false);
+    void dispatch(loadProjects());
+  }
+  console.log(isFull);
   const mappedProjectCards = useMemo(() => {
     if (projects.length === 0) {
       return;
@@ -45,13 +50,26 @@ export const ProjectCards: React.FC = () => {
   const status = useSelector(selectStatus);
 
   if (status !== Statuses.success) {
-    return <div>Загрузка</div>; /* Тут прелоадер */
+    return (
+      <div>
+        <div className={styles.container}>
+          <div className={styles.cards}>{mappedProjectCards}</div>
+          <div>
+            <TfiReload className={styles.loader} />
+          </div>
+        </div>
+      </div>
+    ); /* Тут прелоадер */
   }
 
   return (
     <div className={styles.container}>
       <div className={styles.cards}>{mappedProjectCards}</div>
-      <button onClick={() => setLoad(true)}>Загрузить ещё...</button>
+      {!isFull && (
+        <button className={styles.loadbtn} onClick={() => setLoad(true)}>
+          Загрузить ещё проекты
+        </button>
+      )}
     </div>
   );
 };
