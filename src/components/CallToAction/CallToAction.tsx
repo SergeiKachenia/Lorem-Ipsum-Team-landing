@@ -12,6 +12,10 @@ const CallToAction: React.FC = () => {
         </span>
       </div>
       <button className={styles.CTAButton}>Заказать</button>
+      <button className={styles.CTAScrollButton}>
+        <div className={styles.icon} />
+        <span className={styles.caption}>SCROLL DOWN</span>
+      </button>
     </section>
   );
 };
