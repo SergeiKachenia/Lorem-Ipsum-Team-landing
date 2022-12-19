@@ -1,13 +1,16 @@
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
-import React, { useMemo } from 'react';
+import React, { useContext, useMemo } from 'react';
 
 import styles from './ContactInfoMap.module.scss';
 
 import activeMark from '../../../assets/icons/geomarker-active.svg';
 import defaultMark from '../../../assets/icons/geomarker-default.svg';
+import { LanguageContext } from '../../../contexts/LanguageContext';
 import { IContactInfoMapProps } from '../../../types/ContactInfoProps/ContactInfoMapProps/IContactInfoMapProps';
 
 export const ContactInfoMap: React.FC<IContactInfoMapProps> = ({ activeAddressId, setActiveAddressId, addresses }) => {
+  const languageContext = useContext(LanguageContext);
+
   const placemarkEventsHandler =
     (id: number) =>
     (ref: any): void => {
@@ -35,7 +38,7 @@ export const ContactInfoMap: React.FC<IContactInfoMapProps> = ({ activeAddressId
 
   return (
     <div className={styles.map}>
-      <YMaps>
+      <YMaps key={languageContext.language} query={{ lang: `${languageContext.language}_RU` }}>
         <Map
           options={{
             copyrightLogoVisible: false,

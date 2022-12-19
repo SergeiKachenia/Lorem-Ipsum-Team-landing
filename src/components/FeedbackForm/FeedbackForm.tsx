@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import { useFormik } from 'formik';
 
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 
 import { MdClose } from 'react-icons/md';
 import uuid from 'react-uuid';
@@ -10,9 +10,15 @@ import * as Yup from 'yup';
 
 import styles from './FeedbackForm.module.scss';
 
+import { locales } from '../../constants/modulesLocales/FeedbackForm';
+import { LanguageContext } from '../../contexts/LanguageContext';
+import { TextLocales } from '../common/TextLocales/TextLocales';
+
 const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
   const [buttonPressed, setPressed] = useState(false);
   const [resultMessage, setMessage] = useState('');
+
+  const languageContext = useContext(LanguageContext);
 
   const formik = useFormik({
     initialValues: {
@@ -22,10 +28,14 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
       dataTreat: [],
     },
     validationSchema: Yup.object({
-      name: Yup.string().required('Введите ваше имя').max(30, 'Слишком длинное имя'),
-      email: Yup.string().required('Введите ваш email').email('Некорректный email'),
-      message: Yup.string().required('Сообщение не может быть пустым'),
-      dataTreat: Yup.array().min(1, 'Даю согласие на обработку персональных данных'),
+      name: Yup.string()
+        .required(locales.EnterYourName[languageContext.language])
+        .max(30, locales.NameTooLong[languageContext.language]),
+      email: Yup.string()
+        .required(locales.EnterYourEmail[languageContext.language])
+        .email(locales.IncorrectEmail[languageContext.language]),
+      message: Yup.string().required(locales.MessageCantBeEmpty[languageContext.language]),
+      dataTreat: Yup.array().min(1),
     }),
     onSubmit: async (values, { setSubmitting, resetForm }) => {
       setSubmitting(true);
@@ -66,9 +76,13 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
       <div className={styles.container}>
         <form className={styles.form} onSubmit={formik.handleSubmit}>
           <MdClose className={styles.closeBtn} onClick={closeForm}></MdClose>
-          <h2 className={styles.title}>Форма для связи с нами</h2>
+          <h2 className={styles.title}>
+            <TextLocales locale={(l) => locales.ContactUsForm[l]} />
+          </h2>
           <div className={styles.field}>
-            <label className={cn(styles.label)}>Как вас зовут</label>
+            <label className={cn(styles.label)}>
+              <TextLocales locale={(l) => locales.WhatIsYourName[l]} />
+            </label>
             <input
               name='name'
               type='text'
@@ -86,7 +100,9 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
             {hasError('name') ? '' : formik.errors.name}
           </span>
           <div className={styles.field}>
-            <label className={cn(styles.label)}>Ваш email</label>
+            <label className={cn(styles.label)}>
+              <TextLocales locale={(l) => locales.YourEmail[l]} />
+            </label>
             <input
               name='email'
               type='email'
@@ -104,7 +120,9 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
             {hasError('email') ? '' : formik.errors.email}
           </span>
           <div className={styles.field}>
-            <label className={cn(styles.label)}>Ваше сообщение</label>
+            <label className={cn(styles.label)}>
+              <TextLocales locale={(l) => locales.YourMessage[l]} />
+            </label>
             <textarea
               name='message'
               rows={5}
@@ -130,7 +148,11 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
               onChange={formik.handleChange}
             />
             <label htmlFor='dataTreat' className={styles.data_check__label}>
-              {hasError('dataTreat') ? 'Даю согласие на обработку персональных данных' : formik.errors.dataTreat}
+              {hasError('dataTreat') ? (
+                <TextLocales locale={(l) => locales.ApprovalProcessingPersonalData[l]} />
+              ) : (
+                formik.errors.dataTreat
+              )}
             </label>
           </div>
           <button
@@ -138,7 +160,7 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
             type='submit'
             disabled={!(formik.isValid && formik.dirty) || formik.isSubmitting}
           >
-            Отправить
+            <TextLocales locale={(l) => locales.Send[l]} />
           </button>
         </form>
       </div>
