@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { TfiReload } from 'react-icons/tfi';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -17,17 +17,15 @@ export const ProjectCards: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const projects = useSelector(selectProjects);
   const isFull = useSelector(selectFull);
-  const [loadMore, setLoad] = useState(false);
 
-  useEffect(() => {
+  const loadMoreProjects = (): void => {
     void dispatch(loadProjects());
-  }, []);
+  };
 
-  if (loadMore) {
-    setLoad(false);
-    void dispatch(loadProjects());
+  if (projects.length === 0) {
+    loadMoreProjects();
   }
-  console.log(isFull);
+
   const mappedProjectCards = useMemo(() => {
     if (projects.length === 0) {
       return;
@@ -66,7 +64,7 @@ export const ProjectCards: React.FC = () => {
     <div className={styles.container}>
       <div className={styles.cards}>{mappedProjectCards}</div>
       {!isFull && (
-        <button className={styles.loadbtn} onClick={() => setLoad(true)}>
+        <button className={styles.loadbtn} onClick={loadMoreProjects}>
           Загрузить ещё проекты
         </button>
       )}

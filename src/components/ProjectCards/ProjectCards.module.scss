@@ -2,14 +2,15 @@
 
 .container {
   @include flex(column, flex-start, center);
-  margin-bottom: 48px;
   min-height: 514px;
+  margin-bottom: 48px;
 }
 
 .cards {
   @include flex(row, space-between, flex-start);
   flex-wrap: wrap;
   gap: 64px 16px;
+
   margin-bottom: 52px;
 
   @media (max-width: $width-desk-narrow) {
@@ -20,6 +21,7 @@
 .loader {
   width: 52px;
   height: 52px;
+
   animation: rotation 1s infinite linear;
 }
 
@@ -27,6 +29,7 @@
   from {
       transform: rotate(0deg);
   }
+
   to {
       transform: rotate(360deg);
   }
@@ -34,13 +37,15 @@
 
 
 .loadbtn {
-  @include regular-text(20px, 20px, $color-white-text);
-  background-color: $color-main-blue;
-  padding: 18px 24px;
-  border: none;
-  border-radius: 16px;
+  @include button-default;
+  @include regular-text(20px, 24px, $color-white-text);
+  padding: 28px 89px;
 
-  transition: 0.2s ease-in-out;
+  background-color: $color-main-blue;
+  border-radius: 20px;
+
+  transition: 0.3s ease-in-out;
+
   &:hover {
     background-color: $color-main-blue-hover;
   }

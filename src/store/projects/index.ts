@@ -13,13 +13,13 @@ export const projectsSlice = createSlice({
   name: 'projects',
   initialState,
   reducers: {
-    updateEntities: (state, action) => {
-      const indexes = state.entities.map((el) => el.id);
-      const payload = [...action.payload.entities].filter((el) => !indexes.includes(el.id));
-      state.entities = [...state.entities].concat(payload);
-      if (indexes.length === 9) {
-        state.full = true;
-      }
+    addEntities: (state, action) => {
+      const ids = state.entities.map((el) => el.id);
+      const filteredEntities = [...action.payload.entities].filter((el) => !ids.includes(el.id));
+      state.entities = [...state.entities, ...filteredEntities];
+    },
+    setFull: (state) => {
+      state.full = true;
     },
     startLoading: (state) => {
       state.status = Statuses.inProgress;
