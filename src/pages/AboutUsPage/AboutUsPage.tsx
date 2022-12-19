@@ -1,6 +1,6 @@
+import CallToAction from 'components/CallToAction/CallToAction';
 import { ContactInfo } from 'components/ContactInfo/ContactInfo';
 import { OurTeam } from 'components/OurTeam/OurTeam';
-
 import React from 'react';
 
 import { mockTeamMembers } from 'constants/mock';
@@ -8,6 +8,7 @@ import { mockTeamMembers } from 'constants/mock';
 const AboutUsPage: React.FC = () => {
   return (
     <>
+      <CallToAction />
       <OurTeam teamList={mockTeamMembers} />
       <ContactInfo />
     </>

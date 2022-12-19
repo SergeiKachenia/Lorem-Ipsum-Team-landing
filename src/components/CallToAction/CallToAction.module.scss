@@ -1,0 +1,81 @@
+@import 'styles/global';
+
+.CTAContainer {
+  @include flex(column, center, center);
+  gap: 30px;
+
+  height: calc(100vh - 72px);
+  padding-bottom: 72px;
+
+  text-align: center;
+  letter-spacing: -0.01em;
+
+  background: $color-cta-gradient;
+  @media (max-width: $width-desk-narrow) {
+    height: calc(100vh - 88px);
+    padding-bottom: 88px;
+  }
+}
+
+.CTAHeaderText {
+  @include medium-text(64px, 80px, $color-grey);
+
+  @media (max-width: $width-tablet-wide) {
+    @include medium-text(50px, 50px, $color-grey);
+  }
+  @media (max-width: $width-mobile-wide) {
+    @include medium-text(36px, 40px, $color-grey);
+  }
+}
+
+.CTADescription {
+  @include regular-text(24px, 30px, $color-grey);
+
+  max-width: 580px;
+
+  @media (max-width: $width-tablet-wide) {
+    @include regular-text(16px, 20px, $color-grey);
+    max-width: 460px;
+  }
+
+  @media (max-width: $width-mobile-wide) {
+    @include regular-text(15px, 20px, $color-grey);
+    max-width: 360px;
+  }
+}
+
+.CTAHeaderContainer {
+  @include flex(column, center, center);
+  height: fit-content;
+}
+
+.CTAButton {
+  @include medium-text(26px, 24px, $color-white-text);
+
+  cursor: pointer;
+
+  padding: 22px 45px;
+
+  color: $color-white-text;
+
+  background: $color-main-blue;
+  border: none;
+  border-radius: 20px;
+  outline: inherit;
+
+  transition: background .3s ease-out;
+
+  @media (max-width: $width-tablet-wide) {
+    @include medium-text(23px, 24px, $color-white-text);
+    padding: 19px 42px;
+  }
+
+  @media (max-width: $width-mobile-wide) {
+    @include medium-text(20px, 24px, $color-white-text);
+    padding: 16px 39px;
+  }
+}
+
+.CTAButton:hover {
+  background: $color-main-blue-hover;
+}
