@@ -1,3 +1,4 @@
+import { ReactComponent as RoundArrowLeft } from 'assets/icons/RoundArrowLeft.svg';
 import defaultAvatar from 'assets/images/avatar.png';
 import defaultPreview from 'assets/images/defaultProjectImage.png';
 import React, { useMemo } from 'react';
@@ -42,6 +43,11 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
             <div className={styles.technologies}>{stackLabels}</div>
           </div>
           <p className={styles.description}>{description}</p>
+        </div>
+        <div className={styles.arrowWrapper}>
+          <span className={styles.arrowRotate}>
+            <RoundArrowLeft className={styles.arrow} />
+          </span>
         </div>
       </article>
     </Link>

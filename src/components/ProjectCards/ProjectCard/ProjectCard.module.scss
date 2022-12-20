@@ -12,9 +12,11 @@
   max-width: 622px;
   height: 100%;
 
-  background: $color-white;
+  background-color: $color-white;
   border: 1px solid $color-main-blue;
   border-radius: 16px;
+
+  transition: background-color 0.3s ease-out;
 
   .preview {
     @include no-selection;
@@ -34,6 +36,8 @@
     .title {
       @include medium-text(30px, 48px, $color-another-main-text);
       margin: 0 0 4px;
+
+      transition: color 0.3s ease-out;
     }
 
     .author {
@@ -43,6 +47,8 @@
       margin-bottom: 16px;
 
       font-style: normal;
+
+      transition: color 0.3s ease-out;
 
       &Avatar {
         @include icon-size(32px, 32px);
@@ -66,6 +72,8 @@
 
       margin-bottom: 16px;
 
+      transition: color 0.3s ease-out;
+
       .target {
         font-style: normal;
       }
@@ -79,6 +87,58 @@
 
     .description {
       @include regular-text(16px, 24px, $color-dark-grey-text);
+      transition: color 0.3s ease-out;
+    }
+  }
+
+  .arrowWrapper {
+    @include flex(row, center, center);
+    width: 100%;
+    margin-bottom: 8px;
+
+    .arrowRotate {
+      transform: rotate(90deg);
+
+      .arrow {
+        transform: scaleY(0) translateX(10px);
+
+        opacity: 0;
+
+        transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+
+        path {
+          stroke: $color-white-text;
+        }
+      }
+    }
+  }
+
+
+  &:hover {
+    background-color: $color-main-blue;
+
+    .arrowRotate .arrow {
+      transform: scaleY(1) translateY(0);
+
+      opacity: 1;
+    }
+
+    .info {
+      .title {
+        color: $color-white-text;
+      }
+
+      .author {
+        color: $color-white-text;
+      }
+
+      .subinfo {
+        color: $color-white-text;
+      }
+
+      .description {
+        color: $color-white-text;
+      }
     }
   }
 

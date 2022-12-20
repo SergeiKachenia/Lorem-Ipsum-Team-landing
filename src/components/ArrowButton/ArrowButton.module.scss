@@ -9,6 +9,8 @@
 
   background: $color-white-text;
   border-radius: 20px;
+
+  transition: all 0.3s ease-out;
 }
 
 .buttonContainer path {
@@ -17,8 +19,6 @@
 
 .buttonContainer:hover {
   background: $color-main-blue-hover;
-
-  transition: 0.4s;
 }
 
 .buttonContainer:hover path {
