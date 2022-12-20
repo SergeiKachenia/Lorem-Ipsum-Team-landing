@@ -3,6 +3,7 @@
 .CTAContainer {
   @include flex(column, center, center);
   position: relative;
+  z-index: 1;
 
   gap: 30px;
 
@@ -48,7 +49,7 @@
 }
 
 .CTAButton {
-  @include medium-text(26px, 24px, $color-white-text);
+  @include medium-text(26px, 24px, $color-grey);
 
   cursor: pointer;
 
@@ -62,17 +63,19 @@
   transition: background .3s ease-out;
 
   @media (max-width: $width-tablet-wide) {
-    @include medium-text(23px, 24px, $color-white-text);
+    @include medium-text(23px, 24px, $color-grey);
     padding: 19px 42px;
   }
 
   @media (max-width: $width-mobile-wide) {
-    @include medium-text(20px, 24px, $color-white-text);
+    @include medium-text(20px, 24px, $color-grey);
     padding: 16px 39px;
   }
 }
 
 .CTAButton:hover {
+  color: $color-white-text;
+
   background: $color-main-blue-hover;
 }
 
