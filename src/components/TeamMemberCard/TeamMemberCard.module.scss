@@ -62,6 +62,9 @@
 
 .cardDescription {
   @include regular-text(16px, 22px, $color-dark-grey-text);
+  @include flex(column, flex-start, flex-start);
+
+  gap: 10px;
 }
 
 .card:hover .cardName {
@@ -81,4 +84,30 @@
   border-color: $color-white;
 
   transition: 0.4s;
+}
+
+.cardLinks {
+  @include flex(row, flex-start, center);
+  gap: 8px;
+}
+
+.cardLink {
+  @include flex(row, center, center);
+
+  cursor: pointer;
+
+  width: 26px;
+  height: 26px;
+  padding: 0;
+
+  text-decoration: none;
+
+  background: $color-white;
+  border: 1px solid $color-main-blue;
+  border-radius: 50px;
+  outline: inherit;
+
+  path {
+    fill: $color-another-main-text;
+  }
 }

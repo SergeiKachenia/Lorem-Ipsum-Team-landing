@@ -26,6 +26,8 @@ export const OurTeam: React.FC<IOurTeamProps> = ({ teamList }) => {
           stackList={member[languageContext.language].stackList}
           desc={member[languageContext.language].desc}
           uuid={member.uuid}
+          tgLink={member.tgLink}
+          ghLink={member.gitHubLink}
           data-value={member.uuid}
         />
       </div>
