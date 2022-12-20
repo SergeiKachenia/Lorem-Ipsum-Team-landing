@@ -13,10 +13,12 @@ import { Statuses } from 'constants/statuses';
 import { ProjectCard } from './ProjectCard/ProjectCard';
 import styles from './ProjectCards.module.scss';
 
+import { IShortProjectInfo } from '../../types/IProject';
+
 export const ProjectCards: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
-  const projects = useSelector(selectProjects);
-  const isFull = useSelector(selectFull);
+  const projects: IShortProjectInfo[] = useSelector(selectProjects);
+  const isFull: boolean = useSelector(selectFull);
 
   const loadMoreProjects = (): void => {
     void dispatch(loadProjects());

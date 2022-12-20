@@ -19,7 +19,7 @@ const ProjectsPage: React.FC = () => {
         <h1 className={styles.title}>Наши проекты</h1>
         <ProjectCards />
       </div>
-      <ProjectPopup
+      {/* <ProjectPopup
         author={projectsInfo[0].author}
         date={projectsInfo[0].date}
         target={projectsInfo[0].target}
@@ -31,7 +31,7 @@ const ProjectsPage: React.FC = () => {
         closePopup={() => {
           alert('insert handler there');
         }}
-      />
+      /> */}
     </>
   );
 };
