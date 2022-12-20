@@ -62,6 +62,9 @@
 
 .cardDescription {
   @include regular-text(16px, 22px, $color-dark-grey-text);
+  @include flex(column, flex-start, flex-start);
+
+  gap: 10px;
 }
 
 .card:hover .cardName {
@@ -81,4 +84,9 @@
   border-color: $color-white;
 
   transition: 0.4s;
+}
+
+.cardLinks {
+  @include flex(row, flex-start, center);
+  gap: 8px;
 }

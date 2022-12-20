@@ -5,4 +5,6 @@ export interface ITeamMemberCardProps {
   stackList: IStackItem[];
   desc: string;
   uuid: string;
+  tgLink?: string;
+  ghLink?: string;
 }
