@@ -76,6 +76,8 @@
 
   width: 34.29px;
   height: 34.29px;
+
+  color: $color-black;
 }
 
 .title {
@@ -185,9 +187,12 @@
 
   &:checked {
     &::before {
-      background-image: url("../../assets/icons/checkbox-active.svg");
+      background-color: $color-another-main-text;
       background-position: center;
       background-size: cover;
+      border: 1px solid #4b4c52;
+
+      mask-image: url("../../assets/icons/checkbox-active.svg");
     }
   }
 }

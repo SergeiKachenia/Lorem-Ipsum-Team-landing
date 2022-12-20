@@ -8,6 +8,20 @@
 
   background-color: $color-background-header-and-footer;
 
+  .container {
+    @include flex(row, space-between, center);
+
+    .leftWrapper {
+      @include flex(row, space-between, center);
+
+      width: 100%;
+
+      @media (max-width: $width-desk-narrow) {
+        justify-content: flex-start;
+      }
+    }
+  }
+
   .menu {
     @include flex(row, flex-start, center);
     gap: 40px;

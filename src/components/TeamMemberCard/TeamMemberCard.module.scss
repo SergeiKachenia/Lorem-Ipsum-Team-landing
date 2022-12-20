@@ -65,7 +65,7 @@
 }
 
 .card:hover .cardName {
-  @include medium-text(22px, 28px, $color-white-text);
+  @include medium-text(22px, 28px, $color-card-title-hover);
 }
 
 .card:hover .cardDescription {
@@ -74,7 +74,6 @@
 
 .card:hover .cardStackList * {
   @include regular-text(14px, 20px, $color-dark-grey-text);
-  background: $color-white-text;
 }
 
 .card:hover {
