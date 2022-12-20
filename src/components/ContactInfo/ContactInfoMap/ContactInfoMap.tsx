@@ -2,6 +2,7 @@ import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 import React, { useContext, useMemo } from 'react';
 
 import styles from './ContactInfoMap.module.scss';
+import './ReactYandexMaps.scss';
 
 import activeMark from '../../../assets/icons/geomarker-active.svg';
 import defaultMark from '../../../assets/icons/geomarker-default.svg';
