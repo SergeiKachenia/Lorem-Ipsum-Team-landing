@@ -51,7 +51,7 @@ export const OurTeam: React.FC<IOurTeamProps> = ({ teamList }) => {
   };
 
   return (
-    <section className={styles.wrapper}>
+    <div className={styles.wrapper}>
       <div className={styles.container}>
         <div className={styles.headerContainer}>
           <span className={styles.headerText}>
@@ -76,6 +76,6 @@ export const OurTeam: React.FC<IOurTeamProps> = ({ teamList }) => {
           mouseTracking
         />
       </div>
-    </section>
+    </div>
   );
 };

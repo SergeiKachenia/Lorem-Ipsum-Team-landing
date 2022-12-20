@@ -27,6 +27,7 @@
   --color-main-blue-active: #0b4670;
   --color-background-header-and-footer: #09293f;
   --color-disabled: #A4AAB5;
+  --color-cta-gradient: linear-gradient(97.22deg, #25638F 0%, #2A84C4 100%);
 }
 
 :root[data-theme="dark"] {
@@ -43,6 +44,7 @@
   --color-main-blue-active: none;
   --color-background-header-and-footer: #1C1C1E;
   --color-disabled: #A4AAB5;
+  --color-cta-gradient: linear-gradient(97.22deg, #1B1B1B 0%, #2E2E2E 100%);
 }
 
 // Colors
@@ -73,7 +75,7 @@ $color-disabled: var(--color-disabled);
 $color-background-header-and-footer: var(--color-background-header-and-footer);
 $color-link: #25638F;
 $color-popup-shading: #16161A;
-$color-cta-gradient: linear-gradient(97.22deg, #25638F 0%, #2A84C4 100%);
+$color-cta-gradient: var(--color-cta-gradient);
 
 // Sizes
 $width-desk-wide: 1281px;
