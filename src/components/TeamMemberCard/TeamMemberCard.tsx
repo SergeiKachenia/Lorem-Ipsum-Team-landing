@@ -25,8 +25,8 @@ export const TeamMemberCard: React.FC<ITeamMemberCardProps> = ({ name, stackList
       <div className={styles.cardDescription}>
         <span>{desc}</span>
         <div className={styles.cardLinks}>
-          <IconLink IconEl={GitHubIcon} href={ghLink} />
-          <IconLink IconEl={TelegramIcon} href={tgLink} />
+          {ghLink != null && ghLink !== '' && <IconLink IconEl={GitHubIcon} href={ghLink} />}
+          {tgLink != null && tgLink !== '' && <IconLink IconEl={TelegramIcon} href={tgLink} />}
         </div>
       </div>
     </div>
