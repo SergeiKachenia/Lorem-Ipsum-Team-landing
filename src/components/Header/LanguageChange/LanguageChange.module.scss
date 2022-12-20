@@ -4,13 +4,12 @@
   position: relative;
 
   .currentLanguage {
-    @include regular-text(14px, 28px, $color-white-text);
-
-    z-index: 6;
+    @include regular-text(14px, 28px, $color-grey);
 
     cursor: pointer;
 
     position: relative;
+    z-index: 6;
 
     &::before {
       content: "";
@@ -23,7 +22,7 @@
       width: 24px;
       height: 24px;
 
-      background: $color-white;
+      background: $color-grey;
       background-size: cover;
 
       mask-image: url("../../../assets/icons/language.svg");
