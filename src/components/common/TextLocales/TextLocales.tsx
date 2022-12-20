@@ -1,7 +1,7 @@
+import { LanguageContext } from 'contexts/LanguageContext';
 import React, { useContext } from 'react';
 
-import { LanguageContext } from '../../../contexts/LanguageContext';
-import { LanguageType } from '../../../types/ILanguageContext';
+import { LanguageType } from 'types/ILanguageContext';
 
 interface ITextLocalesProps {
   locale: (language: LanguageType) => string;

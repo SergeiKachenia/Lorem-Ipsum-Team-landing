@@ -1,16 +1,16 @@
 import cn from 'classnames';
 
 import BurgerMenu from 'components/BurgerMenu/BurgerMenu';
+import { TextLocales } from 'components/common/TextLocales/TextLocales';
 import React, { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
+
+import { locales } from 'constants/modulesLocales/Header';
 
 import styles from './Header.module.scss';
 import { LanguageChange } from './LanguageChange/LanguageChange';
 
-import { locales } from 'onstants/modulesLocales/Header';
-import { TextLocales } from 'common/TextLocales/TextLocales';
 import { ThemeChange } from './ThemeButton/ThemeChange';
-
 const Header: React.FC = () => {
   const [isOpen, setOpen] = useState(false);
 
@@ -23,7 +23,6 @@ const Header: React.FC = () => {
               <li>
                 <NavLink className={({ isActive }) => cn(styles.link, { [styles.link_active]: isActive })} to='/'>
                   <TextLocales locale={(l) => locales.aboutUs[l]} />
-                  О нас
                 </NavLink>
               </li>
               <li>
@@ -32,7 +31,6 @@ const Header: React.FC = () => {
                   to={'/projects'}
                 >
                   <TextLocales locale={(l) => locales.ourProjects[l]} />
-                  Наши проекты
                 </NavLink>
               </li>
             </ul>

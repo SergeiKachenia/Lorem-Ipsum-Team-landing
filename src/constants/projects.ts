@@ -327,7 +327,6 @@ export const shortProjectsInfo: IShortProjectInfo[] = [
   },
 ];
 
-
 export const projectsInfo: IProjectInfo[] = [
   {
     id: 1,

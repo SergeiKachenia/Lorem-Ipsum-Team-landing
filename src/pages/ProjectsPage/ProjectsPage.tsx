@@ -1,13 +1,13 @@
-import React from 'react';
-
-import styles from './ProjectsPage.module.scss';
-
 import { TextLocales } from 'components/common/TextLocales/TextLocales';
-import { locales } from 'constants/modulesLocales/ProjectsPage';
+
 import { ProjectCards } from 'components/ProjectCards/ProjectCards';
 import ProjectPopup from 'components/ProjectPopup/ProjectPopup';
+import React from 'react';
+
+import { locales } from 'constants/modulesLocales/ProjectsPage';
 import { projectsInfo } from 'constants/projects';
 
+import styles from './ProjectsPage.module.scss';
 
 const ProjectsPage: React.FC = () => {
   return (
