@@ -1,8 +1,9 @@
-import React, { useMemo } from 'react';
+import React, { useContext, useMemo } from 'react';
 
 import { ContactInfoAddress } from './ContactInfoAddress/ContactInfoAddress';
 import styles from './ContactInfoAddresses.module.scss';
 
+import { LanguageContext } from '../../../contexts/LanguageContext';
 import { IContactInfoAddressesProps } from '../../../types/ContactInfoProps/ContactInfoAddressesProps/IContactInfoAddressesProps';
 
 export const ContactInfoAddresses: React.FC<IContactInfoAddressesProps> = ({
@@ -10,18 +11,20 @@ export const ContactInfoAddresses: React.FC<IContactInfoAddressesProps> = ({
   activeAddressId,
   setActiveAddressId,
 }) => {
+  const languageContext = useContext(LanguageContext);
+
   const mappedAddresses = useMemo(
     () =>
       contacts.map((c) => (
         <ContactInfoAddress
           key={c.id}
-          name={c.name}
-          addresses={c.addresses}
+          name={c[languageContext.language].name}
+          addresses={c[languageContext.language].addresses}
           activeAddressId={activeAddressId}
           setActiveAddressId={setActiveAddressId}
         />
       )),
-    [activeAddressId],
+    [activeAddressId, languageContext.language],
   );
 
   return (

@@ -1,25 +1,32 @@
-import React, { useEffect, useMemo } from 'react';
-
+import React, { useMemo } from 'react';
+import { TfiReload } from 'react-icons/tfi';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { AppDispatch } from 'store';
 
 import { loadProjects } from 'store/projects/loadProjects';
 
-import { selectProjects, selectStatus } from 'store/projects/selectors';
+import { selectProjects, selectStatus, selectFull } from 'store/projects/selectors';
 
 import { Statuses } from 'constants/statuses';
 
 import { ProjectCard } from './ProjectCard/ProjectCard';
 import styles from './ProjectCards.module.scss';
 
+import { IShortProjectInfo } from '../../types/IProject';
+
 export const ProjectCards: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
-  const projects = useSelector(selectProjects);
+  const projects: IShortProjectInfo[] = useSelector(selectProjects);
+  const isFull: boolean = useSelector(selectFull);
 
-  useEffect(() => {
+  const loadMoreProjects = (): void => {
     void dispatch(loadProjects());
-  }, []);
+  };
+
+  if (projects.length === 0) {
+    loadMoreProjects();
+  }
 
   const mappedProjectCards = useMemo(() => {
     if (projects.length === 0) {
@@ -30,12 +37,12 @@ export const ProjectCards: React.FC = () => {
       <ProjectCard
         key={p.id}
         imageUrl={p.imageUrl}
-        title={p.title}
-        author={p.author}
-        date={p.date}
-        target={p.target}
-        stack={p.stack}
-        description={p.description}
+        title={p.ru.title}
+        author={p.ru.author}
+        date={p.ru.date}
+        target={p.ru.target}
+        stack={p.ru.stack}
+        description={p.ru.description}
       />
     ));
   }, [projects]);
@@ -43,8 +50,26 @@ export const ProjectCards: React.FC = () => {
   const status = useSelector(selectStatus);
 
   if (status !== Statuses.success) {
-    return <div>Загрузка</div>; /* Тут прелоадер */
+    return (
+      <div>
+        <div className={styles.container}>
+          <div className={styles.cards}>{mappedProjectCards}</div>
+          <div>
+            <TfiReload className={styles.loader} />
+          </div>
+        </div>
+      </div>
+    ); /* Тут прелоадер */
   }
 
-  return <div className={styles.container}>{mappedProjectCards}</div>;
+  return (
+    <div className={styles.container}>
+      <div className={styles.cards}>{mappedProjectCards}</div>
+      {!isFull && (
+        <button className={styles.loadbtn} onClick={loadMoreProjects}>
+          Загрузить ещё проекты
+        </button>
+      )}
+    </div>
+  );
 };

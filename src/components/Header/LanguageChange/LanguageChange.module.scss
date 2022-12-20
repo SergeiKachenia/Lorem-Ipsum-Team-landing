@@ -1,0 +1,79 @@
+@import "styles/global";
+
+.wrapper {
+  position: relative;
+
+  .currentLanguage {
+    @include regular-text(14px, 28px, $color-white-text);
+
+    cursor: pointer;
+
+    position: relative;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: -24px - 3px;
+      transform: translateY(-50%);
+
+      width: 24px;
+      height: 24px;
+
+      background: $color-white;
+      background-size: cover;
+
+      mask-image: url("../../../assets/icons/language.svg");
+    }
+
+    .languagesList {
+      position: absolute;
+      top: 100%;
+      right: -13px;
+      transform: translateY(-8px);
+
+      min-width: 192px;
+      padding: 8px;
+
+      visibility: hidden;
+      opacity: 0;
+      background-color: $color-white-text;
+      border: 1px solid $color-dark-grey-text;
+      border-radius: 8px;
+
+      transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s ease-out;
+
+      &.active {
+        transform: translateY(0);
+
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .language {
+        @include medium-text(14px, 28px, $color-main-text);
+        cursor: pointer;
+
+        padding: 8px;
+
+        border-radius: 4px;
+
+        transition: background-color 0.3s ease-out;
+
+        &:hover {
+          color: $color-white-text;
+
+          background-color: $color-grey-text-hover;
+        }
+      }
+    }
+
+    &:hover .languagesList {
+      transform: translateY(0);
+
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

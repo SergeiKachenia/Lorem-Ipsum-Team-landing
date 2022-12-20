@@ -1,10 +1,17 @@
 import { IStackItem } from './IStack';
 
 export interface ITeamMember {
-  name: string;
-  stackList: IStackItem[];
+  uuid: string;
   vkLink: string;
   gitHubLink: string;
-  desc: string;
-  uuid: string;
+  ru: {
+    name: string;
+    stackList: IStackItem[];
+    desc: string;
+  };
+  en: {
+    name: string;
+    stackList: IStackItem[];
+    desc: string;
+  };
 }

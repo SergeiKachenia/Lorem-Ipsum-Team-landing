@@ -12,7 +12,7 @@ export const ContactInfo: React.FC = () => {
   const addresses = useMemo(
     () =>
       contacts.reduce((acc: IAddress[], contact) => {
-        acc = [...acc, ...contact.addresses];
+        acc = [...acc, ...contact.ru.addresses];
         return acc;
       }, []),
     [contacts],

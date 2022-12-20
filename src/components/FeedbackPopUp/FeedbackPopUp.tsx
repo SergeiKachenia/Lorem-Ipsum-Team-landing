@@ -5,6 +5,9 @@ import React, { useState } from 'react';
 
 import styles from './FeedbackPopUp.module.scss';
 
+import { locales } from '../../constants/modulesLocales/ContactInfo';
+import { TextLocales } from '../common/TextLocales/TextLocales';
+
 const FeedbackPopUp: React.FC = () => {
   const [isOpen, setOpen] = useState(false);
   const setPopUpVisible = (): void => {
@@ -13,7 +16,7 @@ const FeedbackPopUp: React.FC = () => {
   return (
     <div>
       <button onClick={setPopUpVisible} className={cn(styles.popup_btn)}>
-        Написать нам
+        <TextLocales locale={(l) => locales.WriteToUs[l]} />
       </button>
       {isOpen && <FeedbackForm closeForm={setPopUpVisible}></FeedbackForm>}
     </div>

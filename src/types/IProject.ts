@@ -1,6 +1,6 @@
 import { IStackItem } from './IStack';
 
-interface IAuthor {
+export interface IAuthor {
   id: number;
   avatarUrl: string | null;
   name: string;
@@ -9,24 +9,45 @@ interface IAuthor {
 export interface IShortProjectInfo {
   id: number;
   imageUrl: string | null;
-  title: string;
-  author: IAuthor;
-  date: string;
-  target: string;
-  stack: IStackItem[];
-  description: string;
+  ru: {
+    title: string;
+    author: IAuthor;
+    date: string;
+    target: string;
+    stack: IStackItem[];
+    description: string;
+  };
+  en: {
+    title: string;
+    author: IAuthor;
+    date: string;
+    target: string;
+    stack: IStackItem[];
+    description: string;
+  };
 }
 
 export interface IProjectInfo {
   id: number;
   imagesUrls: string[] | null;
-  title: string;
-  author: IAuthor;
-  date: string;
-  target: string;
-  stack: IStackItem[];
-  description: string;
-  link: string;
+  ru: {
+    title: string;
+    author: IAuthor;
+    date: string;
+    target: string;
+    stack: IStackItem[];
+    description: string;
+    link: string;
+  };
+  en: {
+    title: string;
+    author: IAuthor;
+    date: string;
+    target: string;
+    stack: IStackItem[];
+    description: string;
+    link: string;
+  };
 }
 
 export interface IProjectCardProps {
