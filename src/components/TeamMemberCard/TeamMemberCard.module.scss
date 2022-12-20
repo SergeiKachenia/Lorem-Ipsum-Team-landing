@@ -90,24 +90,3 @@
   @include flex(row, flex-start, center);
   gap: 8px;
 }
-
-.cardLink {
-  @include flex(row, center, center);
-
-  cursor: pointer;
-
-  width: 26px;
-  height: 26px;
-  padding: 0;
-
-  text-decoration: none;
-
-  background: $color-white;
-  border: 1px solid $color-main-blue;
-  border-radius: 50px;
-  outline: inherit;
-
-  path {
-    fill: $color-another-main-text;
-  }
-}

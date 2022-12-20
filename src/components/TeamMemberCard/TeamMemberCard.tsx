@@ -4,6 +4,7 @@ import React, { useMemo } from 'react';
 
 import { ITeamMemberCardProps } from 'types/ITeamMemberCardProps';
 
+import IconLink from './IconLink/IconLink';
 import styles from './TeamMemberCard.module.scss';
 
 import { StackLabel } from '../StackLabel/StackLabel';
@@ -24,20 +25,8 @@ export const TeamMemberCard: React.FC<ITeamMemberCardProps> = ({ name, stackList
       <div className={styles.cardDescription}>
         <span>{desc}</span>
         <div className={styles.cardLinks}>
-          {ghLink === '' ? (
-            ''
-          ) : (
-            <a href={ghLink} className={styles.cardLink}>
-              <GitHubIcon />
-            </a>
-          )}
-          {tgLink === '' ? (
-            ''
-          ) : (
-            <a href={tgLink} className={styles.cardLink}>
-              <TelegramIcon />
-            </a>
-          )}
+          <IconLink IconEl={GitHubIcon} href={ghLink} />
+          <IconLink IconEl={TelegramIcon} href={tgLink} />
         </div>
       </div>
     </div>
