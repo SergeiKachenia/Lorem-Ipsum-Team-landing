@@ -24,6 +24,8 @@
 
   .menu {
     @include flex(row, flex-start, center);
+    z-index: 10;
+
     gap: 40px;
 
     list-style: none;
@@ -67,18 +69,18 @@
   transition: color 0.3s ease-out;
 
   &:active {
-    color: $color-white-text;
+    color: $color-grey;
   }
 
   &.link_active {
-    color: $color-white-text;
+    color: $color-grey;
 
-    border-bottom: 1px solid $color-white-text;
+    border-bottom: 1px solid $color-grey;
   }
 
   @media (any-hover: hover) {
     &:hover {
-      color: $color-white-text;
+      color: $color-grey-text-hover;
     }
   }
 }

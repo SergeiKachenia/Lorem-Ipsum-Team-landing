@@ -1,0 +1,157 @@
+@import 'styles/global';
+
+.CTAContainer {
+  @include flex(column, center, center);
+  position: relative;
+  z-index: 1;
+
+  gap: 30px;
+
+  height: calc(100vh - 88px);
+  padding-bottom: 88px;
+
+  text-align: center;
+  letter-spacing: -0.01em;
+
+  background: $color-cta-gradient;
+}
+
+.CTAHeaderText {
+  @include medium-text(64px, 80px, $color-grey);
+
+  @media (max-width: $width-tablet-wide) {
+    @include medium-text(50px, 50px, $color-grey);
+  }
+  @media (max-width: $width-mobile-wide) {
+    @include medium-text(36px, 40px, $color-grey);
+  }
+}
+
+.CTADescription {
+  @include regular-text(24px, 30px, $color-grey);
+
+  max-width: 580px;
+
+  @media (max-width: $width-tablet-wide) {
+    @include regular-text(16px, 20px, $color-grey);
+    max-width: 460px;
+  }
+
+  @media (max-width: $width-mobile-wide) {
+    @include regular-text(15px, 20px, $color-grey);
+    max-width: 360px;
+  }
+}
+
+.CTAHeaderContainer {
+  @include flex(column, center, center);
+  height: fit-content;
+}
+
+.CTAButton {
+  @include medium-text(26px, 24px, $color-grey);
+
+  cursor: pointer;
+
+  padding: 22px 45px;
+
+  background: $color-main-blue;
+  border: 2px solid $color-main-blue-hover;
+  border-radius: 20px;
+  outline: inherit;
+
+  transition: background .3s ease-out;
+
+  @media (max-width: $width-tablet-wide) {
+    @include medium-text(23px, 24px, $color-grey);
+    padding: 19px 42px;
+  }
+
+  @media (max-width: $width-mobile-wide) {
+    @include medium-text(20px, 24px, $color-grey);
+    padding: 16px 39px;
+  }
+}
+
+.CTAButton:hover {
+  color: $color-white-text;
+
+  background: $color-main-blue-hover;
+}
+
+.CTAScrollButton {
+  cursor: pointer;
+
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 150px;
+
+  text-align: center;
+
+  background: transparent;
+  border: none;
+  outline: inherit;
+
+  transition: background .3s ease-out;
+
+  .icon {
+    width: 26px;
+    height: 44px;
+    margin: 0 auto 4px;
+
+    border: 2px solid $color-grey;
+    border-radius: 13px;
+
+    transition: 0.3s all ease-in-out;
+  }
+
+  @keyframes scrollDownKnobAnimation {
+    0% {
+      transform: translate(-50%, 50%);
+    }
+
+    100% {
+      transform: translate(-50%, 150%);
+    }
+
+  }
+
+  .icon::before {
+    content: "";
+
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+
+    width: 6px;
+    height: 6px;
+
+    background-color: $color-grey;
+    border-radius: 50%;
+
+    animation: scrollDownKnobAnimation 1s ease-in infinite alternate;
+  }
+
+  .caption {
+    @include regular-text(12px, auto, $color-grey);
+
+    letter-spacing: 3px;
+
+    transition: 0.3s all ease;
+  }
+}
+
+.CTAScrollButton:hover .icon {
+  background-color: $color-grey;
+  border-color: $color-grey;
+}
+
+.CTAScrollButton:hover .caption {
+  letter-spacing: 5px;
+
+  opacity: 0;
+}

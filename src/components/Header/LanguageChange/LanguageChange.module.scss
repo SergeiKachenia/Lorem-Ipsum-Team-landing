@@ -4,7 +4,7 @@
   position: relative;
 
   .currentLanguage {
-    @include regular-text(14px, 28px, $color-white-text);
+    @include regular-text(14px, 28px, $color-grey);
 
     cursor: pointer;
 
@@ -21,7 +21,7 @@
       width: 24px;
       height: 24px;
 
-      background: $color-white;
+      background: $color-grey;
       background-size: cover;
 
       mask-image: url("../../../assets/icons/language.svg");
@@ -29,6 +29,7 @@
 
     .languagesList {
       position: absolute;
+      z-index: 9;
       top: 100%;
       right: -13px;
       transform: translateY(-8px);

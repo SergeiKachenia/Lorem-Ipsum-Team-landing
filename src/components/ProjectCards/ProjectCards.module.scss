@@ -23,6 +23,10 @@
   height: 52px;
 
   animation: rotation 1s infinite linear;
+
+  path {
+    fill: $color-another-main-text;
+  }
 }
 
 @keyframes rotation {
@@ -31,7 +35,7 @@
   }
 
   to {
-      transform: rotate(360deg);
+      transform: rotate(-360deg);
   }
 }
 
