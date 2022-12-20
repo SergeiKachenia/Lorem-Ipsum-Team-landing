@@ -21,7 +21,7 @@ export const ContactInfo: React.FC = () => {
   const [activeAddressId, setActiveAddressId] = useState(addresses[0].id);
 
   return (
-    <section className={styles.wrapper}>
+    <div className={styles.wrapper}>
       <div className={styles.container}>
         <MemoizedContactInfoHeader />
         <div className={styles.content}>
@@ -37,6 +37,6 @@ export const ContactInfo: React.FC = () => {
           />
         </div>
       </div>
-    </section>
+    </div>
   );
 };

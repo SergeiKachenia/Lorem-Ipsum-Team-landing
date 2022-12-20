@@ -1,16 +1,24 @@
 import CallToAction from 'components/CallToAction/CallToAction';
 import { ContactInfo } from 'components/ContactInfo/ContactInfo';
 import { OurTeam } from 'components/OurTeam/OurTeam';
-import React from 'react';
+import React, { useRef } from 'react';
 
 import { mockTeamMembers } from 'constants/mock';
 
 const AboutUsPage: React.FC = () => {
+  const scrollContactInfo = useRef<HTMLDivElement>(null);
+  const scrollDown = useRef<HTMLDivElement>(null);
+  const executeScrollContactInfo = (): void => scrollContactInfo?.current?.scrollIntoView();
+  const executeScrollDown = (): void => scrollDown?.current?.scrollIntoView();
   return (
     <>
-      <CallToAction />
-      <OurTeam teamList={mockTeamMembers} />
-      <ContactInfo />
+      <CallToAction scrollContactInfo={executeScrollContactInfo} scrollDown={executeScrollDown} />
+      <section ref={scrollDown}>
+        <OurTeam teamList={mockTeamMembers} />
+      </section>
+      <section ref={scrollContactInfo}>
+        <ContactInfo />
+      </section>
     </>
   );
 };

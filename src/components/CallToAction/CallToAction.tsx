@@ -2,7 +2,9 @@ import React from 'react';
 
 import styles from './CallToAction.module.scss';
 
-const CallToAction: React.FC = () => {
+import { ICallToActionProps } from '../../types/ICallToActionProps';
+
+const CallToAction: React.FC<ICallToActionProps> = ({ scrollContactInfo, scrollDown }) => {
   return (
     <section className={styles.CTAContainer}>
       <div className={styles.CTAHeaderContainer}>
@@ -11,8 +13,10 @@ const CallToAction: React.FC = () => {
           Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.
         </span>
       </div>
-      <button className={styles.CTAButton}>Заказать</button>
-      <button className={styles.CTAScrollButton}>
+      <button onClick={scrollContactInfo} className={styles.CTAButton}>
+        Заказать
+      </button>
+      <button onClick={scrollDown} className={styles.CTAScrollButton}>
         <div className={styles.icon} />
         <span className={styles.caption}>SCROLL DOWN</span>
       </button>
