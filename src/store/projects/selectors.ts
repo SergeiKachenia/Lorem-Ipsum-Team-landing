@@ -1,4 +1,4 @@
-import { IShortProjectInfo } from 'types/IProject';
+import { IProjectInfo, IShortProjectInfo } from 'types/IProject';
 
 import { projectsSlice } from './index';
 
@@ -10,6 +10,7 @@ export const selectProjectsModule = (state: AppStateType): typeof initialState =
 
 export const selectProjects = (state: AppStateType): IShortProjectInfo[] =>
   Object.values(selectProjectsModule(state).entities);
+export const selectDetails = (state: AppStateType): IProjectInfo | null => selectProjectsModule(state).details;
 export const selectStatus = (state: AppStateType): typeof Statuses[keyof typeof Statuses] =>
   selectProjectsModule(state).status;
 export const selectFull = (state: AppStateType): boolean => state.projects.full;

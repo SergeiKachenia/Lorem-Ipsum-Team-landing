@@ -1,11 +1,16 @@
 @import "styles/global";
 
-.wrapper {
+.link {
   align-self: stretch;
 
+  text-decoration: none;
+}
+
+.wrapper {
   box-sizing: content-box;
   width: 100%;
   max-width: 622px;
+  height: 100%;
 
   background: $color-white;
   border: 1px solid $color-main-blue;
