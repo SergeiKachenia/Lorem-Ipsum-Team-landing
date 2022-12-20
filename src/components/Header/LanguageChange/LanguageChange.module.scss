@@ -68,6 +68,10 @@
           background-color: $color-grey-text-hover;
         }
       }
+
+      @media (max-width: $width-desk-narrow) {
+        left: -13px - 27px;
+      }
     }
 
     &:hover .languagesList {

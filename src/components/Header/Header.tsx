@@ -35,8 +35,10 @@ const Header: React.FC = () => {
               </li>
             </ul>
           </nav>
-          <LanguageChange />
-          <ThemeChange />
+          <div className={styles.settings}>
+            <LanguageChange />
+            <ThemeChange />
+          </div>
         </div>
         <BurgerMenu onClick={() => setOpen(!isOpen)}></BurgerMenu>
       </div>

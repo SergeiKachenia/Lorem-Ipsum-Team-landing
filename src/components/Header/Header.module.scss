@@ -16,6 +16,16 @@
 
       width: 100%;
 
+      .settings {
+        @include flex(row, flex-start, center);
+        gap: 35px;
+
+        @media (max-width: $width-desk-narrow) {
+          flex-direction: row-reverse;
+          gap: 45px;
+        }
+      }
+
       @media (max-width: $width-desk-narrow) {
         justify-content: flex-start;
       }
