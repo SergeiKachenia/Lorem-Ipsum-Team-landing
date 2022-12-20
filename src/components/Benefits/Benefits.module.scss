@@ -1,0 +1,37 @@
+@import "styles/global";
+
+.container {
+  margin-top: 100px;
+  padding-top: 20px;
+}
+
+.title {
+  @include regular-text(64px, 80px, $color-main-text);
+  margin: 0 0 42px;
+
+  @media (max-width: $width-desk-narrow) {
+    font-size: 40px;
+  }
+  @media (max-width: 595px) {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
+.items {
+  @include flex(row, space-around, flex-start);
+  flex-wrap: wrap;
+  gap: 60px;
+
+  padding: 0 77px;
+
+  @media (max-width: $width-desk-wide) {
+    justify-content: space-evenly;
+
+    padding: 0 17px;
+  }
+
+  @media (max-width: 469px) {
+    padding: 0;
+  }
+}

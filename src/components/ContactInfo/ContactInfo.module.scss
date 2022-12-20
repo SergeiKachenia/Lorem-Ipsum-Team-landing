@@ -1,7 +1,8 @@
 @import 'styles/global';
 
 .wrapper {
-  margin-bottom: 126px;
+  margin: 100px 0 126px;
+  padding-top: 20px;
 
   .content {
     @include flex(row, space-between, flex-start);
