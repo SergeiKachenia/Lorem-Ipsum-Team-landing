@@ -5,14 +5,12 @@ import React from 'react';
 
 import styles from './BurgerMenu.module.scss';
 
-interface BurgerComponents {
-  onClick: () => void;
-}
+import { IBurgerProps } from '../../types/IBurgerProps';
 
-const BurgerMenu: React.FC<BurgerComponents> = ({ onClick }) => {
+const BurgerMenu: React.FC<IBurgerProps> = ({ onClick, toggled }) => {
   return (
     <div className={cn(styles.menu)}>
-      <Divide color='#e7ecf7' onToggle={onClick}></Divide>
+      <Divide color='#e7ecf7' onToggle={onClick} toggled={toggled}></Divide>
     </div>
   );
 };

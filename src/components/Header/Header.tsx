@@ -2,7 +2,7 @@ import cn from 'classnames';
 
 import BurgerMenu from 'components/BurgerMenu/BurgerMenu';
 import { TextLocales } from 'components/common/TextLocales/TextLocales';
-import React, { useContext, useState } from 'react';
+import React, { RefObject, useContext, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import { locales } from 'constants/modulesLocales/Header';
@@ -11,8 +11,13 @@ import styles from './Header.module.scss';
 import { LanguageChange } from './LanguageChange/LanguageChange';
 
 import { ThemeChange } from './ThemeButton/ThemeChange';
+
 const Header: React.FC = () => {
   const [isOpen, setOpen] = useState(false);
+
+  const closeMenu = (): void => {
+    setOpen(false);
+  };
 
   return (
     <header className={styles.header}>
@@ -21,7 +26,11 @@ const Header: React.FC = () => {
           <nav className={styles.navigation}>
             <ul className={cn(styles.menu, { [styles.menu_active]: isOpen })}>
               <li>
-                <NavLink className={({ isActive }) => cn(styles.link, { [styles.link_active]: isActive })} to='/'>
+                <NavLink
+                  className={({ isActive }) => cn(styles.link, { [styles.link_active]: isActive })}
+                  to='/'
+                  onClick={closeMenu}
+                >
                   <TextLocales locale={(l) => locales.aboutUs[l]} />
                 </NavLink>
               </li>
@@ -29,6 +38,7 @@ const Header: React.FC = () => {
                 <NavLink
                   className={({ isActive }) => cn(styles.link, { [styles.link_active]: isActive })}
                   to={'/projects'}
+                  onClick={closeMenu}
                 >
                   <TextLocales locale={(l) => locales.ourProjects[l]} />
                 </NavLink>
@@ -40,7 +50,7 @@ const Header: React.FC = () => {
             <ThemeChange />
           </div>
         </div>
-        <BurgerMenu onClick={() => setOpen(!isOpen)}></BurgerMenu>
+        <BurgerMenu onClick={() => setOpen(!isOpen)} toggled={isOpen}></BurgerMenu>
       </div>
     </header>
   );
