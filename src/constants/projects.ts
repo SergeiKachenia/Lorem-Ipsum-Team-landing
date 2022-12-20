@@ -3,7 +3,6 @@ import { IProjectInfo } from 'types/IProject';
 export const projectsInfo: IProjectInfo[] = [
   {
     id: 1,
-    imagesUrls: null,
     ru: {
       title: 'Название проекта #1',
       author: {
@@ -38,6 +37,7 @@ export const projectsInfo: IProjectInfo[] = [
         'Краткое описание проекта. Lorem ipsum dolor sit amet consectetur. Senectus sed velit libero urna sem vivamus senectus penatibus turpis. Ut enim neque malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus ullamcorper vivamus. Amet neque aenean gravida maecenas...',
       link: 'https://example.com/',
     },
+    imagesUrls: ['images/defaultProjectImage.png', 'images/defaultProjectImage.png'],
   },
   {
     id: 2,

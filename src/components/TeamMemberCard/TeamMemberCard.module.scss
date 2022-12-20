@@ -65,7 +65,7 @@
 }
 
 .card:hover .cardName {
-  @include medium-text(22px, 28px, $color-card-title-hover);
+  @include medium-text(22px, 28px, $color-white-text);
 }
 
 .card:hover .cardDescription {
