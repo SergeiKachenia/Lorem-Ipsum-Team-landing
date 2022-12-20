@@ -29,6 +29,7 @@
 
     .languagesList {
       position: absolute;
+      z-index: 9;
       top: 100%;
       right: -13px;
       transform: translateY(-8px);
