@@ -6,17 +6,13 @@
 
   gap: 30px;
 
-  height: calc(100vh - 72px);
-  padding-bottom: 72px;
+  height: calc(100vh - 88px);
+  padding-bottom: 88px;
 
   text-align: center;
   letter-spacing: -0.01em;
 
   background: $color-cta-gradient;
-  @media (max-width: $width-desk-narrow) {
-    height: calc(100vh - 88px);
-    padding-bottom: 88px;
-  }
 }
 
 .CTAHeaderText {
@@ -58,10 +54,8 @@
 
   padding: 22px 45px;
 
-  color: $color-white-text;
-
   background: $color-main-blue;
-  border: none;
+  border: 2px solid $color-main-blue-hover;
   border-radius: 20px;
   outline: inherit;
 
@@ -105,7 +99,7 @@
     height: 44px;
     margin: 0 auto 4px;
 
-    border: 2px solid $color-white-text;
+    border: 2px solid $color-grey;
     border-radius: 13px;
 
     transition: 0.3s all ease-in-out;
@@ -133,14 +127,14 @@
     width: 6px;
     height: 6px;
 
-    background-color: $color-white-text;
+    background-color: $color-grey;
     border-radius: 50%;
 
     animation: scrollDownKnobAnimation 1s ease-in infinite alternate;
   }
 
   .caption {
-    @include regular-text(12px, auto, $color-white-text);
+    @include regular-text(12px, auto, $color-grey);
 
     letter-spacing: 3px;
 
@@ -149,8 +143,8 @@
 }
 
 .CTAScrollButton:hover .icon {
-  background-color: $color-white-text;
-  border-color: $color-white-text;
+  background-color: $color-grey;
+  border-color: $color-grey;
 }
 
 .CTAScrollButton:hover .caption {
