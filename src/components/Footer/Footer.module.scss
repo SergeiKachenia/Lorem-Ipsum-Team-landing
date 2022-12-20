@@ -7,5 +7,5 @@
 }
 
 .text {
-  @include regular-text(16px, 32px, $color-white-text);
+  @include regular-text(16px, 32px, $color-grey);
 }
