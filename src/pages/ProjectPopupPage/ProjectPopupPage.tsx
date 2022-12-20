@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 export const ProjectPopupPage: React.FC = () => {
   const navigate = useNavigate();
 
-  const closePopup = (popupReset: () => void) => {
+  const closePopup = (popupReset: () => void): void => {
     popupReset();
     navigate('/projects');
   };
