@@ -2,14 +2,18 @@ import React from 'react';
 
 import styles from './ProjectsPage.module.scss';
 
-import ProjectPopup from '../../components/ProjectPopup/ProjectPopup';
-import { projectsInfo } from '../../constants/projects';
+
+import { ProjectCards } from 'components/ProjectCards/ProjectCards';
+import ProjectPopup from 'components/ProjectPopup/ProjectPopup';
+import { projectsInfo } from 'constants/projects';
+
 
 const ProjectsPage: React.FC = () => {
   return (
     <>
       <div className={styles.container}>
         <h1 className={styles.title}>Наши проекты</h1>
+        <ProjectCards />
       </div>
       <ProjectPopup
         author={projectsInfo[0].author}
