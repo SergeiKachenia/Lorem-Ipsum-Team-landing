@@ -2,19 +2,23 @@ import React from 'react';
 
 import styles from './CallToAction.module.scss';
 
+import { locales } from '../../constants/modulesLocales/CallToAction';
 import { ICallToActionProps } from '../../types/ICallToActionProps';
+import { TextLocales } from '../common/TextLocales/TextLocales';
 
 const CallToAction: React.FC<ICallToActionProps> = ({ scrollContactInfo, scrollDown }) => {
   return (
     <section className={styles.CTAContainer}>
       <div className={styles.CTAHeaderContainer}>
-        <h2 className={styles.CTAHeaderText}>Lorem ipsum dolor sit.</h2>
+        <h2 className={styles.CTAHeaderText}>
+          <TextLocales locale={(l) => locales.HeaderText[l]} />
+        </h2>
         <span className={styles.CTADescription}>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.
+          <TextLocales locale={(l) => locales.Description[l]} />
         </span>
       </div>
       <button onClick={scrollContactInfo} className={styles.CTAButton}>
-        Заказать
+        <TextLocales locale={(l) => locales.Order[l]} />
       </button>
       <button onClick={scrollDown} className={styles.CTAScrollButton}>
         <div className={styles.icon} />
