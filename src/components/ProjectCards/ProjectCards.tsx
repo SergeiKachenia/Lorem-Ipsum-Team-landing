@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useContext, useMemo } from 'react';
 import { TfiReload } from 'react-icons/tfi';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -13,10 +13,16 @@ import { Statuses } from 'constants/statuses';
 import { ProjectCard } from './ProjectCard/ProjectCard';
 import styles from './ProjectCards.module.scss';
 
+import { locales } from '../../constants/modulesLocales/ProjectCards';
+import { LanguageContext } from '../../contexts/LanguageContext';
+import { TextLocales } from '../common/TextLocales/TextLocales';
+
 export const ProjectCards: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const projects = useSelector(selectProjects);
   const isFull = useSelector(selectFull);
+
+  const languageContext = useContext(LanguageContext);
 
   const loadMoreProjects = (): void => {
     void dispatch(loadProjects());
@@ -35,15 +41,15 @@ export const ProjectCards: React.FC = () => {
       <ProjectCard
         key={p.id}
         imageUrl={p.imageUrl}
-        title={p.ru.title}
-        author={p.ru.author}
-        date={p.ru.date}
-        target={p.ru.target}
-        stack={p.ru.stack}
-        description={p.ru.description}
+        title={p[languageContext.language].title}
+        author={p[languageContext.language].author}
+        date={p[languageContext.language].date}
+        target={p[languageContext.language].target}
+        stack={p[languageContext.language].stack}
+        description={p[languageContext.language].description}
       />
     ));
-  }, [projects]);
+  }, [projects, languageContext.language]);
 
   const status = useSelector(selectStatus);
 
@@ -65,7 +71,7 @@ export const ProjectCards: React.FC = () => {
       <div className={styles.cards}>{mappedProjectCards}</div>
       {!isFull && (
         <button className={styles.loadbtn} onClick={loadMoreProjects}>
-          Загрузить ещё проекты
+          <TextLocales locale={(l) => locales.LoadMoreProjects[l]} />
         </button>
       )}
     </div>
