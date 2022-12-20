@@ -6,6 +6,8 @@
   .currentLanguage {
     @include regular-text(14px, 28px, $color-white-text);
 
+    z-index: 6;
+
     cursor: pointer;
 
     position: relative;
