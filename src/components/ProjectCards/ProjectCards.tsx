@@ -35,12 +35,12 @@ export const ProjectCards: React.FC = () => {
       <ProjectCard
         key={p.id}
         imageUrl={p.imageUrl}
-        title={p.title}
-        author={p.author}
-        date={p.date}
-        target={p.target}
-        stack={p.stack}
-        description={p.description}
+        title={p.ru.title}
+        author={p.ru.author}
+        date={p.ru.date}
+        target={p.ru.target}
+        stack={p.ru.stack}
+        description={p.ru.description}
       />
     ));
   }, [projects]);

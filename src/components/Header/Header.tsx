@@ -1,14 +1,19 @@
 import cn from 'classnames';
 
 import BurgerMenu from 'components/BurgerMenu/BurgerMenu';
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import styles from './Header.module.scss';
+import { LanguageChange } from './LanguageChange/LanguageChange';
+
+import { locales } from 'onstants/modulesLocales/Header';
+import { TextLocales } from 'common/TextLocales/TextLocales';
 import { ThemeChange } from './ThemeButton/ThemeChange';
 
 const Header: React.FC = () => {
   const [isOpen, setOpen] = useState(false);
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
@@ -17,6 +22,7 @@ const Header: React.FC = () => {
             <ul className={cn(styles.menu, { [styles.menu_active]: isOpen })}>
               <li>
                 <NavLink className={({ isActive }) => cn(styles.link, { [styles.link_active]: isActive })} to='/'>
+                  <TextLocales locale={(l) => locales.aboutUs[l]} />
                   О нас
                 </NavLink>
               </li>
@@ -25,11 +31,13 @@ const Header: React.FC = () => {
                   className={({ isActive }) => cn(styles.link, { [styles.link_active]: isActive })}
                   to={'/projects'}
                 >
+                  <TextLocales locale={(l) => locales.ourProjects[l]} />
                   Наши проекты
                 </NavLink>
               </li>
             </ul>
           </nav>
+          <LanguageChange />
           <ThemeChange />
         </div>
         <BurgerMenu onClick={() => setOpen(!isOpen)}></BurgerMenu>
