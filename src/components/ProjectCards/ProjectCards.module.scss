@@ -43,7 +43,9 @@
 .loadbtn {
   @include button-default;
   @include regular-text(20px, 24px, $color-white-text);
-  padding: 28px 89px;
+  width: 100%;
+  max-width: 400px;
+  padding: 28px;
 
   background-color: $color-main-blue;
   border-radius: 20px;

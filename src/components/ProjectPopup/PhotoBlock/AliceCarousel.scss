@@ -1,0 +1,13 @@
+@import "styles/global";
+
+.alice-carousel {
+  height: 100%;
+
+  &>div {
+    height: 100%;
+
+    .alice-carousel__wrapper {
+      height: 100%;
+    }
+  }
+}
