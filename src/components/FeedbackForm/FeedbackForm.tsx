@@ -1,4 +1,5 @@
 import cn from 'classnames';
+import { getFirestore, collection, addDoc, getDocs } from 'firebase/firestore';
 import { useFormik } from 'formik';
 
 import React, { useContext, useState } from 'react';
@@ -12,6 +13,7 @@ import styles from './FeedbackForm.module.scss';
 
 import { locales } from '../../constants/modulesLocales/FeedbackForm';
 import { LanguageContext } from '../../contexts/LanguageContext';
+import { app } from '../../firebase';
 import { TextLocales } from '../common/TextLocales/TextLocales';
 
 const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
@@ -19,6 +21,20 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
   const [resultMessage, setMessage] = useState('');
 
   const languageContext = useContext(LanguageContext);
+
+  const db = getFirestore(app);
+
+  try {
+    const docRef = await addDoc(collection(db, 'replies'), {
+      name: 'testAdding',
+      email: 'add@test.com',
+      message: 'message',
+      dataTreat: ['on'],
+    });
+    console.log('Document written with ID: ', docRef.id);
+  } catch (e) {
+    console.error('Error adding document: ', e);
+  }
 
   const formik = useFormik({
     initialValues: {

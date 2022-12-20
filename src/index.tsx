@@ -5,6 +5,7 @@ import './fonts/YS/stylesheet.css';
 import { App } from './App';
 import LanguageProvider from './providers/LanguageProvider';
 import ThemeProvider from './providers/ThemeProvider';
+import './firebase';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
