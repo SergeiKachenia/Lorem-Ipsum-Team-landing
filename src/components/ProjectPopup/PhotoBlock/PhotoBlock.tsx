@@ -28,7 +28,7 @@ const PhotoBlock: React.FC<IPhotoBlockProps> = ({ imagesUrls }) => {
   };
   const carousel = useRef<AliceCarousel>(null);
   return (
-    <section className={cn(styles.photoBlock, { [styles.hidden]: typeof imgList === 'undefined' })}>
+    <section className={cn(styles.photoBlock, { [styles.hidden]: imgList === undefined })}>
       <div className={styles.buttons}>
         <button className={styles.button} onClick={prevSlideHandler}>
           <RoundArrowButton isLeft={true} />

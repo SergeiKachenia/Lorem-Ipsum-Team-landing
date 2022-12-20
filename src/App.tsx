@@ -6,6 +6,7 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
+import { ProjectPopupPage } from './pages/ProjectPopupPage/ProjectPopupPage';
 import { store } from './store';
 
 export const App: React.FC = (): JSX.Element => {
@@ -16,7 +17,18 @@ export const App: React.FC = (): JSX.Element => {
         <main>
           <Routes>
             <Route index element={<AboutUsPage />} />
-            <Route path={'/projects'} element={<ProjectsPage />} />
+            <Route path={'/projects/'}>
+              <Route path={''} element={<ProjectsPage />} />
+              <Route
+                path={':projectId'}
+                element={
+                  <>
+                    <ProjectPopupPage />
+                    <ProjectsPage />
+                  </>
+                }
+              />
+            </Route>
           </Routes>
         </main>
         <Footer />

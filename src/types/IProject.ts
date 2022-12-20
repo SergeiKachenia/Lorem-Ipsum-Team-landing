@@ -9,6 +9,7 @@ export interface IAuthor {
 export interface IShortProjectInfo {
   id: number;
   imageUrl: string | null;
+  imagesUrls?: string[] | null;
   ru: {
     title: string;
     author: IAuthor;
@@ -16,6 +17,7 @@ export interface IShortProjectInfo {
     target: string;
     stack: IStackItem[];
     description: string;
+    link?: string;
   };
   en: {
     title: string;
@@ -24,6 +26,7 @@ export interface IShortProjectInfo {
     target: string;
     stack: IStackItem[];
     description: string;
+    link?: string;
   };
 }
 
@@ -51,6 +54,7 @@ export interface IProjectInfo {
 }
 
 export interface IProjectCardProps {
+  id: number;
   imageUrl: string | null;
   title: string;
   author: IAuthor;
