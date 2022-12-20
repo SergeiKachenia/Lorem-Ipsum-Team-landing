@@ -54,6 +54,7 @@ export interface IProjectInfo {
 }
 
 export interface IProjectCardProps {
+  id: number;
   imageUrl: string | null;
   title: string;
   author: IAuthor;

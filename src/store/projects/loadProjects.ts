@@ -18,7 +18,7 @@ export const loadProjects = createAsyncThunk('projects/loadProjects', async (_, 
       const projects = projectsInfo.slice(projectsCount, projectsCount + countOnPage);
 
       return projects.map((p): IShortProjectInfo => {
-        const transformedProject = { ...p } as unknown as IShortProjectInfo;
+        const transformedProject = JSON.parse(JSON.stringify(p)) as IShortProjectInfo;
 
         transformedProject.imageUrl = transformedProject.imagesUrls != null ? transformedProject.imagesUrls[0] : null;
 

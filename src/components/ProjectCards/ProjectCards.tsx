@@ -1,4 +1,4 @@
-import React, { useContext, useMemo } from 'react';
+import React, { useContext, useEffect, useMemo } from 'react';
 import { TfiReload } from 'react-icons/tfi';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -28,9 +28,12 @@ export const ProjectCards: React.FC = () => {
     void dispatch(loadProjects());
   };
 
-  if (projects.length === 0) {
+  useEffect(() => {
+    if (projects.length !== 0) {
+      return;
+    }
     loadMoreProjects();
-  }
+  }, [projects.length === 0]);
 
   const mappedProjectCards = useMemo(() => {
     if (projects.length === 0) {
@@ -40,6 +43,7 @@ export const ProjectCards: React.FC = () => {
     return projects.map((p) => (
       <ProjectCard
         key={p.id}
+        id={p.id}
         imageUrl={p.imageUrl}
         title={p[languageContext.language].title}
         author={p[languageContext.language].author}

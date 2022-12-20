@@ -3,6 +3,10 @@ import { IProjectInfo } from 'types/IProject';
 export const projectsInfo: IProjectInfo[] = [
   {
     id: 1,
+    imagesUrls: [
+      'https://timeweb.com/media/default/0001/12/74c0bc01b8a8dab8b2b73b649f9a1b9259282e4e.png',
+      '/images/defaultProjectImage.png',
+    ],
     ru: {
       title: 'Название проекта #1',
       author: {
@@ -37,7 +41,6 @@ export const projectsInfo: IProjectInfo[] = [
         'Краткое описание проекта. Lorem ipsum dolor sit amet consectetur. Senectus sed velit libero urna sem vivamus senectus penatibus turpis. Ut enim neque malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus ullamcorper vivamus. Amet neque aenean gravida maecenas...',
       link: 'https://example.com/',
     },
-    imagesUrls: ['images/defaultProjectImage.png', 'images/defaultProjectImage.png'],
   },
   {
     id: 2,

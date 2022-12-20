@@ -1,40 +1,42 @@
 import cn from 'classnames';
-import React, { memo } from 'react';
+import React, { memo, useEffect } from 'react';
 
 import { MdClose } from 'react-icons/md';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import { IProjectPopupProps } from 'types/IProjectPopupProps';
 
 import InfoBlock from './InfoBlock/InfoBlock';
 import PhotoBlock from './PhotoBlock/PhotoBlock';
 import styles from './ProjectPopup.module.scss';
 
-const ProjectPopup: React.FC<IProjectPopupProps> = ({
-  imagesUrls,
-  title,
-  author,
-  date,
-  target,
-  stack,
-  description,
-  link,
-  closePopup,
-}) => {
+import { AppDispatch } from '../../store';
+
+import { projectsSlice } from '../../store/projects';
+import { loadDetails } from '../../store/projects/loadDetails';
+import { selectDetails } from '../../store/projects/selectors';
+
+const ProjectPopup: React.FC<IProjectPopupProps> = ({ closePopup }) => {
+  const dispatch = useDispatch<AppDispatch>();
+  const { projectId } = useParams();
+  const details = useSelector(selectDetails);
+
+  useEffect(() => {
+    void dispatch(loadDetails(Number(projectId)));
+  }, [projectId]);
+
+  const popupReset = (): void => {
+    dispatch(projectsSlice.actions.resetDetails());
+  };
+
   return (
     <div className={styles.wrapper}>
-      <div className={styles.background} onClick={closePopup} />
+      <div className={styles.background} onClick={() => closePopup(popupReset)} />
       <div className={styles.popupWrapper}>
         <article className={cn(styles.container, styles.popupContainer)}>
-          <InfoBlock
-            author={author}
-            description={description}
-            link={link}
-            target={target}
-            stack={stack}
-            title={title}
-            date={date}
-          />
-          <PhotoBlock imagesUrls={imagesUrls} />
-          <MdClose className={styles.closeBtn} onClick={closePopup} />
+          <InfoBlock details={details} />
+          <PhotoBlock imagesUrls={details?.imagesUrls != null ? details.imagesUrls : null} />
+          <MdClose className={styles.closeBtn} onClick={() => closePopup(popupReset)} />
         </article>
       </div>
     </div>
