@@ -4,7 +4,7 @@ import { ITeamMember } from 'types/ITeamMember';
 export const mockTeamMembers: ITeamMember[] = [
   {
     uuid: '4e5ae8d6-9449-459a-b807-07a8c82ee8f8',
-    vkLink: '',
+    tgLink: '',
     gitHubLink: '',
     ru: {
       name: 'Дрягин Даниил',
@@ -19,7 +19,7 @@ export const mockTeamMembers: ITeamMember[] = [
   },
   {
     uuid: 'bf7095e0-dc74-4814-bf6a-239b4756214d',
-    vkLink: '',
+    tgLink: '',
     gitHubLink: '',
     ru: {
       name: 'Хамуева Дарья',
@@ -34,7 +34,7 @@ export const mockTeamMembers: ITeamMember[] = [
   },
   {
     uuid: 'eb4e103b-d9e7-4ab9-a032-63abc3a7eaef',
-    vkLink: '',
+    tgLink: '',
     gitHubLink: '',
     ru: {
       name: 'Устинов Александр',
@@ -49,7 +49,7 @@ export const mockTeamMembers: ITeamMember[] = [
   },
   {
     uuid: '4366c906-ad8a-48a0-8ec2-ac6dc643a373',
-    vkLink: '',
+    tgLink: '',
     gitHubLink: '',
     ru: {
       name: 'Афанасьев Артем',
@@ -64,7 +64,7 @@ export const mockTeamMembers: ITeamMember[] = [
   },
   {
     uuid: '5e31d6e5-08d6-4e59-8411-c0eda4d6a3fb',
-    vkLink: '',
+    tgLink: '',
     gitHubLink: '',
     ru: {
       name: 'Сергей Каченя',
