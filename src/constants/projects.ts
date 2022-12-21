@@ -49,7 +49,7 @@ export const projectsInfo: IProjectInfo[] = [
       title: 'MonoEat',
       author: {
         id: 2,
-        avatarUrl: null,
+        avatarUrl: '/images/4e5ae8d6-9449-459a-b807-07a8c82ee8f8.png',
         name: 'Дрягин Даниил',
       },
       date: '21:32 21/05/2022',
@@ -167,7 +167,7 @@ export const projectsInfo: IProjectInfo[] = [
       title: 'SoftChat',
       author: {
         id: 2,
-        avatarUrl: null,
+        avatarUrl: '/images/4e5ae8d6-9449-459a-b807-07a8c82ee8f8.png',
         name: 'Дрягин Даниил',
       },
       date: '21:32 11/10/2022',
@@ -289,7 +289,7 @@ export const projectsInfo: IProjectInfo[] = [
       title: 'Сайт-визитка Danxay',
       author: {
         id: 2,
-        avatarUrl: null,
+        avatarUrl: '/images/4e5ae8d6-9449-459a-b807-07a8c82ee8f8.png',
         name: 'Дрягин Даниил',
       },
       date: '21:32 01/09/2022',
