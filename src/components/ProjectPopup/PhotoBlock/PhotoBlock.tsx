@@ -15,7 +15,9 @@ const PhotoBlock: React.FC<IPhotoBlockProps> = ({ imagesUrls }) => {
       return undefined;
     }
     return imagesUrls.map((url: string) => (
-      <img className={styles.carouselItem} key={url} src={url} alt={'Фотография проекта'} />
+      <div key={url} className={styles.carouselItemWrapper}>
+        <img className={styles.carouselItem} key={url} src={url} alt={'Фотография проекта'} />
+      </div>
     ));
   }, [imagesUrls]);
   const responsive = {
