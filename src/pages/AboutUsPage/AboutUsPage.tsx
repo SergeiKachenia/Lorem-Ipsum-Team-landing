@@ -1,3 +1,4 @@
+import { Benefits } from 'components/Benefits/Benefits';
 import CallToAction from 'components/CallToAction/CallToAction';
 import { ContactInfo } from 'components/ContactInfo/ContactInfo';
 import { OurTeam } from 'components/OurTeam/OurTeam';
@@ -14,6 +15,9 @@ const AboutUsPage: React.FC = () => {
     <>
       <CallToAction scrollContactInfo={executeScrollContactInfo} scrollDown={executeScrollDown} />
       <section ref={scrollDown}>
+        <Benefits />
+      </section>
+      <section>
         <OurTeam teamList={mockTeamMembers} />
       </section>
       <section ref={scrollContactInfo}>
