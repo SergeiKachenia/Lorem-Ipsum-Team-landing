@@ -162,11 +162,45 @@ export const contacts: IContact[] = [
     id: 3,
     ru: {
       name: 'Устинов Александр',
-      addresses: [],
+      addresses: [
+        {
+          id: 5,
+          address: 'г. Рубцовск, Тракторная улица, 2/6',
+          location: {
+            lat: 51.525198,
+            lon: 81.210483,
+          },
+        },
+        {
+          id: 6,
+          address: 'г. Рубцовск, Тракторная улица, 17',
+          location: {
+            lat: 51.533347,
+            lon: 81.205145,
+          },
+        },
+      ],
     },
     en: {
       name: 'Ustinov Aleksandr',
-      addresses: [],
+      addresses: [
+        {
+          id: 5,
+          address: 'Rubtsovsk, Traktornaya Street, 2/6',
+          location: {
+            lat: 51.525198,
+            lon: 81.210483,
+          },
+        },
+        {
+          id: 6,
+          address: 'Rubtsovsk, Traktornaya Street, 17',
+          location: {
+            lat: 51.533347,
+            lon: 81.205145,
+          },
+        },
+      ],
     },
   },
   {
