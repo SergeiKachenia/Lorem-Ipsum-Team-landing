@@ -70,18 +70,30 @@ export const mockTeamMembers: ITeamMember[] = [
     },
   },
   {
-    uuid: '4366c906-ad8a-48a0-8ec2-ac6dc643a373',
-    tgLink: '',
-    gitHubLink: '',
+    uuid: 'c2f62b777219cb6f60afe4b1bfc0eb24',
+    tgLink: 'https://t.me/trippl3a',
+    gitHubLink: 'https://github.com/Haping61',
     ru: {
       name: 'Афанасьев Артем',
-      stackList: [{ id: 1, technology: 'HTML' }],
-      desc: 'Рассказ о себе. Lorem ipsum dolor amet consectetur. Duis sed velit libero urna vivamus sem sit. Penatibus enim iaculis malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus enim ac ullamcorper.',
+      stackList: [
+        { id: 1, technology: 'TS' },
+        { id: 2, technology: 'React' },
+        { id: 3, technology: 'Redux' },
+        { id: 4, technology: 'Python' },
+        { id: 4, technology: 'SQL' },
+      ],
+      desc: 'Разрабатываю Frontend часть веб-приложений. Стараюсь быть вовлечённым в проект, предлагать идеи для новых фичей и совершенствования проекта. Также могу немного поперекладывать json-чики)',
     },
     en: {
-      name: "Afanas'ev Artem",
-      stackList: [{ id: 1, technology: 'HTML' }],
-      desc: 'Рассказ о себе. Lorem ipsum dolor amet consectetur. Duis sed velit libero urna vivamus sem sit. Penatibus enim iaculis malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus enim ac ullamcorper.',
+      name: 'Afanasev Artem',
+      stackList: [
+        { id: 1, technology: 'TS' },
+        { id: 2, technology: 'React' },
+        { id: 3, technology: 'Redux' },
+        { id: 4, technology: 'Python' },
+        { id: 4, technology: 'SQL' },
+      ],
+      desc: 'I develop Frontend part of web applications. I try to be involved in the project, offer ideas for new features and improve the project. I can also shift json files a little)',
     },
   },
   {
@@ -106,11 +118,29 @@ export const contacts: IContact[] = [
     id: 1,
     ru: {
       name: 'Афанасьев Артем',
-      addresses: [],
+      addresses: [
+        {
+          id: 10,
+          address: 'г.Бийск, улица Михаила Кутузова, 9/3',
+          location: {
+            lat: 52.491805,
+            lon: 85.146967,
+          },
+        },
+      ],
     },
     en: {
-      name: 'Afanas`ev Artem',
-      addresses: [],
+      name: 'Afanasev Artem',
+      addresses: [
+        {
+          id: 10,
+          address: 'Biysk, Mikhail Kutuzov street, 9/3',
+          location: {
+            lat: 52.491805,
+            lon: 85.146967,
+          },
+        },
+      ],
     },
   },
   {
