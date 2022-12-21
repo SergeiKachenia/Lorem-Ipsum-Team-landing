@@ -29,7 +29,7 @@ export const projectsInfo: IProjectInfo[] = [
       author: {
         id: 1,
         avatarUrl: null,
-        name: 'Afanas`ev Artem',
+        name: 'Afanasev Artem',
       },
       date: '21:32 21/11/2022',
       target: 'Yandex Academy',
@@ -155,7 +155,7 @@ export const projectsInfo: IProjectInfo[] = [
       author: {
         id: 1,
         avatarUrl: null,
-        name: 'Afanas`ev Artem',
+        name: 'Afanasev Artem',
       },
       date: '21:32 21/11/2022',
       target: 'Yandex Academy',
@@ -277,7 +277,7 @@ export const projectsInfo: IProjectInfo[] = [
       author: {
         id: 1,
         avatarUrl: null,
-        name: 'Afanas`ev Artem',
+        name: 'Afanasev Artem',
       },
       date: '21:32 21/11/2022',
       target: 'Yandex Academy',
