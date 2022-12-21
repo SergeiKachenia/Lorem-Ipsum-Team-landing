@@ -5,12 +5,14 @@
 
   position: relative;
 
-  width: 50%;
+  width: 100%;
+  max-width: 50%;
   height: 100%;
 
   opacity: 1;
   background: $color-another-main-text;
   border-radius: 0 2px 2px 0;
+
 }
 
 .hidden {
@@ -23,6 +25,11 @@
   padding: 8px;
 
   border-radius: 2px;
+}
+
+.carouselItemWrapper {
+  @include flex(row, center, center);
+  height: 100%;
 }
 
 .button {
