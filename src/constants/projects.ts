@@ -202,39 +202,45 @@ export const projectsInfo: IProjectInfo[] = [
   },
   {
     id: 6,
-    imagesUrls: null,
+    imagesUrls: ['https://i.imgur.com/L4qvf08.png', 'https://i.imgur.com/zrKySP9.png'],
     ru: {
-      title: 'Название проекта #6',
+      title: 'Сайт команды Lorem Ipsum Team',
       author: {
         id: 3,
-        avatarUrl: null,
+        avatarUrl: '/images/eb4e103b-d9e7-4ab9-a032-63abc3a7eaef.png',
         name: 'Устинов Александр',
       },
       date: '21:32 21/11/2022',
-      target: 'Академия Яндекс',
+      target: 'Академия Яндекса',
       stack: [
-        { id: 1, technology: 'HTML' },
-        { id: 2, technology: 'CSS' },
+        { id: 1, technology: 'React' },
+        { id: 2, technology: 'TypeScript' },
+        { id: 3, technology: 'SCSS' },
       ],
-      description:
-        'Краткое описание проекта. Lorem ipsum dolor sit amet consectetur. Senectus sed velit libero urna sem vivamus senectus penatibus turpis. Ut enim neque malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus ullamcorper vivamus. Amet neque aenean gravida maecenas...',
+      description: `Сайт-визитка для команды Lorem Ipsum Team.
+        Основной идеей был монотонный, но в тоже время интересный дизайн, без каких-либо перегруженных элементов. Для более удобной разработки цвета элементов хранились в переменных, благодаря чему удалось существенно сократить время затраченное на создание темной версии сайта. Аналогично переменным в SCSS, цвета на макете были также распределены на одноименные стили. Такой подход позволил корректировать цвета в режиме реального времени без вноса постоянных правок в код.
+        Фреймворком для разработки был выбран React, из-за его распространённости и наличия опыта использования оного у членов команды. Для удобства было принято решение использовать TypeScript вместо JavaScript, это позволило избежать большинство ошибок и непредсказуемых ситуаций.
+        Разработка проекта занял в районе 3-ех недель.`,
       link: 'https://example.com/',
     },
     en: {
-      title: 'Project Name #6',
+      title: 'Landing for the Lorem Ipsum team',
       author: {
         id: 3,
-        avatarUrl: null,
+        avatarUrl: '/images/eb4e103b-d9e7-4ab9-a032-63abc3a7eaef.png',
         name: 'Ustinov Aleksandr',
       },
       date: '21:32 21/11/2022',
       target: 'Yandex Academy',
       stack: [
-        { id: 1, technology: 'HTML' },
-        { id: 2, technology: 'CSS' },
+        { id: 1, technology: 'React' },
+        { id: 2, technology: 'TypeScript' },
+        { id: 3, technology: 'SCSS' },
       ],
-      description:
-        'Краткое описание проекта. Lorem ipsum dolor sit amet consectetur. Senectus sed velit libero urna sem vivamus senectus penatibus turpis. Ut enim neque malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus ullamcorper vivamus. Amet neque aenean gravida maecenas...',
+      description: `Landing for the Lorem Ipsum team.
+ The main idea was a monotonous, but at the same time interesting design, without any overloaded elements. For more convenient development, the colors of the elements were stored in variables, thanks to which it was possible to significantly reduce the time spent on creating a dark version of the site. Similar to the variables in SCSS, the colors on the layout were also distributed into styles of the same name. This approach made it possible to adjust colors in real time without making permanent edits to the code.
+ React was chosen as the framework for development, because of its prevalence and the experience of using it among team members. For convenience, it was decided to use TypeScript instead of JavaScript, this made it possible to avoid most errors and unpredictable situations.
+ The development of the project took around 3 weeks.`,
       link: 'https://example.com/',
     },
   },

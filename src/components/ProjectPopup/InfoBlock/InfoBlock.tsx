@@ -27,7 +27,11 @@ const InfoBlock: React.FC<IInfoBlockProps> = ({ details }) => {
               <TextLocales locale={(l) => details[l].title}></TextLocales>
             </h1>
             <address className={styles.author}>
-              <img src={authorAvatarUrl !== null ? authorAvatarUrl : defaultAvatar} alt='Аватар автора' />
+              <img
+                className={styles.authorAvatar}
+                src={authorAvatarUrl !== null ? authorAvatarUrl : defaultAvatar}
+                alt='Аватар автора'
+              />
               <TextLocales locale={(l) => details[l].author.name}></TextLocales>
             </address>
             <div className={styles.projectHeaderBottom}>
