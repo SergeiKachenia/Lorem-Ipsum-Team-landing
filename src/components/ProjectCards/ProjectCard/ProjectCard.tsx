@@ -1,4 +1,4 @@
-import { ReactComponent as RoundArrowLeft } from 'assets/icons/RoundArrowLeft.svg';
+import { ReactComponent as RoundArrow } from 'assets/icons/RoundArrow.svg';
 import defaultAvatar from 'assets/images/avatar.png';
 import defaultPreview from 'assets/images/defaultProjectImage.png';
 import React, { useMemo } from 'react';
@@ -46,7 +46,7 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
         </div>
         <div className={styles.arrowWrapper}>
           <span className={styles.arrowRotate}>
-            <RoundArrowLeft className={styles.arrow} />
+            <RoundArrow className={styles.arrow} />
           </span>
         </div>
       </article>

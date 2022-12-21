@@ -24,3 +24,7 @@
 .buttonContainer:hover path {
   stroke: $color-white-text;
 }
+
+.arrowRight {
+  transform: rotate(180deg);
+}

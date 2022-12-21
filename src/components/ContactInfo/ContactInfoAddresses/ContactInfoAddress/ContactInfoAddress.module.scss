@@ -29,6 +29,8 @@
       transform: translateY(-50%);
 
       background-image: url("../../../../assets/icons/geomarker-default.svg");
+      background-position: center;
+      background-size: cover;
     }
 
     &:hover {
@@ -48,6 +50,8 @@
         transform: translateY(-50%);
 
         background-image: url("../../../../assets/icons/geomarker-active.svg");
+        background-position: center;
+        background-size: cover;
       }
     }
   }
