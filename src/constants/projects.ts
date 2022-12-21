@@ -86,40 +86,48 @@ export const projectsInfo: IProjectInfo[] = [
   },
   {
     id: 3,
-    imagesUrls: null,
+    imagesUrls: ['https://i.imgur.com/wch9nyh.png'],
     ru: {
-      title: 'Название проекта #3',
+      title: 'Веб-приложение для загрузки пользовательского контента',
       author: {
         id: 3,
-        avatarUrl: null,
+        avatarUrl: '/images/eb4e103b-d9e7-4ab9-a032-63abc3a7eaef.png',
         name: 'Устинов Александр',
       },
-      date: '21:32 21/11/2022',
-      target: 'Академия Яндекс',
+      date: '12:10 03/08/2021',
+      target: 'IronTubeGames',
       stack: [
         { id: 1, technology: 'HTML' },
         { id: 2, technology: 'CSS' },
+        { id: 3, technology: 'jQuery' },
+        { id: 4, technology: 'PHP' },
+        { id: 5, technology: 'JavaScript' },
       ],
-      description:
-        'Краткое описание проекта. Lorem ipsum dolor sit amet consectetur. Senectus sed velit libero urna sem vivamus senectus penatibus turpis. Ut enim neque malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus ullamcorper vivamus. Amet neque aenean gravida maecenas...',
-      link: 'https://example.com/',
+      description: `Проект был создан для игры Evertech Sandbox. Основное предназначение - упростить процесс загрузки пользовательского контента во внутриигровой каталог.
+      Backend составляющая была написана на чистом PHP, также как и панель управления. Весь процесс загрузки контента автоматизирован, от модерации требуется лишь одобрять/отклонять заявки.
+      Загружаемый контент проверяется на наличие специальных файлов, для избежания загрузки не имеющих отношения к игре файлов.`,
+      link: 'https://upload.irontubegames.com',
     },
     en: {
-      title: 'Project Name #3',
+      title: 'Web application for downloading user content',
       author: {
         id: 3,
-        avatarUrl: null,
+        avatarUrl: '/images/eb4e103b-d9e7-4ab9-a032-63abc3a7eaef.png',
         name: 'Ustinov Aleksandr',
       },
-      date: '21:32 21/11/2022',
-      target: 'Yandex Academy',
+      date: '12:10 03/08/2021',
+      target: 'IronTubeGames',
       stack: [
         { id: 1, technology: 'HTML' },
         { id: 2, technology: 'CSS' },
+        { id: 3, technology: 'jQuery' },
+        { id: 4, technology: 'PHP' },
+        { id: 5, technology: 'JavaScript' },
       ],
-      description:
-        'Краткое описание проекта. Lorem ipsum dolor sit amet consectetur. Senectus sed velit libero urna sem vivamus senectus penatibus turpis. Ut enim neque malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus ullamcorper vivamus. Amet neque aenean gravida maecenas...',
-      link: 'https://example.com/',
+      description: `The project was created for the Evertech Sandbox game. The main purpose is to simplify the process of uploading user content to the in-game catalog.
+ The backend component was written in pure PHP, as well as the control panel. The whole process of uploading content is automated, moderation is only required to approve/reject applications.
+ The downloaded content is checked for the presence of special files to avoid downloading files unrelated to the game.`,
+      link: 'https://upload.irontubegames.com',
     },
   },
   {
@@ -328,40 +336,40 @@ export const projectsInfo: IProjectInfo[] = [
   },
   {
     id: 9,
-    imagesUrls: null,
+    imagesUrls: [
+      'https://sun9-76.userapi.com/impg/Wt6mECyFWuBMrXBGjccyJCrSq8Ft4i_YZv0ZOA/ZdIdxW7bd8Y.jpg?size=2000x2000&quality=96&sign=58b47ad1003188186c783ca8af92efc6&type=album',
+    ],
     ru: {
-      title: 'Название проекта #9',
+      title: 'Lejics',
       author: {
         id: 3,
-        avatarUrl: null,
+        avatarUrl: '/images/eb4e103b-d9e7-4ab9-a032-63abc3a7eaef.png',
         name: 'Устинов Александр',
       },
-      date: '21:32 21/11/2022',
-      target: 'Академия Яндекс',
+      date: '20:40 20/12/2018',
+      target: 'Персональный проект',
       stack: [
-        { id: 1, technology: 'HTML' },
-        { id: 2, technology: 'CSS' },
+        { id: 1, technology: 'Node.js' },
+        { id: 2, technology: 'JavaScript' },
       ],
-      description:
-        'Краткое описание проекта. Lorem ipsum dolor sit amet consectetur. Senectus sed velit libero urna sem vivamus senectus penatibus turpis. Ut enim neque malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus ullamcorper vivamus. Amet neque aenean gravida maecenas...',
-      link: 'https://example.com/',
+      description: `Самописный язык программирования, создавался в качестве эксперимента. Поддерживает базовые команды, разноцветный текст, запуск через команду в консоли.`,
+      link: 'https://github.com/AnimeLore/Lejics',
     },
     en: {
-      title: 'Project Name #9',
+      title: 'Lejics',
       author: {
         id: 3,
-        avatarUrl: null,
+        avatarUrl: '/images/eb4e103b-d9e7-4ab9-a032-63abc3a7eaef.png',
         name: 'Ustinov Aleksandr',
       },
-      date: '21:32 21/11/2022',
-      target: 'Yandex Academy',
+      date: '20:40 20/12/2018',
+      target: 'Personal project',
       stack: [
-        { id: 1, technology: 'HTML' },
-        { id: 2, technology: 'CSS' },
+        { id: 1, technology: 'Node.js' },
+        { id: 2, technology: 'JavaScript' },
       ],
-      description:
-        'Краткое описание проекта. Lorem ipsum dolor sit amet consectetur. Senectus sed velit libero urna sem vivamus senectus penatibus turpis. Ut enim neque malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus ullamcorper vivamus. Amet neque aenean gravida maecenas...',
-      link: 'https://example.com/',
+      description: `A self-written programming language, created as an experiment. Supports basic commands, multi-colored text, launch via a command in the console.`,
+      link: 'https://github.com/AnimeLore/Lejics',
     },
   },
 ];
