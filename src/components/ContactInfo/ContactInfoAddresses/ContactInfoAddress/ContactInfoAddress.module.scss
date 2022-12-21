@@ -28,9 +28,11 @@
       left: -24px;
       transform: translateY(-50%);
 
-      background-image: url("../../../../assets/icons/geomarker-default.svg");
-      background-position: center;
-      background-size: cover;
+      background-color: $color-grey;
+
+      mask-image: url("../../../../assets/icons/geomarker-default-stroke.svg");
+      mask-position: center;
+      mask-size: cover;
     }
 
     &:hover {
@@ -49,9 +51,11 @@
         left: -24px;
         transform: translateY(-50%);
 
-        background-image: url("../../../../assets/icons/geomarker-active.svg");
-        background-position: center;
-        background-size: cover;
+        background-color: $color-main-blue-hover;
+
+        mask-image: url("../../../../assets/icons/geomarker-active.svg");
+        mask-position: center;
+        mask-size: cover;
       }
     }
   }
