@@ -14,13 +14,13 @@ const AboutUsPage: React.FC = () => {
   return (
     <>
       <CallToAction scrollContactInfo={executeScrollContactInfo} scrollDown={executeScrollDown} />
-      <section ref={scrollDown}>
+      <section id='benefits' ref={scrollDown}>
         <Benefits />
       </section>
-      <section>
+      <section id='our-team'>
         <OurTeam teamList={mockTeamMembers} />
       </section>
-      <section ref={scrollContactInfo}>
+      <section id='contact-info' ref={scrollContactInfo}>
         <ContactInfo />
       </section>
     </>

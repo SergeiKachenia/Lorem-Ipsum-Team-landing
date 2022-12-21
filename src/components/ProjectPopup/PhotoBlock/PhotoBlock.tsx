@@ -4,7 +4,7 @@ import React, { memo, useMemo, useRef } from 'react';
 import AliceCarousel from 'react-alice-carousel';
 
 import styles from './PhotoBlock.module.scss';
-import './AliceCarousel.scss';
+import './AliceCarouselPopup.scss';
 
 import { IPhotoBlockProps } from '../../../types/IPhotoBlockProps';
 import { RoundArrowButton } from '../../RoundArrowButton/RoundArrowButton';
@@ -31,7 +31,7 @@ const PhotoBlock: React.FC<IPhotoBlockProps> = ({ imagesUrls }) => {
   };
   const carousel = useRef<AliceCarousel>(null);
   return (
-    <section className={cn(styles.photoBlock, { [styles.hidden]: imgList === undefined })}>
+    <section id='photo-block' className={cn(styles.photoBlock, { [styles.hidden]: imgList === undefined })}>
       <div className={styles.buttons}>
         <button className={styles.button} onClick={prevSlideHandler}>
           <RoundArrowButton isLeft={true} />
