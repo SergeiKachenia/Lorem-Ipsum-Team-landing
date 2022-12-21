@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import { ProjectPopupPage } from './pages/ProjectPopupPage/ProjectPopupPage';
 import { store } from './store';
+import 'react-loading-skeleton/dist/skeleton.css';
 
 export const App: React.FC = (): JSX.Element => {
   return (
