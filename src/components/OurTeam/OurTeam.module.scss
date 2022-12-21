@@ -22,6 +22,8 @@
 
 .carouselItem {
   @include flex(row, center, stretch);
+
+  height: 100%;
   padding: 0 4px;
 }
 
