@@ -11,7 +11,6 @@ export const mockTeamMembers: ITeamMember[] = [
       stackList: [
         { id: 1, technology: 'React' },
         { id: 2, technology: 'TS' },
-        { id: 3, technology: 'HTML' },
         { id: 4, technology: 'SCSS' },
         { id: 5, technology: 'Python' },
         { id: 6, technology: 'SQL' },
@@ -23,7 +22,6 @@ export const mockTeamMembers: ITeamMember[] = [
       stackList: [
         { id: 1, technology: 'React' },
         { id: 2, technology: 'TS' },
-        { id: 3, technology: 'HTML' },
         { id: 4, technology: 'SCSS' },
         { id: 5, technology: 'Python' },
         { id: 6, technology: 'SQL' },
