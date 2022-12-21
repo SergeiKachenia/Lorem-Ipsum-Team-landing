@@ -4,17 +4,31 @@ import { ITeamMember } from 'types/ITeamMember';
 export const mockTeamMembers: ITeamMember[] = [
   {
     uuid: '4e5ae8d6-9449-459a-b807-07a8c82ee8f8',
-    tgLink: '',
-    gitHubLink: '',
+    tgLink: 'https://t.me/borchsh',
+    gitHubLink: 'https://github.com/Danxay',
     ru: {
       name: 'Дрягин Даниил',
-      stackList: [{ id: 1, technology: 'HTML' }],
-      desc: 'Рассказ о себе. Lorem ipsum dolor amet consectetur. Duis sed velit libero urna vivamus sem sit. Penatibus enim iaculis malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus enim ac ullamcorper.',
+      stackList: [
+        { id: 1, technology: 'React' },
+        { id: 2, technology: 'TS' },
+        { id: 3, technology: 'HTML' },
+        { id: 4, technology: 'SCSS' },
+        { id: 5, technology: 'Python' },
+        { id: 6, technology: 'SQL' },
+      ],
+      desc: 'Мои основные направления - Frontend и Backend разработка для веб-приложений. Я создаю сайты различной сложности. Проявляю интерес во время рабочих процессов, рад учиться новому и предлагать идеи по улучшению проекта.',
     },
     en: {
       name: 'Dryagin Daniil',
-      stackList: [{ id: 1, technology: 'HTML' }],
-      desc: 'Рассказ о себе. Lorem ipsum dolor amet consectetur. Duis sed velit libero urna vivamus sem sit. Penatibus enim iaculis malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus enim ac ullamcorper.',
+      stackList: [
+        { id: 1, technology: 'React' },
+        { id: 2, technology: 'TS' },
+        { id: 3, technology: 'HTML' },
+        { id: 4, technology: 'SCSS' },
+        { id: 5, technology: 'Python' },
+        { id: 6, technology: 'SQL' },
+      ],
+      desc: 'My main areas are Frontend and Backend development for web applications. I create websites of varying complexity. I show interest during work processes, I am happy to learn new things and offer ideas for improving the project.',
     },
   },
   {

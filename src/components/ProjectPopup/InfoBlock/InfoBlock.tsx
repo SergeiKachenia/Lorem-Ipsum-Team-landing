@@ -43,7 +43,11 @@ const InfoBlock: React.FC<IInfoBlockProps> = ({ details }) => {
           </>
         ) : null}
       </header>
-      {details !== null ? <p className={styles.description}>{details.ru.description}</p> : null}
+      {details !== null ? (
+        <p className={styles.description}>
+          <TextLocales locale={(l) => details[l].description}></TextLocales>
+        </p>
+      ) : null}
       <footer className={styles.projectFooter}>
         <LinkIcon />
         {details !== null ? (

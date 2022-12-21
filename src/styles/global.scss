@@ -91,6 +91,20 @@ body {
   transition: background-color 0.3s ease-out;
 }
 
+html, body {
+  scrollbar-color: #458245 #714826; /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-width: thin;  /* толщина */
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $color-grey;
+  border-radius: 50px;
+}
+
 // Mixins
 @mixin regular-text($size, $line-height, $color) {
   font-family: "Yandex Sans Text", sans-serif;

@@ -48,7 +48,7 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
             <time className={styles.date}>{date}</time>|<address className={styles.target}>{target}</address>|
             <div className={styles.technologies}>{stackLabels}</div>
           </div>
-          <p className={styles.description}>{description}</p>
+          <p className={styles.description}>{`${description.slice(0, 233)}...`}</p>
         </div>
         <div className={styles.arrowWrapper}>
           <span className={styles.arrowRotate}>
