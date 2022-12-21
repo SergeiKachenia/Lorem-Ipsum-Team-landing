@@ -19,19 +19,19 @@
 }
 
 .items {
-  @include flex(row, space-around, flex-start);
+  @include flex(row, space-around, stretch);
   flex-wrap: wrap;
   gap: 60px;
 
   padding: 0 77px;
 
-  @media (max-width: $width-desk-wide) {
+  @media (max-width: 1318px) {
     justify-content: space-evenly;
 
     padding: 0 17px;
   }
 
-  @media (max-width: 469px) {
+  @media (max-width: 787px) {
     padding: 0;
   }
 }

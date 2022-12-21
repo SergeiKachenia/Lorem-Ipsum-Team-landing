@@ -27,7 +27,13 @@ export const ProjectCard: React.FC<IProjectCardProps> = ({
   return (
     <Link to={`/projects/${String(id)}`} className={styles.link}>
       <article className={styles.wrapper}>
-        <img className={styles.preview} src={imageUrl !== null ? imageUrl : defaultPreview} alt='Превью проекта' />
+        <div className={styles.preview}>
+          <img
+            className={styles.previewImage}
+            src={imageUrl !== null ? imageUrl : defaultPreview}
+            alt='Превью проекта'
+          />
+        </div>
         <div className={styles.info}>
           <h1 className={styles.title}>{title}</h1>
           <address className={styles.author}>

@@ -17,6 +17,7 @@ const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children })
 
   React.useEffect(() => {
     document.documentElement.dataset.language = language;
+    document.documentElement.lang = language;
     localStorage.setItem('locale', language);
   }, [language]);
 
