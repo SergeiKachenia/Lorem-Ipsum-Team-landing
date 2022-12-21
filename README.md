@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Lorem Ipsum Team Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Веб-сайт команды Lorem Ipsum Team
 
-## Available Scripts
+## Описание проекта
+### Структура сайта
+Сайт состоит из двух страниц: ``О нас`` и ``Проекты``. 
+<br><br>
+На первой странице находится информация об команде, об преимуществах перед другими и контактная информация. Описание каждого члена команды происходит в отдельном компоненте ``TeamMemberCard``, а сами компоненты находятся в слайдере ``AliceCarousel``. Контактная информация состоит из формы связи (``FeedbackForm``, ``FeedbackPopup``), карты и списка членов команды с их метками на карте. Карта реализована через __react-yandex-maps__. Преимущества отображаются в отдельных карточках ``BenefitCard``.
+<br><br>
+На второй странице находится список проектов, в создании которых участвовали участники команды. Краткая информация об проектах отображается в отдельных карточках ``ProjectCard`` (по аналогии с ``BenefitCard``), по нажатию на которые открывается pop-up окно ``ProjectPopup``, содержащее полную информацию об проекте, а также слайдер ``AliceCarousel`` с фотографиями, которые прикреплены к проекту. Компонент с карточками ``ProjectCards`` имеет лоадер, позволяющий постепенно подгружать часть проектов по нажатию на кнопку.
 
-In the project directory, you can run:
+### Стилизация сайта
+Каждый цвет использованный в проекте хранится в отдельной переменной SCSS, список которых хранится в файле ``styles/global.scss``. Благодаря подобному решению существенно упрощается процесс разработки темной темы сайта, а также ускоряется процесс правок связанных с цветами компонентов.
 
-### `npm start`
+Помимо цветов в файле ``styles/global.scss`` хранятся mixin'ы, упрощающие прописывание стилей у компонентов (mixin'ы для текста, для flex отображения и не только) и пресеты размеров для media запросов.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Особенности проекта
+<ul>
+  <li>Наличие смены темы сайта (Светлая/Тёмная)</li>
+  <li>Наличие смены языка отображаемой информации (Русский/English)</li>
+  <li>Наличие прелоадеров/лоадеров</li>
+  <li>Наличие полностью рабочей формы обратной связи</li>
+</ul>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Использованные технологии
+<ul>
+  <li>React</li>
+  <li>TypeScript</li>
+  <li>SCSS</li>
+  <li>Redux Toolkit</li>
+</ul>
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Состав команды
+[Сергей](../../../../SergeiKachenia) - ментор  
+[Даниил](../../../../Danxay) - тимлид  
+[Артём](../../../../Haping61), [Александр](../../../../AnimeLore), [Дарья](../../../../DariaX06) - члены команды
