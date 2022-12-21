@@ -17,6 +17,7 @@ import { TextLocales } from '../common/TextLocales/TextLocales';
 const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
   const [buttonPressed, setPressed] = useState(false);
   const [resultMessage, setMessage] = useState('');
+  const [hasSuccessSent, setSuccessSent] = useState(false);
 
   const languageContext = useContext(LanguageContext);
 
@@ -35,9 +36,9 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
         .required(locales.EnterYourEmail[languageContext.language])
         .email(locales.IncorrectEmail[languageContext.language]),
       message: Yup.string().required(locales.MessageCantBeEmpty[languageContext.language]),
-      dataTreat: Yup.array().min(1),
+      dataTreat: Yup.array().min(1, 'Даю согласие на обработку персональных данных'),
     }),
-    onSubmit: async (values, { setSubmitting, resetForm }) => {
+    onSubmit: async (values, { setSubmitting }) => {
       setSubmitting(true);
       try {
         const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
@@ -52,21 +53,21 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
           },
         });
         const respJson = await response.json();
-        setMessage('Your data is send to server!');
         console.log(respJson);
-        resetForm();
+        setSuccessSent(true);
       } catch (err) {
-        setMessage('Failed send your data(');
         console.log(err);
+        setMessage('Failed sending your data(');
+        setPressed(true);
+        setTimeout(() => {
+          setPressed(false);
+          setMessage('');
+        }, 3000);
       }
       setSubmitting(false);
-      setPressed(true);
-      setTimeout(() => {
-        setPressed(false);
-        setMessage('');
-      }, 3000);
     },
   });
+
   const hasError = (fieldName: keyof typeof formik.touched | keyof typeof formik.errors): boolean =>
     !(formik.touched[fieldName] !== undefined && formik.errors[fieldName] !== undefined);
 
@@ -74,7 +75,7 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
     <div className={styles.wrapper}>
       <div className={styles.background} onClick={closeForm}></div>
       <div className={styles.container}>
-        <form className={styles.form} onSubmit={formik.handleSubmit}>
+        <form className={cn(styles.form, { [styles.hidden]: hasSuccessSent })} onSubmit={formik.handleSubmit}>
           <MdClose className={styles.closeBtn} onClick={closeForm}></MdClose>
           <h2 className={styles.title}>
             <TextLocales locale={(l) => locales.ContactUsForm[l]} />
@@ -148,11 +149,7 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
               onChange={formik.handleChange}
             />
             <label htmlFor='dataTreat' className={styles.data_check__label}>
-              {hasError('dataTreat') ? (
-                <TextLocales locale={(l) => locales.ApprovalProcessingPersonalData[l]} />
-              ) : (
-                formik.errors.dataTreat
-              )}
+              <TextLocales locale={(l) => locales.ApprovalProcessingPersonalData[l]} />
             </label>
           </div>
           <button
@@ -163,6 +160,10 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
             <TextLocales locale={(l) => locales.Send[l]} />
           </button>
         </form>
+        <div className={cn(styles.successMessage, { [styles.active]: hasSuccessSent })}>
+          <MdClose className={styles.closeBtn} onClick={closeForm}></MdClose>
+          <span className={styles.text}>Форма отправлена</span>
+        </div>
       </div>
       <span className={cn(styles.hiddenMessage, { [styles.resultMessage]: buttonPressed })}>{resultMessage}</span>
     </div>
