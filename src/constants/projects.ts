@@ -4,14 +4,14 @@ export const projectsInfo: IProjectInfo[] = [
   {
     id: 1,
     imagesUrls: [
-      'https://timeweb.com/media/default/0001/12/74c0bc01b8a8dab8b2b73b649f9a1b9259282e4e.png',
-      '/images/defaultProjectImage.png',
+      'https://cdn.dribbble.com/users/5215825/screenshots/14628486/instagram___1_2x_4x.png',
+      'https://cdn.dribbble.com/users/5215825/screenshots/14628486/instagram___1_2x_4x.png',
     ],
     ru: {
-      title: 'Название проекта #1',
+      title: 'Weather App',
       author: {
         id: 1,
-        avatarUrl: null,
+        avatarUrl: '',
         name: 'Афанасьев Артем',
       },
       date: '21:32 21/11/2022',
@@ -19,16 +19,17 @@ export const projectsInfo: IProjectInfo[] = [
       stack: [
         { id: 1, technology: 'HTML' },
         { id: 2, technology: 'CSS' },
+        { id: 3, technology: 'JS' },
       ],
       description:
         'Краткое описание проекта. Lorem ipsum dolor sit amet consectetur. Senectus sed velit libero urna sem vivamus senectus penatibus turpis. Ut enim neque malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus ullamcorper vivamus. Amet neque aenean gravida maecenas...',
       link: 'https://example.com/',
     },
     en: {
-      title: 'Project Name #1',
+      title: 'Weather App',
       author: {
         id: 1,
-        avatarUrl: null,
+        avatarUrl: '',
         name: 'Afanasev Artem',
       },
       date: '21:32 21/11/2022',
@@ -36,6 +37,7 @@ export const projectsInfo: IProjectInfo[] = [
       stack: [
         { id: 1, technology: 'HTML' },
         { id: 2, technology: 'CSS' },
+        { id: 3, technology: 'JS' },
       ],
       description:
         'Краткое описание проекта. Lorem ipsum dolor sit amet consectetur. Senectus sed velit libero urna sem vivamus senectus penatibus turpis. Ut enim neque malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus ullamcorper vivamus. Amet neque aenean gravida maecenas...',
@@ -132,7 +134,7 @@ export const projectsInfo: IProjectInfo[] = [
   },
   {
     id: 4,
-    imagesUrls: null,
+    imagesUrls: ['https://assets.materialup.com/uploads/ddee5e43-4aea-4c63-abf4-b08f7233d98c/preview.png'],
     ru: {
       title: 'Название проекта #4',
       author: {
@@ -145,6 +147,8 @@ export const projectsInfo: IProjectInfo[] = [
       stack: [
         { id: 1, technology: 'HTML' },
         { id: 2, technology: 'CSS' },
+        { id: 3, technology: 'JS' },
+        { id: 4, technology: 'Tailwind' },
       ],
       description:
         'Краткое описание проекта. Lorem ipsum dolor sit amet consectetur. Senectus sed velit libero urna sem vivamus senectus penatibus turpis. Ut enim neque malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus ullamcorper vivamus. Amet neque aenean gravida maecenas...',
@@ -254,9 +258,11 @@ export const projectsInfo: IProjectInfo[] = [
   },
   {
     id: 7,
-    imagesUrls: null,
+    imagesUrls: [
+      'https://cdn.dribbble.com/userupload/2809295/file/original-8915e292e820efb7f6025db0e7241571.png?compress=1&resize=1024x768',
+    ],
     ru: {
-      title: 'Название проекта #7',
+      title: 'furniture store',
       author: {
         id: 1,
         avatarUrl: null,
@@ -273,7 +279,7 @@ export const projectsInfo: IProjectInfo[] = [
       link: 'https://example.com/',
     },
     en: {
-      title: 'Project Name #7',
+      title: 'furniture store',
       author: {
         id: 1,
         avatarUrl: null,
