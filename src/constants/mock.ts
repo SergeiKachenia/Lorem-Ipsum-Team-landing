@@ -34,17 +34,27 @@ export const mockTeamMembers: ITeamMember[] = [
   },
   {
     uuid: 'eb4e103b-d9e7-4ab9-a032-63abc3a7eaef',
-    tgLink: '',
-    gitHubLink: '',
+    tgLink: 'https://t.me/aloreoff',
+    gitHubLink: 'https://github.com/AnimeLore',
     ru: {
       name: 'Устинов Александр',
-      stackList: [{ id: 1, technology: 'HTML' }],
-      desc: 'Рассказ о себе. Lorem ipsum dolor amet consectetur. Duis sed velit libero urna vivamus sem sit. Penatibus enim iaculis malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus enim ac ullamcorper.',
+      stackList: [
+        { id: 1, technology: 'React' },
+        { id: 2, technology: 'TS' },
+        { id: 3, technology: 'PHP' },
+        { id: 4, technology: 'jQuery' },
+      ],
+      desc: 'Разрабатываю различные веб-приложения, увлекаюсь UX/UI-дизайном, учусь и совершенствуюсь. В основном занимаюсь frontend составляющей, люблю писать тесты под hermione. Среднестатистический любитель jQuery.',
     },
     en: {
       name: 'Ustinov Aleksandr',
-      stackList: [{ id: 1, technology: 'HTML' }],
-      desc: 'Рассказ о себе. Lorem ipsum dolor amet consectetur. Duis sed velit libero urna vivamus sem sit. Penatibus enim iaculis malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus enim ac ullamcorper.',
+      stackList: [
+        { id: 1, technology: 'React' },
+        { id: 2, technology: 'TS' },
+        { id: 3, technology: 'PHP' },
+        { id: 4, technology: 'jQuery' },
+      ],
+      desc: 'I develop various web applications, I am fond of UX/UI design, I study and improve. I mainly deal with the frontend component, I like to write tests for hermione. Average jQuery enjoyer.',
     },
   },
   {
