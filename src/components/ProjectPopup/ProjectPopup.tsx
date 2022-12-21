@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 import { IProjectPopupProps } from 'types/IProjectPopupProps';
 
 import InfoBlock from './InfoBlock/InfoBlock';
+import InfoBlockLoader from './InfoBlockLoader/InfoBlockLoader';
 import PhotoBlock from './PhotoBlock/PhotoBlock';
 import styles from './ProjectPopup.module.scss';
 
@@ -34,8 +35,14 @@ const ProjectPopup: React.FC<IProjectPopupProps> = ({ closePopup }) => {
       <div className={styles.background} onClick={() => closePopup(popupReset)} />
       <div className={styles.popupWrapper}>
         <article className={cn(styles.container, styles.popupContainer)}>
-          <InfoBlock details={details} />
-          <PhotoBlock imagesUrls={details?.imagesUrls != null ? details.imagesUrls : null} />
+          {details !== null ? (
+            <>
+              <InfoBlock details={details} />
+              <PhotoBlock imagesUrls={details?.imagesUrls != null ? details.imagesUrls : null} />
+            </>
+          ) : (
+            <InfoBlockLoader />
+          )}
           <MdClose className={styles.closeBtn} onClick={() => closePopup(popupReset)} />
         </article>
       </div>

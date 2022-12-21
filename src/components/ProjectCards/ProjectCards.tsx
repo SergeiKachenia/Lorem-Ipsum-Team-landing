@@ -11,6 +11,7 @@ import { selectProjects, selectStatus, selectFull } from 'store/projects/selecto
 import { Statuses } from 'constants/statuses';
 
 import { ProjectCard } from './ProjectCard/ProjectCard';
+import { ProjectCardLoader } from './ProjectCardLoader/ProjectCardLoader';
 import styles from './ProjectCards.module.scss';
 
 import { locales } from '../../constants/modulesLocales/ProjectCards';
@@ -61,13 +62,27 @@ export const ProjectCards: React.FC = () => {
     return (
       <div>
         <div className={styles.container}>
-          <div className={styles.cards}>{mappedProjectCards}</div>
-          <div>
-            <TfiReload className={styles.loader} />
-          </div>
+          {projects.length !== 0 ? (
+            <>
+              <div className={styles.cards}>{mappedProjectCards}</div>
+
+              <div>
+                <TfiReload className={styles.loader} />
+              </div>
+            </>
+          ) : (
+            <div className={styles.cards}>
+              <ProjectCardLoader />
+              <ProjectCardLoader />
+              <ProjectCardLoader />
+              <ProjectCardLoader />
+              <ProjectCardLoader />
+              <ProjectCardLoader />
+            </div>
+          )}
         </div>
       </div>
-    ); /* Тут прелоадер */
+    );
   }
 
   return (
