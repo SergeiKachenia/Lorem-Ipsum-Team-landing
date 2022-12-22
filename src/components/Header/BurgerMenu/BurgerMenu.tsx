@@ -5,7 +5,7 @@ import React from 'react';
 
 import styles from './BurgerMenu.module.scss';
 
-import { IBurgerProps } from '../../types/BurgerMenuProps/IBurgerProps';
+import { IBurgerProps } from '../../../types/HeaderProps/BurgerMenuProps/IBurgerProps';
 
 const BurgerMenu: React.FC<IBurgerProps> = ({ onClick, toggled }) => {
   return (

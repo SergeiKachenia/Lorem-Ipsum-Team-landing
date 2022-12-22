@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import FeedbackForm from 'components/FeedbackForm/FeedbackForm';
+import FeedbackForm from 'components/FeedbackPopUp/FeedbackForm/FeedbackForm';
 
 import React, { useState } from 'react';
 

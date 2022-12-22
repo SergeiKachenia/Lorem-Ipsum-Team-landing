@@ -6,15 +6,15 @@ import { useFormik } from 'formik';
 import React, { useContext, useState } from 'react';
 
 import { MdClose } from 'react-icons/md';
-import { IFeedbackFormProps } from 'types/FeedbackFormProps/IFeedbackFormProps';
+import { IFeedbackFormProps } from 'types/FeedbackPopupProps/FeedbackFormProps/IFeedbackFormProps';
 import * as Yup from 'yup';
 
 import styles from './FeedbackForm.module.scss';
 
-import { locales } from '../../constants/localesModules/FeedbackForm';
-import { LanguageContext } from '../../contexts/LanguageContext';
-import { firestore } from '../../firebase';
-import { TextLocales } from '../common/TextLocales/TextLocales';
+import { locales } from '../../../constants/localesModules/FeedbackForm';
+import { LanguageContext } from '../../../contexts/LanguageContext';
+import { firestore } from '../../../firebase';
+import { TextLocales } from '../../common/TextLocales/TextLocales';
 
 const FeedbackForm: React.FC<IFeedbackFormProps> = ({ closeForm }) => {
   const [buttonPressed, setPressed] = useState(false);

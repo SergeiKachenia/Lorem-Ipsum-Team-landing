@@ -1,7 +1,7 @@
 import cn from 'classnames';
 
-import BurgerMenu from 'components/BurgerMenu/BurgerMenu';
 import { TextLocales } from 'components/common/TextLocales/TextLocales';
+import BurgerMenu from 'components/Header/BurgerMenu/BurgerMenu';
 import React, { RefObject, useContext, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
