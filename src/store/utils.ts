@@ -1,4 +1,4 @@
-export const setDelay = async (cb: () => any): Promise<any> => {
+export const setDelay = async (cb: () => unknown): Promise<unknown> => {
   return await new Promise((resolve) => {
     setTimeout(() => {
       resolve(cb());

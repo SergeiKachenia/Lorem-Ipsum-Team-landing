@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 
 import './ReactYandexMaps.scss';
