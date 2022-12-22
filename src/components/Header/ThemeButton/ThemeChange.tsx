@@ -1,5 +1,5 @@
-import DarkThemeIcon from 'assets/icons/DarkTheme.svg';
-import LightThemeIcon from 'assets/icons/LightTheme.svg';
+import { ReactComponent as DarkThemeIcon } from 'assets/icons/DarkTheme.svg';
+import { ReactComponent as LightThemeIcon } from 'assets/icons/LightTheme.svg';
 
 import React, { useContext } from 'react';
 
@@ -17,11 +17,7 @@ export const ThemeChange: React.FC = () => {
 
   return (
     <button className={styles.button} onClick={changeTheme}>
-      <img
-        src={themeContext?.theme === themes.light ? DarkThemeIcon : LightThemeIcon}
-        className={styles.icon}
-        alt='Тема'
-      />
+      {themeContext?.theme === themes.light ? <DarkThemeIcon /> : <LightThemeIcon />}
     </button>
   );
 };
