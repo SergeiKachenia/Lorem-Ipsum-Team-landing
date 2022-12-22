@@ -64,9 +64,8 @@
 
 .cardDescription {
   @include regular-text(16px, 22px, $color-dark-grey-text);
-  @include flex(column, flex-start, flex-start);
-
-  gap: 10px;
+  @include flex(column, space-between, flex-start);
+  height: 100%;
 }
 
 .card:hover .cardName {
