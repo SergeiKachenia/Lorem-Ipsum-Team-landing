@@ -27,7 +27,7 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
       dataTreat: Yup.array().min(1, 'Даю согласие на обработку персональных данных'),
     }),
     onSubmit: (values) => {
-      console.log(values);п
+      console.log(values);
     },
   });
   const hasError = (fieldName: keyof typeof formik.touched | keyof typeof formik.errors): boolean =>
