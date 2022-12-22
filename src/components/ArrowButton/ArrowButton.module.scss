@@ -1,0 +1,30 @@
+@import "styles/global";
+
+.buttonContainer {
+  @include flex(row, center, center);
+  cursor: pointer;
+
+  width: 100%;
+  height: 100%;
+
+  background: $color-white-text;
+  border-radius: 20px;
+
+  transition: all 0.3s ease-out;
+}
+
+.buttonContainer path {
+  stroke: $color-main-blue-hover;
+}
+
+.buttonContainer:hover {
+  background: $color-main-blue-hover;
+}
+
+.buttonContainer:hover path {
+  stroke: $color-white-text;
+}
+
+.arrowRight {
+  transform: rotate(180deg);
+}

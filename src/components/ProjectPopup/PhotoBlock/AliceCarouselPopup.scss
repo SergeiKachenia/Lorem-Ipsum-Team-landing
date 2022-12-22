@@ -1,0 +1,17 @@
+@import "styles/global";
+
+#photo-block .alice-carousel {
+  height: 100%;
+
+  &>div {
+    height: 100%;
+  }
+}
+
+#photo-block .alice-carousel__wrapper {
+  height: 100%;
+}
+
+#photo-block .alice-carousel__stage-item {
+  width: 100% !important;
+}

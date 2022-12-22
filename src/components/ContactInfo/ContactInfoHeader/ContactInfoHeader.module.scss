@@ -1,0 +1,16 @@
+@import 'styles/global';
+
+.header {
+  @include flex(row, space-between, center);
+  gap: 15px;
+
+  margin-bottom: 52px;
+
+  .title {
+    @include regular-text(40px, 48px, $color-main-text);
+  }
+
+  @media (max-width: $width-tablet-narrow) {
+    @include flex(column, flex-start, flex-start);
+  }
+}

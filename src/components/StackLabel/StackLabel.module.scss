@@ -1,0 +1,10 @@
+@import "styles/global";
+
+.stackLabel {
+  @include regular-text(14px, 20px, $color-grey-text);
+  padding: 2px 8px;
+
+  background: $color-white;
+  border: 1px solid $color-main-blue;
+  border-radius: 4px;
+}

@@ -1,0 +1,23 @@
+@import 'styles/global';
+
+.iconLink {
+  @include flex(row, center, center);
+
+  cursor: pointer;
+
+  padding: 3px;
+
+  text-decoration: none;
+
+  background: $color-white;
+  border: 1px solid $color-main-blue;
+  border-radius: 50px;
+  outline: inherit;
+
+  path {
+    width: 20px;
+    height: 20px;
+
+    fill: $color-another-main-text;
+  }
+}

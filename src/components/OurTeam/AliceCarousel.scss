@@ -1,0 +1,21 @@
+@import "styles/global";
+
+#our-team .alice-carousel__dots {
+  @include flex(row, flex-start, flex-start);
+  width: 100%;
+  margin: 112px 0 0;
+
+  &-item {
+    width: 100%;
+  }
+}
+
+#our-team .alice-carousel__stage {
+  display: flex;
+}
+
+#our-team .alice-carousel__stage-item {
+  flex: 1 0 auto;
+
+  height: auto;
+}

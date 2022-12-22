@@ -1,0 +1,93 @@
+@use "sass:math";
+@import "styles/global";
+
+
+@mixin avatar-wrapper($border: 2px, $size: 84px, $color: #454545) {
+  $radius: math.div($size, 2) - $border;
+  width: $size;
+  height: $size;
+
+  clip-path: circle($radius);
+
+  img {
+    $offset: $radius - $border;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    clip-path: circle($offset);
+  }
+}
+
+.card {
+  @include flex(column, stretch, flex-start);
+  gap: 20px;
+
+  width: 408px;
+  height: 100%;
+  min-height: 330px;
+  padding: 28px;
+
+  background: $color-white;
+  border: 1px solid $color-main-blue;
+  border-radius: 16px;
+
+  transition: all 0.3s ease-out;
+}
+
+.cardImage {
+  @include avatar-wrapper(0, 60px, $color-white);
+}
+
+.cardTop {
+  @include flex(row, flex-start, center);
+  gap: 16px;
+
+}
+
+.cardNameStack {
+  @include flex(column, center, flex-start);
+  gap: 8px;
+
+  width: 100%;
+}
+
+.cardName {
+  @include medium-text(22px, 28px, $color-main-text);
+}
+
+.cardStackList {
+  @include flex(row, flex-start, center);
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cardDescription {
+  @include regular-text(16px, 22px, $color-dark-grey-text);
+  @include flex(column, space-between, flex-start);
+  gap:10px;
+
+  height: 100%;
+}
+
+.card:hover .cardName {
+  @include medium-text(22px, 28px, $color-white-text);
+}
+
+.card:hover .cardDescription {
+  @include regular-text(16px, 22px, $color-white-text);
+}
+
+.card:hover .cardStackList * {
+  @include regular-text(14px, 20px, $color-dark-grey-text);
+}
+
+.card:hover {
+  background: $color-main-blue;
+  border-color: $color-white;
+}
+
+.cardLinks {
+  @include flex(row, flex-start, center);
+  gap: 8px;
+}

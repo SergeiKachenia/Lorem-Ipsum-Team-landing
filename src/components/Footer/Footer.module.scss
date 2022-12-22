@@ -1,0 +1,11 @@
+@import "styles/global";
+
+.wrapper {
+  padding: 48px 0;
+
+  background-color: $color-background-header-and-footer;
+}
+
+.text {
+  @include regular-text(16px, 32px, $color-grey);
+}

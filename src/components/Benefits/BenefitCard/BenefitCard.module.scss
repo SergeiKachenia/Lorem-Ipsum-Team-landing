@@ -1,0 +1,53 @@
+@use 'sass:color';
+@import "styles/global";
+
+
+.wrapper {
+  @include flex(column, flex-start, center);
+  width: 100%;
+  max-width: 330px;
+  padding: 29px 0;
+
+  text-align: center;
+
+  background-color: $color-white;
+  border: 1px solid $color-main-blue-hover;
+  border-radius: 16px;
+
+  transition: all 0.3s ease-out;
+
+  .icon {
+    @include icon-size(80x, 80px);
+
+    & path {
+      fill: $color-main-blue-hover;
+    }
+  }
+
+  .title {
+    @include medium-text(30px, 38px, $color-main-blue-hover);
+
+    margin: 24px 0 48px;
+  }
+
+  .description {
+    @include regular-text(20px, 25px, $color-grey-text);
+    max-width: 224px;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+
+    background-color: $color-main-blue;
+    filter: drop-shadow(0 6px 8px rgba(18, 21, 24, 0.35));
+
+     * {
+       color: $color-white-text;
+     }
+
+    path {
+      fill: $color-white-text;
+    }
+  }
+
+}

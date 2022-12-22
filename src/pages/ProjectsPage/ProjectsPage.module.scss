@@ -1,0 +1,13 @@
+@import "styles/global";
+
+.title {
+  @include regular-text(64px, 80px, $color-main-text);
+  margin: 80px 0 24px;
+
+  @media (max-width: $width-desk-narrow) {
+    font-size: 40px;
+  }
+  @media (max-width: 595px) {
+    text-align: center;
+  }
+}

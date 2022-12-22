@@ -1,0 +1,23 @@
+@import 'styles/global';
+
+.ymap {
+  width: 832px;
+  height: 680px;
+
+  @media (max-width: $width-desk-wide) {
+    width: 57.78vw;
+    height: calc(57.78vw / 104 * 85);
+  }
+
+  @media (max-width: $width-tablet-narrow) {
+    width: 100%;
+    height: calc(96vw / 104 * 85);
+  }
+}
+
+.map {
+  @media (max-width: $width-tablet-narrow) {
+    width: 100%;
+  }
+}
+

@@ -1,20 +1,81 @@
-// Colors
-$color-black: #000000;
-$color-white: #ffffff;
-$color-main-text: #111315;
-$color-secondary-text: #cfdefb;
-$color-main: #0a558b;
-$color-main-light: #25638f;
-$color-main-hover: #083c62;
-$color-main-active: #06273e;
-$color-grey: #fafafa;
-$color-error: #940202;
-$color-disabled: #a4aab5;
-$color-background: #64849a;
-$color-background-hover: #516a7c;
-$color-background-active: #384a56;
-$color-background-header-and-footer: #062942;
+@use "sass:math";
 
+// Common styles
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    width: 96%;
+  }
+}
+
+:root[data-theme="light"] {
+  --color-white: #fff;
+  --color-main-text: #121518;
+  --color-another-main-text: #16161A;
+  --color-grey: #D9D9D9;
+  --color-grey-text: #85868C;
+  --color-grey-text-hover: #A4AAB5;
+  --color-white-text: #E7ECF7;
+  --color-dark-grey-text: #4B4C52;
+  --color-main-blue: #25638f;
+  --color-main-blue-hover: #0a558b;
+  --color-main-blue-active: #0b4670;
+  --color-background-header-and-footer: #09293f;
+  --color-disabled: #A4AAB5;
+  --color-cta-gradient: linear-gradient(97.22deg, #25638F 0%, #2A84C4 100%);
+}
+
+:root[data-theme="dark"] {
+  --color-white: #0F0F10;
+  --color-main-text: #fff;
+  --color-another-main-text: #C9C9C9;
+  --color-grey: #D9D9D9;
+  --color-grey-text: #85868C;
+  --color-grey-text-hover: #929AA9;
+  --color-white-text: #1B1B1B;
+  --color-dark-grey-text: #7D7D7D;
+  --color-main-blue: #666;
+  --color-main-blue-hover: #fff;
+  --color-main-blue-active: none;
+  --color-background-header-and-footer: #1C1C1E;
+  --color-disabled: #A4AAB5;
+  --color-cta-gradient: linear-gradient(97.22deg, #1B1B1B 0%, #2E2E2E 100%);
+}
+
+// Colors
+$color-black: #000;
+$color-white: var(--color-white);
+
+// Text
+$color-main-text: var(--color-main-text);
+$color-another-main-text: var(--color-another-main-text);
+
+// Grey
+$color-grey: var(--color-grey);
+$color-grey-text: var(--color-grey-text);
+$color-grey-text-hover: var(--color-grey-text-hover);
+
+// Text
+$color-white-text: var(--color-white-text);
+$color-dark-grey-text: var(--color-dark-grey-text);
+
+// Main
+$color-main-blue: var(--color-main-blue);
+$color-main-blue-hover: var(--color-main-blue-hover);
+$color-main-blue-active: var(--color-main-blue-active);
+
+// Other
+$color-error: #940202;
+$color-disabled: var(--color-disabled);
+$color-background-header-and-footer: var(--color-background-header-and-footer);
+$color-link: #25638F;
+$color-popup-shading: #16161A;
+$color-cta-gradient: var(--color-cta-gradient);
 
 // Sizes
 $width-desk-wide: 1281px;
@@ -24,9 +85,29 @@ $width-tablet-narrow: 769px;
 $width-mobile-wide: 451px;
 $width-mobile-narrow: 331px;
 
+html, body {
+  scrollbar-color: $color-grey;
+  scrollbar-width: thin;
+
+  body {
+    background-color: $color-white;
+
+    transition: background-color 0.3s ease-out;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $color-grey;
+    border-radius: 50px;
+  }
+}
+
 // Mixins
 @mixin regular-text($size, $line-height, $color) {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Yandex Sans Text", sans-serif;
   font-size: $size;
   font-weight: 400;
   line-height: $line-height;
@@ -34,7 +115,7 @@ $width-mobile-narrow: 331px;
 }
 
 @mixin medium-text($size, $line-height, $color) {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Yandex Sans Text", sans-serif;
   font-size: $size;
   font-weight: 500;
   line-height: $line-height;
@@ -42,7 +123,7 @@ $width-mobile-narrow: 331px;
 }
 
 @mixin semi-medium-text($size, $line-height, $color) {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Yandex Sans Text", sans-serif;
   font-size: $size;
   font-weight: 600;
   line-height: $line-height;
@@ -50,7 +131,7 @@ $width-mobile-narrow: 331px;
 }
 
 @mixin bold-text($size, $line-height, $color) {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Yandex Sans Text", sans-serif;
   font-size: $size;
   font-weight: 700;
   line-height: $line-height;
@@ -78,10 +159,29 @@ $width-mobile-narrow: 331px;
   max-height: $height;
 }
 
-@mixin buttonDefault() {
-    background: transparent;
-    border: none;
-    outline: 0;
-    padding: 0;
-    cursor: pointer;
+@mixin button-default() {
+  cursor: pointer;
+
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  outline: 0;
+}
+
+@mixin avatar-wrapper($border: 2px, $size: 84px, $color: #454545) {
+  $radius: math.div($size, 2) - $border;
+  width: $size;
+  height: $size;
+
+  clip-path: circle($radius);
+
+  img {
+    $offset: $radius - $border;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    clip-path: circle($offset);
   }
+}
