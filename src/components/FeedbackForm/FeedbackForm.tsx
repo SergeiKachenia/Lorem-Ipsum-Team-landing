@@ -1,3 +1,4 @@
+import { ReactComponent as CheckMark } from 'assets/icons/checkbox-active.svg';
 import cn from 'classnames';
 import { useFormik } from 'formik';
 
@@ -140,18 +141,18 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
           >
             {hasError('message') ? '' : formik.errors.message}
           </span>
-          <div className={styles.data_check}>
-            <input
-              id='dataTreat'
-              name='dataTreat'
-              type='checkbox'
-              className={styles.checkbox}
-              onChange={formik.handleChange}
-            />
-            <label htmlFor='dataTreat' className={styles.data_check__label}>
+          <label className={styles.data_check}>
+            <div className={styles.checkboxWrapper}>
+              <input name='dataTreat' type='checkbox' className={styles.checkbox} onChange={formik.handleChange} />
+              <span className={styles.customCheckbox}>
+                <CheckMark />
+              </span>
+            </div>
+
+            <div className={styles.data_check__label}>
               <TextLocales locale={(l) => locales.ApprovalProcessingPersonalData[l]} />
-            </label>
-          </div>
+            </div>
+          </label>
           <button
             className={styles.send_btn}
             type='submit'

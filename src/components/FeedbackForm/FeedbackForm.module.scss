@@ -28,6 +28,10 @@
 
 .form {
   @include flex(column, flex-start, flex-start);
+
+  scrollbar-color: $color-grey;
+  scrollbar-width: thin;
+
   position: relative;
   z-index: 2;
 
@@ -168,40 +172,45 @@
   visibility: visible;
 }
 
-.checkbox {
-  position: relative;
-
-  width: 0;
-  height: 48px;
-  margin-right: 48px;
-
-  &::before {
+.checkboxWrapper {
+  .customCheckbox {
     cursor: pointer;
-    content: "";
 
-    position: absolute;
-    top: 0;
-    left: 0;
+    display: block;
 
     box-sizing: border-box;
     width: 48px;
     height: 48px;
 
-    border: 1px solid #4b4c52;
+    border: 1px solid $color-dark-grey-text;
     border-radius: 10px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+
+      visibility: hidden;
+
+      path {
+        stroke: $color-another-main-text;
+      }
+    }
   }
 
-  &:checked {
-    &::before {
-      background-color: $color-another-main-text;
-      background-position: center;
-      background-size: cover;
-      border: 1px solid #4b4c52;
+  .checkbox {
+    display: none;
 
-      mask-image: url("../../assets/icons/checkbox-active.svg");
+    margin-right: 48px;
+
+    &:checked {
+      & ~ .customCheckbox svg {
+        visibility: visible;
+      }
     }
   }
 }
+
+
 
 .data_check__label {
   @include medium-text(19px, 24px, $color-another-main-text);
