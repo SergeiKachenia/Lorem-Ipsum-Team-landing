@@ -1,10 +1,13 @@
+import { LanguageContext, locales } from 'contexts/LanguageContext';
 import React, { useContext } from 'react';
+
+import { LanguageType } from 'types/contexts/ILanguageContext';
 
 import styles from './LanguageChange.module.scss';
 
-import { LanguageContext, locales } from '../../../contexts/LanguageContext';
-import { LanguageType } from '../../../types/contexts/ILanguageContext';
-
+/**
+ * Компонент меню для смены языка
+ */
 export const LanguageChange: React.FC = () => {
   const languageContext = useContext(LanguageContext);
 

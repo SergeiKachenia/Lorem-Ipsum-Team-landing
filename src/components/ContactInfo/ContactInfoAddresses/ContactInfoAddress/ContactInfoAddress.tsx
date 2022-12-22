@@ -1,10 +1,13 @@
 import cn from 'classnames';
 import React from 'react';
 
+import { IContactInfoAddressProps } from 'types/ContactInfoProps/ContactInfoAddressesProps/ContactInfoAddressProps/IContactInfoAddressProps';
+
 import styles from './ContactInfoAddress.module.scss';
 
-import { IContactInfoAddressProps } from '../../../../types/ContactInfoProps/ContactInfoAddressesProps/ContactInfoAddressProps/IContactInfoAddressProps';
-
+/**
+ * Компонент адреса
+ */
 export const ContactInfoAddress: React.FC<IContactInfoAddressProps> = ({
   name,
   addresses,

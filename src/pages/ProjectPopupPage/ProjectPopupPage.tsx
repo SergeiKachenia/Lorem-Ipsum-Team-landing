@@ -3,6 +3,9 @@ import React from 'react';
 
 import { useNavigate } from 'react-router-dom';
 
+/**
+ * Компонент страницы попапа проекта
+ */
 export const ProjectPopupPage: React.FC = () => {
   const navigate = useNavigate();
 

@@ -6,6 +6,10 @@ import styles from './InfoBlockLoader.module.scss';
 
 import { ReactComponent as LinkIcon } from '../../../assets/icons/LinkIcon.svg';
 import defaultAvatar from '../../../assets/images/avatar.png';
+
+/**
+ * Прелоадер для компонента с детальной ифнормацией о проекте
+ */
 const InfoBlockLoader: React.FC = () => {
   return (
     <section className={styles.infoBlock}>

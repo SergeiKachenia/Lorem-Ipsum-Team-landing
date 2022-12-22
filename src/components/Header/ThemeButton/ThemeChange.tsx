@@ -1,12 +1,14 @@
 import { ReactComponent as DarkThemeIcon } from 'assets/icons/DarkTheme.svg';
 import { ReactComponent as LightThemeIcon } from 'assets/icons/LightTheme.svg';
 
+import { ThemeContext, themes } from 'contexts/ThemeContext';
 import React, { useContext } from 'react';
 
 import styles from './ThemeChange.module.scss';
 
-import { ThemeContext, themes } from '../../../contexts/ThemeContext';
-
+/**
+ * Компонент кнопки смены темы
+ */
 export const ThemeChange: React.FC = () => {
   const themeContext = useContext(ThemeContext);
 

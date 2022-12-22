@@ -3,6 +3,9 @@ import { IBenefitCardProps } from 'types/BenefitsProps/BenefitCardProps/IBenefit
 
 import styles from './BenefitCard.module.scss';
 
+/**
+ * Компонент карточки преимущества
+ */
 export const BenefitCard: React.FC<IBenefitCardProps> = ({ Icon, title, description }) => {
   return (
     <div className={styles.wrapper}>

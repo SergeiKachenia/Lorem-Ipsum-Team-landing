@@ -1,3 +1,5 @@
+import { ReactComponent as Arrow } from 'assets/icons/Arrow.svg';
+
 import cn from 'classnames';
 import React from 'react';
 
@@ -6,8 +8,9 @@ import { IArrowButtonProps } from 'types/ArrowButtonProps/IArrowButtonProps';
 
 import styles from './ArrowButton.module.scss';
 
-import { ReactComponent as Arrow } from '../../assets/icons/Arrow.svg';
-
+/**
+ * Компонент, возврашающий иконку стрелочки с палочкой
+ */
 export const ArrowButton: React.FC<IArrowButtonProps> = ({ isLeft }) => {
   return (
     <div className={cn(styles.buttonContainer)}>

@@ -1,11 +1,14 @@
+import { LanguageContext } from 'contexts/LanguageContext';
 import React, { useContext, useMemo } from 'react';
+
+import { IContactInfoAddressesProps } from 'types/ContactInfoProps/ContactInfoAddressesProps/IContactInfoAddressesProps';
 
 import { ContactInfoAddress } from './ContactInfoAddress/ContactInfoAddress';
 import styles from './ContactInfoAddresses.module.scss';
 
-import { LanguageContext } from '../../../contexts/LanguageContext';
-import { IContactInfoAddressesProps } from '../../../types/ContactInfoProps/ContactInfoAddressesProps/IContactInfoAddressesProps';
-
+/**
+ * КонтейнерныЙ компонент для адресов
+ */
 export const ContactInfoAddresses: React.FC<IContactInfoAddressesProps> = ({
   contacts,
   activeAddressId,

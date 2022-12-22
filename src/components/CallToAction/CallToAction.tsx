@@ -1,11 +1,15 @@
+import { TextLocales } from 'components/common/TextLocales/TextLocales';
 import React from 'react';
+
+import { ICallToActionProps } from 'types/CallToActionProps/ICallToActionProps';
+
+import { locales } from 'constants/localesModules/CallToAction';
 
 import styles from './CallToAction.module.scss';
 
-import { locales } from '../../constants/localesModules/CallToAction';
-import { ICallToActionProps } from '../../types/CallToActionProps/ICallToActionProps';
-import { TextLocales } from '../common/TextLocales/TextLocales';
-
+/**
+ * Компонент CallToAction секции
+ */
 const CallToAction: React.FC<ICallToActionProps> = ({ scrollContactInfo, scrollDown }) => {
   return (
     <section className={styles.CTAContainer}>

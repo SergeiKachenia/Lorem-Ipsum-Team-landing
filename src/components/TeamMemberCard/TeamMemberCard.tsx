@@ -9,10 +9,14 @@ import styles from './TeamMemberCard.module.scss';
 
 import { StackLabel } from '../StackLabel/StackLabel';
 
+/**
+ * Компонент карточки участника команды
+ */
 export const TeamMemberCard: React.FC<ITeamMemberCardProps> = ({ name, stackList, desc, uuid, tgLink, ghLink }) => {
   const stackLabels = useMemo(() => {
     return stackList.map((stack) => <StackLabel key={stack.id} technology={stack.technology} />);
   }, [stackList, uuid]);
+
   return (
     <div className={styles.card}>
       <div className={styles.cardTop}>

@@ -1,10 +1,13 @@
+import { TextLocales } from 'components/common/TextLocales/TextLocales';
 import React from 'react';
+
+import { locales } from 'constants/localesModules/Footer';
 
 import styles from './Footer.module.scss';
 
-import { locales } from '../../constants/localesModules/Footer';
-import { TextLocales } from '../common/TextLocales/TextLocales';
-
+/**
+ * Компонент футера сайта
+ */
 const Footer: React.FC = () => {
   return (
     <footer className={styles.wrapper}>

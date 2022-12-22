@@ -6,6 +6,9 @@ import React, { useRef } from 'react';
 
 import { mockTeamMembers } from 'constants/mock';
 
+/**
+ * Компонент страницы "О нас"
+ */
 const AboutUsPage: React.FC = () => {
   const scrollContactInfo = useRef<HTMLDivElement>(null);
   const scrollDown = useRef<HTMLDivElement>(null);

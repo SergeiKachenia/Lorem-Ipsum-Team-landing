@@ -2,7 +2,7 @@ import cn from 'classnames';
 
 import { TextLocales } from 'components/common/TextLocales/TextLocales';
 import BurgerMenu from 'components/Header/BurgerMenu/BurgerMenu';
-import React, { RefObject, useContext, useRef, useState } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 import { locales } from 'constants/localesModules/Header';
@@ -12,6 +12,9 @@ import { LanguageChange } from './LanguageChange/LanguageChange';
 
 import { ThemeChange } from './ThemeButton/ThemeChange';
 
+/**
+ * Компонент хедера сайта
+ */
 const Header: React.FC = () => {
   const [isOpen, setOpen] = useState(false);
 

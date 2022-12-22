@@ -3,10 +3,13 @@ import cn from 'classnames';
 import { Divide } from 'hamburger-react';
 import React from 'react';
 
+import { IBurgerProps } from 'types/HeaderProps/BurgerMenuProps/IBurgerProps';
+
 import styles from './BurgerMenu.module.scss';
 
-import { IBurgerProps } from '../../../types/HeaderProps/BurgerMenuProps/IBurgerProps';
-
+/**
+ * Компонент бургер-меню для мобильной версии сайта
+ */
 const BurgerMenu: React.FC<IBurgerProps> = ({ onClick, toggled }) => {
   return (
     <div className={cn(styles.menu)}>

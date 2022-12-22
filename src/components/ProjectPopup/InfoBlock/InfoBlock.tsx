@@ -1,14 +1,17 @@
+import { ReactComponent as LinkIcon } from 'assets/icons/LinkIcon.svg';
+import defaultAvatar from 'assets/images/avatar.png';
+import { TextLocales } from 'components/common/TextLocales/TextLocales';
+import { LanguageContext } from 'contexts/LanguageContext';
 import React, { memo, useContext, useMemo } from 'react';
+import { IInfoBlockProps } from 'types/PropjectPopupProps/InfoBlockProps/IInfoBlockProps';
 
 import styles from './InfoBlock.module.scss';
 
-import { ReactComponent as LinkIcon } from '../../../assets/icons/LinkIcon.svg';
-import defaultAvatar from '../../../assets/images/avatar.png';
-import { LanguageContext } from '../../../contexts/LanguageContext';
-import { IInfoBlockProps } from '../../../types/PropjectPopupProps/InfoBlockProps/IInfoBlockProps';
-import { TextLocales } from '../../common/TextLocales/TextLocales';
 import { StackLabel } from '../../StackLabel/StackLabel';
 
+/**
+ * Компонент c детальной ифнормацией о проекте
+ */
 const InfoBlock: React.FC<IInfoBlockProps> = ({ details }) => {
   const languageContext = useContext(LanguageContext);
 

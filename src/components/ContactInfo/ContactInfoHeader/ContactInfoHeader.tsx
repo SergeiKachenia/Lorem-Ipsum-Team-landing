@@ -1,11 +1,15 @@
+import { TextLocales } from 'components/common/TextLocales/TextLocales';
 import React, { memo } from 'react';
+
+import { locales } from 'constants/localesModules/ContactInfo';
 
 import styles from './ContactInfoHeader.module.scss';
 
-import { locales } from '../../../constants/localesModules/ContactInfo';
-import { TextLocales } from '../../common/TextLocales/TextLocales';
 import FeedbackPopUp from '../../FeedbackPopUp/FeedbackPopUp';
 
+/**
+ * Компонент, возврашающий заглавную часть секции контактной информации
+ */
 const ContactInfoHeader: React.FC = () => {
   return (
     <header className={styles.header}>

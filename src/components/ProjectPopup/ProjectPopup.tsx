@@ -4,6 +4,10 @@ import React, { memo, useEffect } from 'react';
 import { MdClose } from 'react-icons/md';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import { AppDispatch } from 'store';
+import { projectsSlice } from 'store/projects';
+import { loadDetails } from 'store/projects/loadDetails';
+import { selectDetails } from 'store/projects/selectors';
 import { IProjectPopupProps } from 'types/PropjectPopupProps/IProjectPopupProps';
 
 import InfoBlock from './InfoBlock/InfoBlock';
@@ -11,12 +15,9 @@ import InfoBlockLoader from './InfoBlockLoader/InfoBlockLoader';
 import PhotoBlock from './PhotoBlock/PhotoBlock';
 import styles from './ProjectPopup.module.scss';
 
-import { AppDispatch } from '../../store';
-
-import { projectsSlice } from '../../store/projects';
-import { loadDetails } from '../../store/projects/loadDetails';
-import { selectDetails } from '../../store/projects/selectors';
-
+/**
+ * Попап с детальной информацией о проекте
+ */
 const ProjectPopup: React.FC<IProjectPopupProps> = ({ closePopup }) => {
   const dispatch = useDispatch<AppDispatch>();
   const { projectId } = useParams();

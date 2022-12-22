@@ -8,6 +8,9 @@ import styles from './RoundArrowButton.module.scss';
 
 import { ReactComponent as RoundArrow } from '../../assets/icons/RoundArrow.svg';
 
+/**
+ * Компонент, возврашающий иконку стрелочки
+ */
 export const RoundArrowButton: React.FC<IArrowButtonProps> = ({ isLeft }) => {
   return (
     <div className={cn(styles.buttonContainer)}>

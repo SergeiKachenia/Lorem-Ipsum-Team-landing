@@ -1,6 +1,10 @@
 import { addDoc, collection } from '@firebase/firestore';
 import { ReactComponent as CheckMark } from 'assets/icons/checkbox-active.svg';
 import cn from 'classnames';
+import { TextLocales } from 'components/common/TextLocales/TextLocales';
+import { LanguageContext } from 'contexts/LanguageContext';
+
+import firebase from 'firebase/compat';
 import { useFormik } from 'formik';
 
 import React, { useContext, useState } from 'react';
@@ -9,13 +13,15 @@ import { MdClose } from 'react-icons/md';
 import { IFeedbackFormProps } from 'types/FeedbackPopupProps/FeedbackFormProps/IFeedbackFormProps';
 import * as Yup from 'yup';
 
+import { locales } from 'constants/localesModules/FeedbackForm';
+
 import styles from './FeedbackForm.module.scss';
 
-import { locales } from '../../../constants/localesModules/FeedbackForm';
-import { LanguageContext } from '../../../contexts/LanguageContext';
 import { firestore } from '../../../firebase';
-import { TextLocales } from '../../common/TextLocales/TextLocales';
 
+/**
+ * Компонент формы обратной связи
+ */
 const FeedbackForm: React.FC<IFeedbackFormProps> = ({ closeForm }) => {
   const [buttonPressed, setPressed] = useState(false);
   const [resultMessage, setMessage] = useState('');

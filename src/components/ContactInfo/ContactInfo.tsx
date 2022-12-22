@@ -1,13 +1,17 @@
 import React, { useMemo, useState } from 'react';
 
+import { IAddress } from 'types/IContact';
+
+import { contacts } from 'constants/mock';
+
 import styles from './ContactInfo.module.scss';
 import { ContactInfoAddresses } from './ContactInfoAddresses/ContactInfoAddresses';
 import { MemoizedContactInfoHeader } from './ContactInfoHeader/ContactInfoHeader';
 import { ContactInfoMap } from './ContactInfoMap/ContactInfoMap';
 
-import { contacts } from '../../constants/mock';
-import { IAddress } from '../../types/IContact';
-
+/**
+ * Компонент секции контактной информации
+ */
 export const ContactInfo: React.FC = () => {
   const addresses = useMemo(
     () =>

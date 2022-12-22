@@ -1,15 +1,18 @@
+import { TextLocales } from 'components/common/TextLocales/TextLocales';
 import { LanguageContext } from 'contexts/LanguageContext';
 import React, { useContext, useMemo } from 'react';
 
 import { benefits } from 'constants/benefits';
 
+import { locales } from 'constants/localesModules/Benefits';
+
 import { BenefitCard } from './BenefitCard/BenefitCard';
 
 import styles from './Benefits.module.scss';
 
-import { locales } from '../../constants/localesModules/Benefits';
-import { TextLocales } from '../common/TextLocales/TextLocales';
-
+/**
+ * Контейнерный компонент для карточек преимуществ
+ */
 export const Benefits: React.FC = () => {
   const languageContext = useContext(LanguageContext);
 

@@ -1,3 +1,5 @@
+import { TextLocales } from 'components/common/TextLocales/TextLocales';
+import { LanguageContext } from 'contexts/LanguageContext';
 import React, { useContext, useEffect, useMemo } from 'react';
 import { TfiReload } from 'react-icons/tfi';
 import { useDispatch, useSelector } from 'react-redux';
@@ -8,16 +10,16 @@ import { loadProjects } from 'store/projects/loadProjects';
 
 import { selectProjects, selectStatus, selectFull } from 'store/projects/selectors';
 
+import { locales } from 'constants/localesModules/ProjectCards';
 import { Statuses } from 'constants/statuses';
 
 import { ProjectCard } from './ProjectCard/ProjectCard';
 import { ProjectCardLoader } from './ProjectCardLoader/ProjectCardLoader';
 import styles from './ProjectCards.module.scss';
 
-import { locales } from '../../constants/localesModules/ProjectCards';
-import { LanguageContext } from '../../contexts/LanguageContext';
-import { TextLocales } from '../common/TextLocales/TextLocales';
-
+/**
+ * Контейнер для карточек проектов
+ */
 export const ProjectCards: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const projects = useSelector(selectProjects);

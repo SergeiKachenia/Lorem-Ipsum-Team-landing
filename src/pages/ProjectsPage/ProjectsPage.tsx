@@ -7,6 +7,9 @@ import { locales } from 'constants/localesModules/ProjectsPage';
 
 import styles from './ProjectsPage.module.scss';
 
+/**
+ * Компонент страницы проектов
+ */
 const ProjectsPage: React.FC = () => {
   return (
     <>

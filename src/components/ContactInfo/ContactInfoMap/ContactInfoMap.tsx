@@ -1,14 +1,18 @@
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
-import React, { useContext, useMemo } from 'react';
 
-import styles from './ContactInfoMap.module.scss';
 import './ReactYandexMaps.scss';
 
-import activeMark from '../../../assets/icons/geomarker-active.svg';
-import defaultMark from '../../../assets/icons/geomarker-default.svg';
-import { LanguageContext } from '../../../contexts/LanguageContext';
-import { IContactInfoMapProps } from '../../../types/ContactInfoProps/ContactInfoMapProps/IContactInfoMapProps';
+import activeMark from 'assets/icons/geomarker-active.svg';
+import defaultMark from 'assets/icons/geomarker-default.svg';
+import { LanguageContext } from 'contexts/LanguageContext';
+import React, { useContext, useMemo } from 'react';
+import { IContactInfoMapProps } from 'types/ContactInfoProps/ContactInfoMapProps/IContactInfoMapProps';
 
+import styles from './ContactInfoMap.module.scss';
+
+/**
+ * Компонент интерактивной карты
+ */
 export const ContactInfoMap: React.FC<IContactInfoMapProps> = ({ activeAddressId, setActiveAddressId, addresses }) => {
   const languageContext = useContext(LanguageContext);
 
