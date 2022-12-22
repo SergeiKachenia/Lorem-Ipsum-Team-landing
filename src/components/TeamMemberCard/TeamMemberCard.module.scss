@@ -65,6 +65,7 @@
 .cardDescription {
   @include regular-text(16px, 22px, $color-dark-grey-text);
   @include flex(column, space-between, flex-start);
+  gap:10px;
   height: 100%;
 }
 
