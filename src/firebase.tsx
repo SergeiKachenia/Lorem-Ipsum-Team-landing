@@ -2,12 +2,12 @@ import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  apiKey: 'AIzaSyD6BaqKFDUZlLEG5W68GMB7RXxltD2QEds',
+  authDomain: 'lorem-ipsum-team-db-22627.firebaseapp.com',
+  projectId: 'lorem-ipsum-team-db-22627',
+  storageBucket: 'lorem-ipsum-team-db-22627.appspot.com',
+  messagingSenderId: '561545940839',
+  appId: '1:561545940839:web:4ae3c6c28bc3dbb05a29c2',
 };
 
 const app = initializeApp(firebaseConfig);
