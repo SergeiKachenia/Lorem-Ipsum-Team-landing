@@ -102,17 +102,29 @@ export const mockTeamMembers: ITeamMember[] = [
   },
   {
     uuid: '5e31d6e5-08d6-4e59-8411-c0eda4d6a3fb',
-    tgLink: '',
-    gitHubLink: '',
+    tgLink: 'https://t.me/belitozz',
+    gitHubLink: 'https://github.com/SergeiKachenia',
     ru: {
       name: 'Сергей Каченя',
-      stackList: [{ id: 1, technology: 'HTML' }],
-      desc: 'Рассказ о себе. Lorem ipsum dolor amet consectetur. Duis sed velit libero urna vivamus sem sit. Penatibus enim iaculis malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus enim ac ullamcorper.',
+      stackList: [
+        { id: 1, technology: 'TS' },
+        { id: 2, technology: 'React' },
+        { id: 3, technology: 'Redux' },
+        { id: 4, technology: 'Node.js' },
+        { id: 5, technology: 'Jest' },
+      ],
+      desc: 'Учился в Яндекс.Практикуме по направлению "Web developer +". На данный момент работаю в компании "Спраут" как  Frontend разработчик. Люблю веб-разработку в целом и написание интерфейсов особенно. Пытаюсь углубляться в алгоритмы и структуры данных, также улучшаю свои знания в бэкенде.',
     },
     en: {
-      name: 'Sergej Kachenya',
-      stackList: [{ id: 1, technology: 'HTML' }],
-      desc: 'Рассказ о себе. Lorem ipsum dolor amet consectetur. Duis sed velit libero urna vivamus sem sit. Penatibus enim iaculis malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus enim ac ullamcorper.',
+      name: 'Sergei Kachenia',
+      stackList: [
+        { id: 1, technology: 'TS' },
+        { id: 2, technology: 'React' },
+        { id: 3, technology: 'Redux' },
+        { id: 4, technology: 'Node.js' },
+        { id: 5, technology: 'Jest' },
+      ],
+      desc: `I studied at Yandex.A workshop in the direction of "Web developer +". At the moment I work in the "Spraut" company as a Frontend developer. I love web development in general and interface development especially. I'm trying to delve into algorithms and data structures, and I'm also improving my knowledge in the backend.`,
     },
   },
 ];
@@ -252,11 +264,45 @@ export const contacts: IContact[] = [
     id: 5,
     ru: {
       name: 'Сергей Каченя',
-      addresses: [],
+      addresses: [
+        {
+          id: 7,
+          address: 'г. Санкт-Петербург, Колпино, Октябрьская улица, 63',
+          location: {
+            lat: 59.74001878548699,
+            lon: 30.617417128311153,
+          },
+        },
+        {
+          id: 8,
+          address: 'Тайланд, г. Пхукет, район Раваи, 88/53',
+          location: {
+            lat: 7.782123206009292,
+            lon: 98.3117632381286,
+          },
+        },
+      ],
     },
     en: {
-      name: 'Sergej Kachenya',
-      addresses: [],
+      name: 'Sergei Kachenia',
+      addresses: [
+        {
+          id: 7,
+          address: 'Saint-Petersburg city, Kolpino, Oktyabrskaya street, 63',
+          location: {
+            lat: 59.74001878548699,
+            lon: 30.617417128311153,
+          },
+        },
+        {
+          id: 8,
+          address: 'Thailand, Phuket, Rawai, 88/53',
+          location: {
+            lat: 7.782123206009292,
+            lon: 98.3117632381286,
+          },
+        },
+      ],
     },
   },
 ];
