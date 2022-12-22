@@ -86,11 +86,31 @@
     color: $color-grey;
 
     border-bottom: 1px solid $color-grey;
+
   }
 
   @media (any-hover: hover) {
+    &:not(.link_active) {
+      &::after {
+      content: '';
+
+      transform: scaleX(0);
+      transform-origin: 0 50%;
+
+      display: block;
+
+      border-bottom: 1px solid $color-grey;
+
+      transition: transform 250ms ease-in-out;
+    }
+
+      &:hover::after {
+      transform: scaleX(1);
+    }
+
     &:hover {
       color: $color-grey-text-hover;
     }
+  }
   }
 }
