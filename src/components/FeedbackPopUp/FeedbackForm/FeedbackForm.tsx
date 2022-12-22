@@ -4,7 +4,6 @@ import cn from 'classnames';
 import { TextLocales } from 'components/common/TextLocales/TextLocales';
 import { LanguageContext } from 'contexts/LanguageContext';
 
-import firebase from 'firebase/compat';
 import { useFormik } from 'formik';
 
 import React, { useContext, useState } from 'react';
