@@ -1,11 +1,11 @@
 export const locales = {
   HeaderText: {
-    ru: 'Lorem ipsum dolor sit.',
-    en: 'Lorem ipsum is sick.',
+    ru: 'Разработка различных веб-приложений.',
+    en: 'Development of various web applications.',
   },
   Description: {
-    ru: 'Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.',
-    en: 'Lorem ipsum dolor sit amet, addicting elsewhere, too much. Somewhere in the urine.',
+    ru: 'Сайты, приложения и многое другое. Под ключ, от профессионалов с огромным опытом работы.',
+    en: 'Websites, apps, and more. On turn-key basis, from professionals with extensive experience.',
   },
   Order: {
     ru: 'Заказать',
