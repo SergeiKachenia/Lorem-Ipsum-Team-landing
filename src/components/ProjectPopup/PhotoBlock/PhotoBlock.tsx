@@ -6,7 +6,7 @@ import AliceCarousel from 'react-alice-carousel';
 import styles from './PhotoBlock.module.scss';
 import './AliceCarouselPopup.scss';
 
-import { IPhotoBlockProps } from '../../../types/IPhotoBlockProps';
+import { IPhotoBlockProps } from '../../../types/PropjectPopupProps/PhotoBlockProps/IPhotoBlockProps';
 import { RoundArrowButton } from '../../RoundArrowButton/RoundArrowButton';
 
 const PhotoBlock: React.FC<IPhotoBlockProps> = ({ imagesUrls }) => {

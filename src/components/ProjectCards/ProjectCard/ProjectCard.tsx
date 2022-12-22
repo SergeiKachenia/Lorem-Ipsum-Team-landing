@@ -4,10 +4,10 @@ import defaultPreview from 'assets/images/defaultProjectImage.png';
 import React, { useMemo } from 'react';
 
 import { Link } from 'react-router-dom';
-import { IProjectCardProps } from 'types/IProject';
 
 import styles from './ProjectCard.module.scss';
 
+import { IProjectCardProps } from '../../../types/ProjectCardsProps/ProjectCardProps/IProjectCardProps';
 import { StackLabel } from '../../StackLabel/StackLabel';
 
 export const ProjectCard: React.FC<IProjectCardProps> = ({

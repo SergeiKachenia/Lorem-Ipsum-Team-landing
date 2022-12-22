@@ -2,10 +2,11 @@ import cn from 'classnames';
 import React from 'react';
 
 import 'react-alice-carousel/lib/scss/alice-carousel.scss';
+import { IArrowButtonProps } from 'types/ArrowButtonProps/IArrowButtonProps';
+
 import styles from './ArrowButton.module.scss';
 
 import { ReactComponent as Arrow } from '../../assets/icons/Arrow.svg';
-import { IArrowButtonProps } from '../../types/IArrowButtonProps';
 
 export const ArrowButton: React.FC<IArrowButtonProps> = ({ isLeft }) => {
   return (

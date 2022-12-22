@@ -4,7 +4,7 @@ import React, { memo, useEffect } from 'react';
 import { MdClose } from 'react-icons/md';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import { IProjectPopupProps } from 'types/IProjectPopupProps';
+import { IProjectPopupProps } from 'types/PropjectPopupProps/IProjectPopupProps';
 
 import InfoBlock from './InfoBlock/InfoBlock';
 import InfoBlockLoader from './InfoBlockLoader/InfoBlockLoader';

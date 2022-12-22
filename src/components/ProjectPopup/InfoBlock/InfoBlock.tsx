@@ -5,7 +5,7 @@ import styles from './InfoBlock.module.scss';
 import { ReactComponent as LinkIcon } from '../../../assets/icons/LinkIcon.svg';
 import defaultAvatar from '../../../assets/images/avatar.png';
 import { LanguageContext } from '../../../contexts/LanguageContext';
-import { IInfoBlockProps } from '../../../types/IInfoBlockProps';
+import { IInfoBlockProps } from '../../../types/PropjectPopupProps/InfoBlockProps/IInfoBlockProps';
 import { TextLocales } from '../../common/TextLocales/TextLocales';
 import { StackLabel } from '../../StackLabel/StackLabel';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { IBenefitCardProps } from 'types/IBenefitCardProps';
+import { IBenefitCardProps } from 'types/BenefitsProps/BenefitCardProps/IBenefitCardProps';
 
 import styles from './BenefitCard.module.scss';
 

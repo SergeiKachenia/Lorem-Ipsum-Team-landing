@@ -1,4 +1,4 @@
-import { IStackItem } from './IStack';
+import { IStackItem } from '../IStack';
 
 export interface ITeamMemberCardProps {
   name: string;

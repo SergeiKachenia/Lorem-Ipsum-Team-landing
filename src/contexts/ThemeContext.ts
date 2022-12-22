@@ -1,5 +1,5 @@
 import React from 'react';
-import { IThemeContext } from 'types/IThemeContext';
+import { IThemeContext } from 'types/contexts/IThemeContext';
 
 export const themes = {
   dark: 'dark',

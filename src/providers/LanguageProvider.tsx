@@ -1,6 +1,6 @@
 import { LanguageContext, locales } from 'contexts/LanguageContext';
 import React from 'react';
-import { LanguageType } from 'types/ILanguageContext';
+import { LanguageType } from 'types/contexts/ILanguageContext';
 
 export const getLocale = (): LanguageType => {
   const locale = `${window?.localStorage?.getItem('locale') as string}` as LanguageType;

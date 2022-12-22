@@ -6,7 +6,7 @@ import { useFormik } from 'formik';
 import React, { useContext, useState } from 'react';
 
 import { MdClose } from 'react-icons/md';
-import { ICloseForm } from 'types/ICloseFormProps';
+import { IFeedbackFormProps } from 'types/FeedbackFormProps/IFeedbackFormProps';
 import * as Yup from 'yup';
 
 import styles from './FeedbackForm.module.scss';
@@ -16,7 +16,7 @@ import { LanguageContext } from '../../contexts/LanguageContext';
 import { firestore } from '../../firebase';
 import { TextLocales } from '../common/TextLocales/TextLocales';
 
-const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
+const FeedbackForm: React.FC<IFeedbackFormProps> = ({ closeForm }) => {
   const [buttonPressed, setPressed] = useState(false);
   const [resultMessage, setMessage] = useState('');
   const [hasSuccessSent, setSuccessSent] = useState(false);

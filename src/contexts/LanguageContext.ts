@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ILanguageContext, LanguageType } from '../types/ILanguageContext';
+import { ILanguageContext, LanguageType } from '../types/contexts/ILanguageContext';
 
 export const locales = {
   ru: 'Русский',

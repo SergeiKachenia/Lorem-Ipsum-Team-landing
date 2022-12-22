@@ -1,4 +1,4 @@
-import { locales } from '../contexts/LanguageContext';
+import { locales } from '../../contexts/LanguageContext';
 
 export type LanguageType = keyof typeof locales;
 

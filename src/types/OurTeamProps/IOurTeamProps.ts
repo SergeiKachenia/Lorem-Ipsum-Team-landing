@@ -1,4 +1,4 @@
-import { ITeamMember } from './ITeamMember';
+import { ITeamMember } from '../ITeamMember';
 
 export interface IOurTeamProps {
   teamList: ITeamMember[];

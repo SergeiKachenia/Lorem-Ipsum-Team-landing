@@ -2,10 +2,11 @@ import cn from 'classnames';
 import React from 'react';
 
 import 'react-alice-carousel/lib/scss/alice-carousel.scss';
+import { IArrowButtonProps } from 'types/ArrowButtonProps/IArrowButtonProps';
+
 import styles from './RoundArrowButton.module.scss';
 
 import { ReactComponent as RoundArrow } from '../../assets/icons/RoundArrow.svg';
-import { IArrowButtonProps } from '../../types/IArrowButtonProps';
 
 export const RoundArrowButton: React.FC<IArrowButtonProps> = ({ isLeft }) => {
   return (

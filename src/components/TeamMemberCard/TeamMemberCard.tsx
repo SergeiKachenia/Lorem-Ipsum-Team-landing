@@ -2,7 +2,7 @@ import { ReactComponent as GitHubIcon } from 'assets/icons/GitHubIcon.svg';
 import { ReactComponent as TelegramIcon } from 'assets/icons/TelegramIcon.svg';
 import React, { useMemo } from 'react';
 
-import { ITeamMemberCardProps } from 'types/ITeamMemberCardProps';
+import { ITeamMemberCardProps } from 'types/TeamMemberCardProps/ITeamMemberCardProps';
 
 import IconLink from './IconLink/IconLink';
 import styles from './TeamMemberCard.module.scss';

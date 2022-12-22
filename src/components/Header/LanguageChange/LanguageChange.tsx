@@ -3,7 +3,7 @@ import React, { useContext } from 'react';
 import styles from './LanguageChange.module.scss';
 
 import { LanguageContext, locales } from '../../../contexts/LanguageContext';
-import { LanguageType } from '../../../types/ILanguageContext';
+import { LanguageType } from '../../../types/contexts/ILanguageContext';
 
 export const LanguageChange: React.FC = () => {
   const languageContext = useContext(LanguageContext);

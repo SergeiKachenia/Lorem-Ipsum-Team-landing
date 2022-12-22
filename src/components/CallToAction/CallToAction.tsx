@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './CallToAction.module.scss';
 
 import { locales } from '../../constants/modulesLocales/CallToAction';
-import { ICallToActionProps } from '../../types/ICallToActionProps';
+import { ICallToActionProps } from '../../types/CallToActionProps/ICallToActionProps';
 import { TextLocales } from '../common/TextLocales/TextLocales';
 
 const CallToAction: React.FC<ICallToActionProps> = ({ scrollContactInfo, scrollDown }) => {

@@ -9,7 +9,7 @@ import './AliceCarousel.scss';
 
 import { locales } from '../../constants/modulesLocales/OurTeam';
 import { LanguageContext } from '../../contexts/LanguageContext';
-import { IOurTeamProps } from '../../types/IOurTeamProps';
+import { IOurTeamProps } from '../../types/OurTeamProps/IOurTeamProps';
 import { ArrowButton } from '../ArrowButton/ArrowButton';
 import { TextLocales } from '../common/TextLocales/TextLocales';
 import { TeamMemberCard } from '../TeamMemberCard/TeamMemberCard';
