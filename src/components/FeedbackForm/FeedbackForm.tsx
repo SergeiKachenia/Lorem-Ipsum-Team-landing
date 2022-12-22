@@ -11,7 +11,7 @@ import * as Yup from 'yup';
 
 import styles from './FeedbackForm.module.scss';
 
-import { locales } from '../../constants/modulesLocales/FeedbackForm';
+import { locales } from '../../constants/localesModules/FeedbackForm';
 import { LanguageContext } from '../../contexts/LanguageContext';
 import { firestore } from '../../firebase';
 import { TextLocales } from '../common/TextLocales/TextLocales';

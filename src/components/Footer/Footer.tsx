@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Footer.module.scss';
 
-import { locales } from '../../constants/modulesLocales/Footer';
+import { locales } from '../../constants/localesModules/Footer';
 import { TextLocales } from '../common/TextLocales/TextLocales';
 
 const Footer: React.FC = () => {

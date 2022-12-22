@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './CallToAction.module.scss';
 
-import { locales } from '../../constants/modulesLocales/CallToAction';
+import { locales } from '../../constants/localesModules/CallToAction';
 import { ICallToActionProps } from '../../types/CallToActionProps/ICallToActionProps';
 import { TextLocales } from '../common/TextLocales/TextLocales';
 

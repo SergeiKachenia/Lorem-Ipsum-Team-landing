@@ -5,7 +5,7 @@ import { TextLocales } from 'components/common/TextLocales/TextLocales';
 import React, { RefObject, useContext, useRef, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
-import { locales } from 'constants/modulesLocales/Header';
+import { locales } from 'constants/localesModules/Header';
 
 import styles from './Header.module.scss';
 import { LanguageChange } from './LanguageChange/LanguageChange';

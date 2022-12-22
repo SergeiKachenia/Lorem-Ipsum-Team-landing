@@ -14,7 +14,7 @@ import { ProjectCard } from './ProjectCard/ProjectCard';
 import { ProjectCardLoader } from './ProjectCardLoader/ProjectCardLoader';
 import styles from './ProjectCards.module.scss';
 
-import { locales } from '../../constants/modulesLocales/ProjectCards';
+import { locales } from '../../constants/localesModules/ProjectCards';
 import { LanguageContext } from '../../contexts/LanguageContext';
 import { TextLocales } from '../common/TextLocales/TextLocales';
 

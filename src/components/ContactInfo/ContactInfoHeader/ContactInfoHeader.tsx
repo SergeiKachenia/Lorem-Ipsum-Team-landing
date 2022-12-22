@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 
 import styles from './ContactInfoHeader.module.scss';
 
-import { locales } from '../../../constants/modulesLocales/ContactInfo';
+import { locales } from '../../../constants/localesModules/ContactInfo';
 import { TextLocales } from '../../common/TextLocales/TextLocales';
 import FeedbackPopUp from '../../FeedbackPopUp/FeedbackPopUp';
 

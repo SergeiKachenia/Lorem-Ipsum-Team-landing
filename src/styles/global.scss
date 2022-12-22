@@ -85,24 +85,24 @@ $width-tablet-narrow: 769px;
 $width-mobile-wide: 451px;
 $width-mobile-narrow: 331px;
 
-body {
-  background-color: $color-white;
-
-  transition: background-color 0.3s ease-out;
-}
-
 html, body {
   scrollbar-color: $color-grey;
   scrollbar-width: thin;
-}
 
-::-webkit-scrollbar {
-  width: 8px;
-}
+  body {
+    background-color: $color-white;
 
-::-webkit-scrollbar-thumb {
-  background-color: $color-grey;
-  border-radius: 50px;
+    transition: background-color 0.3s ease-out;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $color-grey;
+    border-radius: 50px;
+  }
 }
 
 // Mixins

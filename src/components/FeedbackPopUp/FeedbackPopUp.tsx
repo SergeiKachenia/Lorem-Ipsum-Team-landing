@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 
 import styles from './FeedbackPopUp.module.scss';
 
-import { locales } from '../../constants/modulesLocales/ContactInfo';
+import { locales } from '../../constants/localesModules/ContactInfo';
 import { TextLocales } from '../common/TextLocales/TextLocales';
 
 const FeedbackPopUp: React.FC = () => {

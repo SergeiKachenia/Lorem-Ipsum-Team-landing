@@ -7,7 +7,7 @@ import { BenefitCard } from './BenefitCard/BenefitCard';
 
 import styles from './Benefits.module.scss';
 
-import { locales } from '../../constants/modulesLocales/Benefits';
+import { locales } from '../../constants/localesModules/Benefits';
 import { TextLocales } from '../common/TextLocales/TextLocales';
 
 export const Benefits: React.FC = () => {

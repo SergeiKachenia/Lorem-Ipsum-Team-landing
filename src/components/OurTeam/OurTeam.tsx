@@ -7,7 +7,7 @@ import 'react-alice-carousel/lib/scss/alice-carousel.scss';
 import styles from './OurTeam.module.scss';
 import './AliceCarousel.scss';
 
-import { locales } from '../../constants/modulesLocales/OurTeam';
+import { locales } from '../../constants/localesModules/OurTeam';
 import { LanguageContext } from '../../contexts/LanguageContext';
 import { IOurTeamProps } from '../../types/OurTeamProps/IOurTeamProps';
 import { ArrowButton } from '../ArrowButton/ArrowButton';

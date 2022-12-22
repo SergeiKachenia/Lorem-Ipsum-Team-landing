@@ -30,21 +30,6 @@ export const mockTeamMembers: ITeamMember[] = [
     },
   },
   {
-    uuid: 'bf7095e0-dc74-4814-bf6a-239b4756214d',
-    tgLink: '',
-    gitHubLink: '',
-    ru: {
-      name: 'Хамуева Дарья',
-      stackList: [{ id: 1, technology: 'HTML' }],
-      desc: 'Рассказ о себе. Lorem ipsum dolor amet consectetur. Duis sed velit libero urna vivamus sem sit. Penatibus enim iaculis malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus enim ac ullamcorper.',
-    },
-    en: {
-      name: 'Khamueva Daria',
-      stackList: [{ id: 1, technology: 'HTML' }],
-      desc: 'Рассказ о себе. Lorem ipsum dolor amet consectetur. Duis sed velit libero urna vivamus sem sit. Penatibus enim iaculis malesuada quam velit diam ipsum sagittis nec. Ut consequat tempus enim ac ullamcorper.',
-    },
-  },
-  {
     uuid: 'eb4e103b-d9e7-4ab9-a032-63abc3a7eaef',
     tgLink: 'https://t.me/aloreoff',
     gitHubLink: 'https://github.com/AnimeLore',
@@ -251,17 +236,6 @@ export const contacts: IContact[] = [
   },
   {
     id: 4,
-    ru: {
-      name: 'Хамуева Дарья',
-      addresses: [],
-    },
-    en: {
-      name: 'Khamueva Daria',
-      addresses: [],
-    },
-  },
-  {
-    id: 5,
     ru: {
       name: 'Сергей Каченя',
       addresses: [
