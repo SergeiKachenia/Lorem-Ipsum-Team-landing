@@ -1,10 +1,10 @@
+import { addDoc, collection } from '@firebase/firestore';
 import cn from 'classnames';
 import { useFormik } from 'formik';
 
 import React, { useContext, useState } from 'react';
 
 import { MdClose } from 'react-icons/md';
-import uuid from 'react-uuid';
 import { ICloseForm } from 'types/ICloseFormProps';
 import * as Yup from 'yup';
 
@@ -12,6 +12,7 @@ import styles from './FeedbackForm.module.scss';
 
 import { locales } from '../../constants/modulesLocales/FeedbackForm';
 import { LanguageContext } from '../../contexts/LanguageContext';
+import { firestore } from '../../firebase';
 import { TextLocales } from '../common/TextLocales/TextLocales';
 
 const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
@@ -20,6 +21,8 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
   const [hasSuccessSent, setSuccessSent] = useState(false);
 
   const languageContext = useContext(LanguageContext);
+
+  const ref = collection(firestore, 'replies');
 
   const formik = useFormik({
     initialValues: {
@@ -41,19 +44,7 @@ const FeedbackForm: React.FC<ICloseForm> = ({ closeForm }) => {
     onSubmit: async (values, { setSubmitting }) => {
       setSubmitting(true);
       try {
-        const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
-          method: 'POST',
-          body: JSON.stringify({
-            title: 'contact form',
-            body: values,
-            userId: uuid(),
-          }),
-          headers: {
-            'Content-type': 'application/json; charset=UTF-8',
-          },
-        });
-        const respJson = await response.json();
-        console.log(respJson);
+        await addDoc(ref, values);
         setSuccessSent(true);
       } catch (err) {
         console.log(err);
