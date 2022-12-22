@@ -20,7 +20,7 @@ export const TeamMemberCard: React.FC<ITeamMemberCardProps> = ({ name, stackList
   return (
     <div className={styles.card}>
       <div className={styles.cardTop}>
-        <img className={styles.cardImage} src={require(`../../assets/images/${uuid}.png`)} alt={`Аватар ${name}`} />
+        <img className={styles.cardImage} src={require(`assets/images/${uuid}.webp`)} alt={`Аватар ${name}`} />
         <div className={styles.cardNameStack}>
           <span className={styles.cardName}>{name}</span>
           <div className={styles.cardStackList}>{stackLabels}</div>
