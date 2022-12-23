@@ -11,7 +11,7 @@ export const projectsInfo: IProjectInfo[] = [
       title: 'Weather App',
       author: {
         id: 1,
-        avatarUrl: '/images/c2f62b777219cb6f60afe4b1bfc0eb24.png',
+        avatarUrl: '/images/c2f62b777219cb6f60afe4b1bfc0eb24.webp',
         name: 'Афанасьев Артем',
       },
       date: '21:32 21/11/2022',
@@ -29,7 +29,7 @@ export const projectsInfo: IProjectInfo[] = [
       title: 'Weather App',
       author: {
         id: 1,
-        avatarUrl: '/images/c2f62b777219cb6f60afe4b1bfc0eb24.png',
+        avatarUrl: '/images/c2f62b777219cb6f60afe4b1bfc0eb24.webp',
         name: 'Afanasev Artem',
       },
       date: '21:32 21/11/2022',
@@ -46,12 +46,12 @@ export const projectsInfo: IProjectInfo[] = [
   },
   {
     id: 2,
-    imagesUrls: ['/images/project2-1.png', '/images/project2-2.png'],
+    imagesUrls: ['/images/project2-1.webp', '/images/project2-2.webp'],
     ru: {
       title: 'MonoEat',
       author: {
         id: 2,
-        avatarUrl: '/images/4e5ae8d6-9449-459a-b807-07a8c82ee8f8.png',
+        avatarUrl: '/images/4e5ae8d6-9449-459a-b807-07a8c82ee8f8.webp',
         name: 'Дрягин Даниил',
       },
       date: '21:32 21/05/2022',
@@ -70,7 +70,7 @@ export const projectsInfo: IProjectInfo[] = [
       title: 'MonoEat',
       author: {
         id: 2,
-        avatarUrl: '/images/4e5ae8d6-9449-459a-b807-07a8c82ee8f8.png',
+        avatarUrl: '/images/4e5ae8d6-9449-459a-b807-07a8c82ee8f8.webp',
         name: 'Dryagin Daniil',
       },
       date: '21:32 21/05/2022',
@@ -88,12 +88,12 @@ export const projectsInfo: IProjectInfo[] = [
   },
   {
     id: 3,
-    imagesUrls: ['https://i.imgur.com/wch9nyh.png'],
+    imagesUrls: ['https://i.imgur.com/wch9nyh.webp'],
     ru: {
       title: 'Веб-приложение для загрузки пользовательского контента',
       author: {
         id: 3,
-        avatarUrl: '/images/eb4e103b-d9e7-4ab9-a032-63abc3a7eaef.png',
+        avatarUrl: '/images/eb4e103b-d9e7-4ab9-a032-63abc3a7eaef.webp',
         name: 'Устинов Александр',
       },
       date: '12:10 03/08/2021',
@@ -114,7 +114,7 @@ export const projectsInfo: IProjectInfo[] = [
       title: 'Web application for downloading user content',
       author: {
         id: 3,
-        avatarUrl: '/images/eb4e103b-d9e7-4ab9-a032-63abc3a7eaef.png',
+        avatarUrl: '/images/eb4e103b-d9e7-4ab9-a032-63abc3a7eaef.webp',
         name: 'Ustinov Aleksandr',
       },
       date: '12:10 03/08/2021',
@@ -139,7 +139,7 @@ export const projectsInfo: IProjectInfo[] = [
       title: 'Веб-мессенджер',
       author: {
         id: 1,
-        avatarUrl: '/images/c2f62b777219cb6f60afe4b1bfc0eb24.png',
+        avatarUrl: '/images/c2f62b777219cb6f60afe4b1bfc0eb24.webp',
         name: 'Афанасьев Артем',
       },
       date: '21:32 21/11/2022',
@@ -158,7 +158,7 @@ export const projectsInfo: IProjectInfo[] = [
       title: 'Web Messenger',
       author: {
         id: 1,
-        avatarUrl: '/images/c2f62b777219cb6f60afe4b1bfc0eb24.png',
+        avatarUrl: '/images/c2f62b777219cb6f60afe4b1bfc0eb24.webp',
         name: 'Afanasev Artem',
       },
       date: '21:32 21/11/2022',
@@ -176,12 +176,12 @@ export const projectsInfo: IProjectInfo[] = [
   },
   {
     id: 5,
-    imagesUrls: ['/images/project5-1.jpg'],
+    imagesUrls: ['/images/project5-1.webp'],
     ru: {
       title: 'SoftChat',
       author: {
         id: 2,
-        avatarUrl: '/images/4e5ae8d6-9449-459a-b807-07a8c82ee8f8.png',
+        avatarUrl: '/images/4e5ae8d6-9449-459a-b807-07a8c82ee8f8.webp',
         name: 'Дрягин Даниил',
       },
       date: '21:32 11/10/2022',
@@ -199,7 +199,7 @@ export const projectsInfo: IProjectInfo[] = [
       title: 'SoftChat',
       author: {
         id: 2,
-        avatarUrl: '/images/4e5ae8d6-9449-459a-b807-07a8c82ee8f8.png',
+        avatarUrl: '/images/4e5ae8d6-9449-459a-b807-07a8c82ee8f8.webp',
         name: 'Dryagin Daniil',
       },
       date: '21:32 11/10/2022',
@@ -216,12 +216,12 @@ export const projectsInfo: IProjectInfo[] = [
   },
   {
     id: 6,
-    imagesUrls: ['https://i.imgur.com/L4qvf08.png', 'https://i.imgur.com/zrKySP9.png'],
+    imagesUrls: ['https://i.imgur.com/L4qvf08.webp', 'https://i.imgur.com/zrKySP9.webp'],
     ru: {
       title: 'Сайт команды Lorem Ipsum Team',
       author: {
         id: 3,
-        avatarUrl: '/images/eb4e103b-d9e7-4ab9-a032-63abc3a7eaef.png',
+        avatarUrl: '/images/eb4e103b-d9e7-4ab9-a032-63abc3a7eaef.webp',
         name: 'Устинов Александр',
       },
       date: '21:32 21/11/2022',
@@ -241,7 +241,7 @@ export const projectsInfo: IProjectInfo[] = [
       title: 'Landing for the Lorem Ipsum team',
       author: {
         id: 3,
-        avatarUrl: '/images/eb4e103b-d9e7-4ab9-a032-63abc3a7eaef.png',
+        avatarUrl: '/images/eb4e103b-d9e7-4ab9-a032-63abc3a7eaef.webp',
         name: 'Ustinov Aleksandr',
       },
       date: '21:32 21/11/2022',
@@ -267,7 +267,7 @@ export const projectsInfo: IProjectInfo[] = [
       title: 'Мебельный магазин',
       author: {
         id: 1,
-        avatarUrl: '/images/c2f62b777219cb6f60afe4b1bfc0eb24.png',
+        avatarUrl: '/images/c2f62b777219cb6f60afe4b1bfc0eb24.webp',
         name: 'Афанасьев Артем',
       },
       date: '21:32 21/11/2022',
@@ -285,7 +285,7 @@ export const projectsInfo: IProjectInfo[] = [
       title: 'Furniture store',
       author: {
         id: 1,
-        avatarUrl: '/images/c2f62b777219cb6f60afe4b1bfc0eb24.png',
+        avatarUrl: '/images/c2f62b777219cb6f60afe4b1bfc0eb24.webp',
         name: 'Afanasev Artem',
       },
       date: '21:32 21/11/2022',
@@ -302,12 +302,12 @@ export const projectsInfo: IProjectInfo[] = [
   },
   {
     id: 8,
-    imagesUrls: ['/images/project8-1.png'],
+    imagesUrls: ['/images/project8-1.webp'],
     ru: {
       title: 'Сайт-визитка Danxay',
       author: {
         id: 2,
-        avatarUrl: '/images/4e5ae8d6-9449-459a-b807-07a8c82ee8f8.png',
+        avatarUrl: '/images/4e5ae8d6-9449-459a-b807-07a8c82ee8f8.webp',
         name: 'Дрягин Даниил',
       },
       date: '21:32 01/09/2022',
@@ -327,7 +327,7 @@ export const projectsInfo: IProjectInfo[] = [
       title: 'Danxay business card website',
       author: {
         id: 2,
-        avatarUrl: '/images/4e5ae8d6-9449-459a-b807-07a8c82ee8f8.png',
+        avatarUrl: '/images/4e5ae8d6-9449-459a-b807-07a8c82ee8f8.webp',
         name: 'Dryagin Daniil',
       },
       date: '21:32 01/09/2022',
@@ -353,7 +353,7 @@ export const projectsInfo: IProjectInfo[] = [
       title: 'Lejics',
       author: {
         id: 3,
-        avatarUrl: '/images/eb4e103b-d9e7-4ab9-a032-63abc3a7eaef.png',
+        avatarUrl: '/images/eb4e103b-d9e7-4ab9-a032-63abc3a7eaef.webp',
         name: 'Устинов Александр',
       },
       date: '20:40 20/12/2018',
@@ -369,7 +369,7 @@ export const projectsInfo: IProjectInfo[] = [
       title: 'Lejics',
       author: {
         id: 3,
-        avatarUrl: '/images/eb4e103b-d9e7-4ab9-a032-63abc3a7eaef.png',
+        avatarUrl: '/images/eb4e103b-d9e7-4ab9-a032-63abc3a7eaef.webp',
         name: 'Ustinov Aleksandr',
       },
       date: '20:40 20/12/2018',
