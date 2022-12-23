@@ -45,6 +45,8 @@
       @include medium-text(30px, 48px, $color-another-main-text);
       margin: 0 0 4px;
 
+      word-break: break-word;
+
       transition: color 0.3s ease-out;
     }
 
