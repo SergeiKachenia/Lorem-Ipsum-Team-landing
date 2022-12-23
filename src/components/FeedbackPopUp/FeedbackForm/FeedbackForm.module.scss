@@ -33,7 +33,7 @@
   scrollbar-width: thin;
 
   position: relative;
-  z-index: 2;
+  z-index: 25;
 
   overflow-y: auto;
   gap: 16px;
@@ -73,6 +73,13 @@
   @media (max-width: 550px) {
     padding: 48px 24px;
   }
+
+
+  @media (any-pointer: coarse) {
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
 }
 
 .closeBtn {
@@ -96,6 +103,7 @@
 
   @media (max-width: 640px) {
     margin-bottom: 28px;
+    @include regular-text(36px, 40px, $color-another-main-text);
   }
 }
 
@@ -148,6 +156,7 @@
 
   @media (max-width: 640px) {
     padding: 0;
+    @include medium-text(16px, 20px, $color-another-main-text);
   }
 }
 
@@ -214,6 +223,9 @@
 
 .data_check__label {
   @include medium-text(19px, 24px, $color-another-main-text);
+  @media (max-width: 640px) {
+    @include medium-text(15px, 20px, $color-another-main-text);
+  }
 }
 
 .send_btn {

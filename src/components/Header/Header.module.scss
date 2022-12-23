@@ -63,6 +63,11 @@
     }
   }
 
+  @media (max-width: $width-tablet-wide) {
+    position: fixed;
+    z-index: 2;
+  }
+
   @media (max-width: $width-desk-narrow) {
     position: sticky;
     z-index: 2;
