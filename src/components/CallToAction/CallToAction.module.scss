@@ -1,11 +1,8 @@
 @import 'styles/global';
 
-.CTAContainer {
-  @include flex(column, center, center);
+.CTAWrapper {
   position: relative;
   z-index: 1;
-
-  gap: 30px;
 
   height: calc(100vh - 88px);
   padding-bottom: 88px;
@@ -14,6 +11,17 @@
   letter-spacing: -0.01em;
 
   background: $color-cta-gradient;
+
+  .container {
+    @include flex(column, center, center);
+    gap: 30px;
+
+    height: 100%;
+  }
+}
+
+.CTAHeaderContainer {
+  gap: 10px;
 }
 
 .CTAHeaderText {

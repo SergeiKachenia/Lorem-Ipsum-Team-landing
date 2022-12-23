@@ -3,6 +3,11 @@
 .container {
   margin-top: 100px;
   padding-top: 20px;
+
+  @media (max-width: $width-desk-narrow) {
+    margin-top: 12px;
+    padding-top: 108px;
+  }
 }
 
 .title {
