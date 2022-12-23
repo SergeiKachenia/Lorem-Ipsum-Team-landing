@@ -8,6 +8,11 @@
 
   background-color: $color-background-header-and-footer;
 
+  @media (max-width: $width-tablet-wide) {
+    position: fixed;
+    z-index: 10;
+  }
+
   .container {
     @include flex(row, space-between, center);
 

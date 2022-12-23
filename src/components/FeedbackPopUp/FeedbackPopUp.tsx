@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { TextLocales } from 'components/common/TextLocales/TextLocales';
 import FeedbackForm from 'components/FeedbackPopUp/FeedbackForm/FeedbackForm';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { locales } from 'constants/localesModules/ContactInfo';
 
@@ -14,9 +14,27 @@ import styles from './FeedbackPopUp.module.scss';
 const FeedbackPopUp: React.FC = () => {
   const [isOpen, setOpen] = useState(false);
 
+  const [header, setHeader] = useState<HTMLElement | null>(null);
+
+  useEffect(() => {
+    setHeader(document.querySelector('header'));
+  });
+
   const setPopUpVisible = (): void => {
     setOpen(!isOpen);
   };
+
+  if (isOpen) {
+    document.body.style.overflow = 'hidden';
+    if (header !== null) {
+      header.style.display = 'none';
+    }
+  } else {
+    document.body.style.overflow = 'unset';
+    if (header !== null) {
+      header.style.display = '';
+    }
+  }
 
   return (
     <div>
