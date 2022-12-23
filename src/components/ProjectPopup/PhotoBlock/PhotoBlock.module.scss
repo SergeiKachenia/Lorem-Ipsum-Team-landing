@@ -73,4 +73,17 @@
     width:100%;
     height: 50%;
   }
+
+  .carouselItem {
+    width: auto;
+    height: 100%;
+    max-height: 100%;
+    padding: 8px;
+
+    border-radius: 2px;
+  }
+
+  .buttons {
+    opacity: 0.4;
+  }
 }
