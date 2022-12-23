@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
+import { YMaps, Map, Placemark, ZoomControl } from '@pbe/react-yandex-maps';
 
 import './ReactYandexMaps.scss';
 
@@ -58,6 +58,7 @@ export const ContactInfoMap: React.FC<IContactInfoMapProps> = ({ activeAddressId
           className={styles.ymap}
         >
           {mappedPlacemarks}
+          <ZoomControl />
         </Map>
       </YMaps>
       <span className={styles.topAngles}></span>
