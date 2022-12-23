@@ -25,7 +25,7 @@
   }
 }
 
-*::-webkit-scrollbar {
+.infoBlock::-webkit-scrollbar {
   width: 18px;
 }
 
@@ -46,14 +46,6 @@
   background-color: $color-grey;
   border: 5px solid $color-white;
   border-radius: 20px;
-}
-
-.infoBlock::-webkit-scrollbar-thumb:hover {
-  background-color: $color-grey;
-}
-
-.infoBlock::-webkit-scrollbar-thumb:active {
-  background-color: $color-grey;
 }
 
 .projectHeader {

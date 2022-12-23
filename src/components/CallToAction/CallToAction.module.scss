@@ -21,7 +21,10 @@
 }
 
 .CTAHeaderContainer {
+  @include flex(column, center, center);
   gap: 10px;
+
+  height: fit-content;
 }
 
 .CTAHeaderText {
@@ -49,11 +52,6 @@
     @include regular-text(15px, 20px, $color-grey);
     max-width: 360px;
   }
-}
-
-.CTAHeaderContainer {
-  @include flex(column, center, center);
-  height: fit-content;
 }
 
 .CTAButton {
