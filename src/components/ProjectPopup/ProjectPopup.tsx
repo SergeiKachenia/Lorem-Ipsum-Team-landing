@@ -23,12 +23,15 @@ const ProjectPopup: React.FC<IProjectPopupProps> = ({ closePopup }) => {
   const { projectId } = useParams();
   const details = useSelector(selectDetails);
 
+  document.body.style.overflow = 'hidden';
+
   useEffect(() => {
     void dispatch(loadDetails(Number(projectId)));
   }, [projectId]);
 
   const popupReset = (): void => {
     dispatch(projectsSlice.actions.resetDetails());
+    document.body.style.overflow = 'unset';
   };
 
   return (

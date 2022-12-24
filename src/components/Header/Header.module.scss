@@ -63,6 +63,18 @@
     }
   }
 
+  @media (max-width: $width-tablet-wide) {
+    position: fixed;
+    z-index: 2;
+  }
+
+  @media (max-width: $width-desk-narrow) {
+    position: sticky;
+    z-index: 2;
+    top: 0;
+    left: 0;
+  }
+
   @media (max-width: $width-desk-narrow) {
     box-sizing: border-box;
   }

@@ -1,0 +1,18 @@
+@import "styles/global";
+
+.wrapper {
+  height: calc(100vh - 88px);
+  padding-top: 120px;
+
+  .title {
+    @include medium-text(64px, 80px, $color-main-text);
+
+    @media (max-width: $width-tablet-wide) {
+      @include medium-text(50px, 50px, $color-main-text);
+    }
+    @media (max-width: $width-mobile-wide) {
+      @include medium-text(40px, 40px, $color-main-text);
+      text-align: center;
+    }
+  }
+}

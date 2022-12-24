@@ -18,6 +18,12 @@ const FeedbackPopUp: React.FC = () => {
     setOpen(!isOpen);
   };
 
+  if (isOpen) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'unset';
+  }
+
   return (
     <div>
       <button onClick={setPopUpVisible} className={cn(styles.popup_btn)}>

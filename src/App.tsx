@@ -1,6 +1,7 @@
 import Footer from 'components/Footer/Footer';
 import Header from 'components/Header/Header';
 import AboutUsPage from 'pages/AboutUsPage/AboutUsPage';
+import { NotFoundPage } from 'pages/NotFoundPage/NotFoundPage';
 import ProjectsPage from 'pages/ProjectsPage/ProjectsPage';
 import React from 'react';
 import { Provider } from 'react-redux';
@@ -30,6 +31,7 @@ export const App: React.FC = (): JSX.Element => {
                 }
               />
             </Route>
+            <Route path='*' element={<NotFoundPage />} />
           </Routes>
         </main>
         <Footer />

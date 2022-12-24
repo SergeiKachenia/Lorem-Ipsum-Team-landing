@@ -14,10 +14,16 @@
   border-radius: 50px;
   outline: inherit;
 
+  transition: all 0.3s ease-out;
+
   path {
     width: 20px;
     height: 20px;
 
     fill: $color-another-main-text;
   }
+}
+
+.iconLink:hover {
+  transform: scale(1.2,1.2);
 }
