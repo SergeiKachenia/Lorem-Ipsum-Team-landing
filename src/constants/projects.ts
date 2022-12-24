@@ -63,7 +63,7 @@ export const projectsInfo: IProjectInfo[] = [
         { id: 4, technology: 'PHP' },
       ],
       description:
-        'Интернет-сервис для ресторана Monoeat. В разработке сайты были использованы технологии React, Redux и PHP для написание бекенда. Функционал сайта представляет из себя магазин, в котором можно заказать блюда из ресторана. На сайте присутствует панель администратора, котором видна вся статистика сервиса и доступно редактирование контента на сайте.',
+        'Интернет-сервис для ресторана Monoeat. В разработке сайта были использованы технологии React, Redux и PHP для написание бекенда. Функционал сайта представляет из себя магазин, в котором можно заказать блюда из ресторана. На сайте присутствует панель администратора, в котором видна вся статистика сервиса и доступно редактирование контента на сайте.',
       link: 'https://monoeat.ru/',
     },
     en: {
@@ -82,7 +82,7 @@ export const projectsInfo: IProjectInfo[] = [
         { id: 4, technology: 'PHP' },
       ],
       description:
-        'Internet service for the MonoEat restaurant. In the development of the sites, React, Redux and PHP technologies were used to write the backend. The functionality of the site is a store where you can order dishes from a restaurant. There is an admin panel on the site, which shows all the statistics of the service and editing of content on the site is available.',
+        'Internet service for the Monet restaurant. In the development of the site, React, Redux and PHP technologies were used to write a backend. The functionality of the site is a store where you can order dishes from a restaurant. There is an admin panel on the site, in which all the statistics of the service are visible and editing of content on the site is available.',
       link: 'https://monoeat.ru/',
     },
   },

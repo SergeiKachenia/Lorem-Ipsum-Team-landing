@@ -71,7 +71,7 @@ export const mockTeamMembers: ITeamMember[] = [
         { id: 4, technology: 'Python' },
         { id: 5, technology: 'SQL' },
       ],
-      desc: 'Разрабатываю Frontend часть веб-приложений. Всегда вовлечён в проект, предлагать идеи для новых фичей и совершенствования проекта. Также могу немного поперекладывать json-чики)',
+      desc: 'Разрабатываю Frontend часть веб-приложений. Всегда вовлечён в проект, предлагаю идеи для новых фичей и совершенствования проекта. Также могу немного поперекладывать json-чики)',
     },
     en: {
       name: 'Afanasev Artem',
@@ -82,7 +82,7 @@ export const mockTeamMembers: ITeamMember[] = [
         { id: 4, technology: 'Python' },
         { id: 5, technology: 'SQL' },
       ],
-      desc: 'I develop Frontend part of web applications. I always involved in the project, offer ideas for new features and improve the project. I can also shift json files a little)',
+      desc: 'I develop Frontend part of web applications. I always involved in the project, offer ideas for new features and improvement of the project. I can also shift json files a little)',
     },
   },
   {
