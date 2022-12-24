@@ -2,7 +2,7 @@
 
 Веб-сайт команды Lorem Ipsum Team
 
-https://main--unique-puffpuff-6c797d.netlify.app/
+## https://unique-puffpuff-6c797d.netlify.app/
 
 ## Описание проекта
 ### Структура сайта
